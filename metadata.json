@@ -1,0 +1,6 @@
+{
+  "name": "ToolTap – 500 AI Tools Directory 2026",
+  "description": "ToolTap helps students, creators, developers, and professionals discover, compare, and save the best AI tools for any task.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFA033" />
+      <stop offset="100%" stop-color="#FF6B00" />
+    </linearGradient>
+    <linearGradient id="orangeShadowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E05500" />
+      <stop offset="100%" stop-color="#B83A00" />
+    </linearGradient>
+    <filter id="iconGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#FF6B00" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <g transform="translate(10, 10)">
+    <!-- Tap Ripple Arc 1 (Outer) -->
+    <path d="M 32 46 A 42 42 0 0 1 92 14" fill="none" stroke="url(#orangeGrad)" stroke-width="8" stroke-linecap="round" />
+    <!-- Tap Ripple Arc 2 (Inner) -->
+    <path d="M 44 54 A 26 26 0 0 1 82 32" fill="none" stroke="url(#orangeGrad)" stroke-width="7.5" stroke-linecap="round" />
+
+    <!-- Cursor Pointer Arrow -->
+    <path d="M 60 52 L 130 122 L 100 122 L 112 154 L 94 160 L 80 130 L 60 148 Z" fill="url(#orangeGrad)" filter="url(#iconGlow)" />
+    <path d="M 60 52 L 130 122 L 100 122 L 112 154 L 94 160 Z" fill="url(#orangeShadowGrad)" opacity="0.45" />
+  </g>
+</svg>

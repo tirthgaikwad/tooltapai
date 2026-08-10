@@ -1,0 +1,449 @@
+/* stylelint-disable */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Design Tokens - ToolTap Refined Dark Theme */
+    --radius-sm: 0.625rem;  /* 10px */
+    --radius: 1rem;         /* 16px */
+    --radius-lg: 1.5rem;    /* 24px */
+    --radius-btn: 0.625rem; /* 10px */
+
+    /* Deep Charcoal #121212 Backgrounds */
+    --background: 0 0% 7%;           /* #121212 */
+    --foreground: 60 12% 95%;        /* rgb(244, 244, 240) Off-White Base */
+    --foreground-high: rgba(244, 244, 240, 0.92);
+    --foreground-med: rgba(244, 244, 240, 0.65);
+    --foreground-low: rgba(244, 244, 240, 0.38);
+
+    /* Surface & Cards #1E1E24 */
+    --card: 240 9% 13%;              /* #1E1E24 */
+    --card-foreground: 60 12% 95%;
+    --card-elevated: 240 9% 15%;     /* #22222A */
+
+    /* Popover */
+    --popover: 240 9% 13%;
+    --popover-foreground: 60 12% 95%;
+
+    /* Primary Accent = Burnt Orange #E05A47 */
+    --primary: 8 74% 58%;            /* #E05A47 */
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary Surface */
+    --secondary: 240 8% 18%;
+    --secondary-foreground: 60 12% 95%;
+
+    /* Muted Text & Backgrounds */
+    --muted: 240 8% 16%;             /* #24242C */
+    --muted-foreground: 244 244 240 / 0.65;   /* Medium-Emphasis Off-White */
+
+    /* Warm Amber Accent #F2994A */
+    --accent: 28 87% 62%;            /* #F2994A */
+    --accent-foreground: 0 0% 10%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Warm Subtle Borders */
+    --border: 0 0% 100% / 0.08;
+    --input: 240 8% 18%;
+    --ring: 28 87% 62%; /* Warm Amber Ring */
+
+    /* Badges & Statuses */
+    --success: 142 70% 45%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 28 87% 62%;
+    --warning-foreground: 0 0% 10%;
+
+    --info: 28 87% 62%;
+
+    --shadow-card: 0 8px 30px rgba(0,0,0,0.4);
+    --shadow-hover: 0 16px 48px rgba(0,0,0,0.6);
+
+    --navbar-height: 72px;
+    --scroll-offset: 96px;
+    --section-scroll-offset: 96px;
+    --page-max-width: 1720px;
+    --page-padding-desktop: 48px;
+    --page-padding-tablet: 24px;
+    --page-padding-mobile: 16px;
+  }
+
+  /* Unified page container system across navbar, hero, and main content */
+  .page-container {
+    width: 100%;
+    max-width: var(--page-max-width);
+    margin-inline: auto;
+    padding-inline: var(--page-padding-desktop);
+  }
+
+  @media (max-width: 1024px) {
+    .page-container {
+      padding-inline: var(--page-padding-tablet);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .page-container {
+      padding-inline: var(--page-padding-mobile);
+    }
+  }
+
+  /* HTML background & smooth scrolling */
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--scroll-offset);
+    background-color: #121212;
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
+  html, body, #root {
+    width: 100%;
+    max-width: 100vw;
+    min-height: 100%;
+  }
+
+  body {
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    touch-action: pan-y;
+    overscroll-behavior-x: none;
+  }
+
+  /* Touch action manipulation on interactive elements to eliminate 300ms tap delay & prevent double-tap zoom */
+  button,
+  a,
+  input,
+  select,
+  textarea,
+  label,
+  [role="button"],
+  [role="option"],
+  [role="checkbox"],
+  [role="switch"],
+  .touch-manipulation {
+    touch-action: manipulation;
+  }
+
+  main {
+    min-height: calc(100vh - var(--navbar-height));
+    overflow: visible;
+  }
+
+  section[id],
+  [data-scroll-section],
+  .documentation-section,
+  .how-to-use-section {
+    scroll-margin-top: var(--scroll-offset);
+    position: relative;
+    width: 100%;
+  }
+
+  :focus-visible {
+    scroll-margin-top: var(--scroll-offset);
+  }
+
+  .scrollable-panel {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      scroll-behavior: auto !important;
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    box-sizing: border-box;
+  }
+
+  html, body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+    letter-spacing: -0.025em;
+    line-height: 1.25;
+  }
+
+  /* Custom Scrollbar */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.15) transparent;
+  }
+  *::-webkit-scrollbar { width: 6px; height: 6px; }
+  *::-webkit-scrollbar-track { background: transparent; }
+  *::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.15); border-radius: 4px; }
+  *::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.25); }
+}
+
+@layer utilities {
+  /* Unified Opacity-Based Typography Contrast Hierarchy */
+  /* High-Emphasis: Headings, Hero Titles, Tool Names, Primary CTAs */
+  .text-high-emphasis,
+  .text-primary-text {
+    color: var(--foreground-high);
+  }
+
+  /* Medium-Emphasis: Tool Descriptions, Card Body Text, Meta Specs, Badges, Labels */
+  .text-med-emphasis,
+  .text-secondary,
+  .text-secondary-text {
+    color: var(--foreground-med);
+  }
+
+  /* Low-Emphasis: Disabled States, Placeholders, Footer Secondary Links, Tooltips, Captions */
+  .text-low-emphasis,
+  .text-tertiary,
+  .text-disabled {
+    color: var(--foreground-low);
+  }
+
+  .font-heading { font-family: 'Plus Jakarta Sans', sans-serif; }
+  .font-body { font-family: 'Inter', sans-serif; }
+
+  .documentation-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  @media (min-width: 768px) {
+    .documentation-layout {
+      grid-template-columns: 260px minmax(0, 1fr);
+    }
+  }
+
+  .documentation-sidebar {
+    position: relative;
+    z-index: 20;
+    background-color: #16171C;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .documentation-sidebar {
+      position: sticky;
+      top: calc(var(--navbar-height) + 20px);
+      max-height: calc(100vh - var(--navbar-height) - 40px);
+      overflow-y: auto;
+    }
+  }
+
+  .documentation-content {
+    min-width: 0;
+    width: 100%;
+    overflow: visible;
+    z-index: 1;
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #E05A47 0%, #F2994A 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .card-gradient {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%), #1E1E24;
+  }
+
+  .card-hover {
+    transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease, border-color 0.2s ease;
+    will-change: transform;
+  }
+  .card-hover:hover {
+    transform: translateY(-4px);
+    border-color: rgba(242, 153, 74, 0.4);
+    box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.5);
+  }
+
+  /* Dark Theme Skeleton Loader Shimmer Wave */
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+
+  /* Charcoal Shimmer Keyframe (#1E1E24 -> #262630 -> #1E1E24) */
+  @keyframes background-shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
+  /* Ambient Glow Active Filter State */
+  .filter-pill-active {
+    background-color: rgba(242, 153, 74, 0.15);
+    border-color: rgba(242, 153, 74, 0.4);
+    color: #fcd34d;
+    box-shadow: 0 0 15px rgba(242, 153, 74, 0.35);
+  }
+
+  .filter-pill-inactive {
+    background-color: rgba(30, 30, 36, 0.6);
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+
+  .skeleton-shimmer-charcoal {
+    background: linear-gradient(
+      90deg,
+      #1E1E24 0%,
+      #262630 50%,
+      #1E1E24 100%
+    );
+    background-size: 200% 100%;
+    animation: background-shimmer 1.8s ease-in-out infinite;
+  }
+
+  @keyframes button-ripple {
+    0% {
+      transform: scale(0);
+      opacity: 0.45;
+    }
+    100% {
+      transform: scale(2.5);
+      opacity: 0;
+    }
+  }
+
+  .animate-ripple {
+    animation: button-ripple 600ms cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  }
+
+  .liquid-glass {
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+  }
+  .liquid-glass:active {
+    transform: scale(0.97) !important;
+  }
+
+  .skeleton-shimmer {
+    position: relative;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.04);
+  }
+
+  .skeleton-shimmer::after {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    transform: translateX(-100%);
+    background-image: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0,
+      rgba(255, 255, 255, 0.06) 20%,
+      rgba(255, 255, 255, 0.1) 60%,
+      rgba(255, 255, 255, 0)
+    );
+    animation: shimmer 1.8s infinite;
+    content: '';
+  }
+
+  /* Accessibility Overrides for Reduced Motion */
+  @media (prefers-reduced-motion: reduce) {
+    .card-hover,
+    .card-hover:hover,
+    .animate-float-up,
+    .skeleton-shimmer::after,
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+    .card-hover:hover {
+      transform: none !important;
+    }
+    .skeleton-shimmer::after {
+      animation: none !important;
+    }
+  }
+
+  .chip-active {
+    background: rgba(224, 90, 71, 0.15);
+    border-color: rgba(242, 153, 74, 0.4);
+    color: #F2994A;
+  }
+
+  .border-subtle { border-color: rgba(255, 255, 255, 0.08); }
+
+  @keyframes float-up {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes logo-fade {
+    from {
+      opacity: 0;
+      transform: scale(0.97);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .animate-float-up { animation: float-up 0.25s ease-out forwards; }
+  .animate-logo-fade { animation: logo-fade 350ms ease-out forwards; }
+
+  .tooltap-brand {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+    text-decoration: none;
+  }
+
+  .tooltap-navbar-logo {
+    display: block;
+    width: auto;
+    height: 44px;
+    max-width: 190px;
+    object-fit: contain;
+    object-position: left center;
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 768px) {
+    .tooltap-navbar-logo {
+      height: 36px;
+      max-width: 155px;
+    }
+  }
+
+  @media (max-width: 360px) {
+    .tooltap-navbar-logo {
+      height: 32px;
+      max-width: 135px;
+    }
+  }
+}

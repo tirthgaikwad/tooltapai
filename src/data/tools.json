@@ -1,0 +1,5402 @@
+[
+  {
+    "id": 1,
+    "name": "ChatGPT",
+    "url": "https://chatgpt.com",
+    "category": "General AI Assistants",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "General assistant for learning, writing, coding, analysis, and files"
+  },
+  {
+    "id": 2,
+    "name": "Claude",
+    "url": "https://claude.ai",
+    "category": "General AI Assistants",
+    "access": "Freemium",
+    "freePlan": "Free tier with message limits resetting every 5 hours; includes Claude 3.5 Sonnet access, document uploads, and live UI Artifacts rendering.",
+    "why": "Next-generation AI assistant by Anthropic known for superior reasoning, 200k+ token context window, advanced coding, writing, and live interactive Artifacts."
+  },
+  {
+    "id": 3,
+    "name": "Google Gemini",
+    "url": "https://gemini.google.com",
+    "category": "General AI Assistants",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Multimodal assistant integrated with Google services"
+  },
+  {
+    "id": 4,
+    "name": "Microsoft Copilot",
+    "url": "https://copilot.microsoft.com",
+    "category": "General AI Assistants",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Web answers, content creation, and Microsoft productivity"
+  },
+  {
+    "id": 5,
+    "name": "Perplexity",
+    "url": "https://www.perplexity.ai",
+    "category": "General AI Assistants",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "AI search and research with cited sources"
+  },
+  {
+    "id": 6,
+    "name": "Grok",
+    "url": "https://grok.com",
+    "category": "General AI Assistants",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Conversational assistant with web and social context"
+  },
+  {
+    "id": 7,
+    "name": "DeepSeek Chat",
+    "url": "https://chat.deepseek.com",
+    "category": "General AI Assistants",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Reasoning, mathematics, and coding assistance"
+  },
+  {
+    "id": 8,
+    "name": "Poe",
+    "url": "https://poe.com",
+    "category": "General AI Assistants",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Use multiple AI models and custom bots in one place"
+  },
+  {
+    "id": 9,
+    "name": "Pi",
+    "url": "https://pi.ai",
+    "category": "General AI Assistants",
+    "access": "Free",
+    "freePlan": "Core access is free; speed, quality, file size, or advanced features may be limited",
+    "why": "Friendly personal conversations and reflection"
+  },
+  {
+    "id": 10,
+    "name": "You.com",
+    "url": "https://you.com",
+    "category": "General AI Assistants",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "AI search, writing, and productivity"
+  },
+  {
+    "id": 11,
+    "name": "Meta AI",
+    "url": "https://www.meta.ai",
+    "category": "General AI Assistants",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Conversational and image AI from Meta"
+  },
+  {
+    "id": 12,
+    "name": "Le Chat",
+    "url": "https://chat.mistral.ai",
+    "category": "General AI Assistants",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Mistral's fast multilingual AI assistant"
+  },
+  {
+    "id": 13,
+    "name": "HuggingChat",
+    "url": "https://huggingface.co/chat",
+    "category": "General AI Assistants",
+    "access": "Free",
+    "freePlan": "Core access is free; speed, quality, file size, or advanced features may be limited",
+    "why": "Chat with open-source language models"
+  },
+  {
+    "id": 14,
+    "name": "DuckDuckGo AI Chat",
+    "url": "https://duck.ai",
+    "category": "General AI Assistants",
+    "access": "Free",
+    "freePlan": "Core access is free; speed, quality, file size, or advanced features may be limited",
+    "why": "Privacy-focused access to several chat models"
+  },
+  {
+    "id": 15,
+    "name": "Brave Leo",
+    "url": "https://brave.com/leo",
+    "category": "General AI Assistants",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Privacy-focused browser AI assistant"
+  },
+  {
+    "id": 16,
+    "name": "Character.AI",
+    "url": "https://character.ai",
+    "category": "General AI Assistants",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Create and chat with fictional or role-based characters"
+  },
+  {
+    "id": 17,
+    "name": "Replika",
+    "url": "https://replika.com",
+    "category": "General AI Assistants",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Personal AI companion and conversation"
+  },
+  {
+    "id": 18,
+    "name": "Komo AI",
+    "url": "https://komo.ai",
+    "category": "General AI Assistants",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "AI-powered search and exploration"
+  },
+  {
+    "id": 19,
+    "name": "Andi",
+    "url": "https://andisearch.com",
+    "category": "General AI Assistants",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Conversational search with summarized answers"
+  },
+  {
+    "id": 20,
+    "name": "Phind",
+    "url": "https://www.phind.com",
+    "category": "General AI Assistants",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Technical search and coding answers for developers"
+  },
+  {
+    "id": 21,
+    "name": "GitHub Copilot",
+    "url": "https://github.com/features/copilot",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Code completion, chat, review, and agent workflows"
+  },
+  {
+    "id": 22,
+    "name": "Cursor",
+    "url": "https://cursor.com",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "AI-first code editor for repository-level development"
+  },
+  {
+    "id": 23,
+    "name": "Windsurf",
+    "url": "https://windsurf.com",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Agentic IDE for writing and changing code"
+  },
+  {
+    "id": 24,
+    "name": "Replit",
+    "url": "https://replit.com",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Build, run, deploy, and collaborate on apps with AI"
+  },
+  {
+    "id": 25,
+    "name": "Amazon Q Developer",
+    "url": "https://aws.amazon.com/q/developer",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Coding assistant for AWS and general development"
+  },
+  {
+    "id": 26,
+    "name": "JetBrains AI Assistant",
+    "url": "https://www.jetbrains.com/ai",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "AI coding inside JetBrains IDEs"
+  },
+  {
+    "id": 27,
+    "name": "Tabnine",
+    "url": "https://www.tabnine.com",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Private code completion and chat for teams"
+  },
+  {
+    "id": 28,
+    "name": "Sourcegraph Cody",
+    "url": "https://sourcegraph.com/cody",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Understand and edit large codebases"
+  },
+  {
+    "id": 29,
+    "name": "Continue",
+    "url": "https://www.continue.dev",
+    "category": "Coding and Software Development",
+    "access": "Open Source",
+    "freePlan": "Software is free; local/cloud compute and API usage may cost extra",
+    "why": "Open-source AI coding assistant for IDEs"
+  },
+  {
+    "id": 30,
+    "name": "Aider",
+    "url": "https://aider.chat",
+    "category": "Coding and Software Development",
+    "access": "Open Source",
+    "freePlan": "Software is free; local/cloud compute and API usage may cost extra",
+    "why": "Terminal-based AI pair programming"
+  },
+  {
+    "id": 31,
+    "name": "Cline",
+    "url": "https://cline.bot",
+    "category": "Coding and Software Development",
+    "access": "Open Source",
+    "freePlan": "Software is free; local/cloud compute and API usage may cost extra",
+    "why": "Autonomous coding agent in VS Code"
+  },
+  {
+    "id": 32,
+    "name": "Roo Code",
+    "url": "https://roocode.com",
+    "category": "Coding and Software Development",
+    "access": "Open Source",
+    "freePlan": "Software is free; local/cloud compute and API usage may cost extra",
+    "why": "Open-source agentic coding extension"
+  },
+  {
+    "id": 33,
+    "name": "OpenAI Codex",
+    "url": "https://openai.com/codex",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Cloud coding agent for software tasks"
+  },
+  {
+    "id": 34,
+    "name": "Claude Code",
+    "url": "https://www.anthropic.com/claude-code",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Free access with Anthropic API research credits & Console tier quotas; paid tier for higher rate limits.",
+    "why": "Agentic command-line coding tool that operates directly in your terminal, understands your entire codebase, executes commands, and edits code autonomously."
+  },
+  {
+    "id": 35,
+    "name": "Gemini Code Assist",
+    "url": "https://codeassist.google",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "AI coding help for IDEs and cloud development"
+  },
+  {
+    "id": 36,
+    "name": "Qodo",
+    "url": "https://www.qodo.ai",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "AI code review, testing, and quality improvement"
+  },
+  {
+    "id": 37,
+    "name": "Sourcery",
+    "url": "https://sourcery.ai",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Refactor and review Python and other code"
+  },
+  {
+    "id": 38,
+    "name": "CodeRabbit",
+    "url": "https://www.coderabbit.ai",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Automated AI pull-request reviews"
+  },
+  {
+    "id": 39,
+    "name": "MutableAI",
+    "url": "https://mutable.ai",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "AI-assisted code generation and documentation"
+  },
+  {
+    "id": 40,
+    "name": "Pieces for Developers",
+    "url": "https://pieces.app",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Save, organize, and reuse code with on-device AI"
+  },
+  {
+    "id": 41,
+    "name": "Bolt",
+    "url": "https://bolt.new",
+    "category": "App and Website Builders",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate and deploy full-stack web apps from prompts"
+  },
+  {
+    "id": 42,
+    "name": "Lovable",
+    "url": "https://lovable.dev",
+    "category": "App and Website Builders",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Build production web apps through conversation"
+  },
+  {
+    "id": 43,
+    "name": "v0",
+    "url": "https://v0.dev",
+    "category": "App and Website Builders",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate React interfaces and web applications"
+  },
+  {
+    "id": 44,
+    "name": "Framer AI",
+    "url": "https://www.framer.com/ai",
+    "category": "App and Website Builders",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate and publish responsive websites"
+  },
+  {
+    "id": 45,
+    "name": "Wix AI Website Builder",
+    "url": "https://www.wix.com/ai-website-builder",
+    "category": "App and Website Builders",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Create websites using guided AI prompts"
+  },
+  {
+    "id": 46,
+    "name": "Durable",
+    "url": "https://durable.co",
+    "category": "App and Website Builders",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate small-business websites quickly"
+  },
+  {
+    "id": 47,
+    "name": "Hostinger AI Website Builder",
+    "url": "https://www.hostinger.com/ai-website-builder",
+    "category": "App and Website Builders",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Build websites with AI content and layouts"
+  },
+  {
+    "id": 48,
+    "name": "10Web",
+    "url": "https://10web.io",
+    "category": "App and Website Builders",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "AI WordPress website creation and hosting"
+  },
+  {
+    "id": 49,
+    "name": "Webflow AI",
+    "url": "https://webflow.com/ai",
+    "category": "App and Website Builders",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate and optimize professional websites"
+  },
+  {
+    "id": 50,
+    "name": "Squarespace Blueprint AI",
+    "url": "https://www.squarespace.com",
+    "category": "App and Website Builders",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Create branded website structures and content"
+  },
+  {
+    "id": 51,
+    "name": "Bubble AI",
+    "url": "https://bubble.io/ai",
+    "category": "App and Website Builders",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Build no-code web applications with prompts"
+  },
+  {
+    "id": 52,
+    "name": "Softr",
+    "url": "https://www.softr.io",
+    "category": "App and Website Builders",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Create portals and business apps without code"
+  },
+  {
+    "id": 53,
+    "name": "Glide",
+    "url": "https://www.glideapps.com",
+    "category": "App and Website Builders",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Build data-powered apps with AI and no code"
+  },
+  {
+    "id": 54,
+    "name": "FlutterFlow AI Gen",
+    "url": "https://www.flutterflow.io/ai-gen",
+    "category": "App and Website Builders",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate Flutter mobile and web application screens"
+  },
+  {
+    "id": 55,
+    "name": "Create.xyz",
+    "url": "https://www.create.xyz",
+    "category": "App and Website Builders",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Turn descriptions into sites, tools, and apps"
+  },
+  {
+    "id": 56,
+    "name": "Databutton",
+    "url": "https://databutton.com",
+    "category": "App and Website Builders",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Build AI-powered apps with an agent"
+  },
+  {
+    "id": 57,
+    "name": "Base44",
+    "url": "https://base44.com",
+    "category": "App and Website Builders",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate complete business applications from natural language"
+  },
+  {
+    "id": 58,
+    "name": "Typedream",
+    "url": "https://typedream.com",
+    "category": "App and Website Builders",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Create landing pages and websites quickly"
+  },
+  {
+    "id": 59,
+    "name": "Dorik AI",
+    "url": "https://dorik.com/ai",
+    "category": "App and Website Builders",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "AI website builder for simple business sites"
+  },
+  {
+    "id": 60,
+    "name": "Unicorn Platform",
+    "url": "https://unicornplatform.com",
+    "category": "App and Website Builders",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "AI-assisted landing-page creation"
+  },
+  {
+    "id": 61,
+    "name": "Midjourney",
+    "url": "https://www.midjourney.com",
+    "category": "Image Generation",
+    "access": "Paid",
+    "freePlan": "",
+    "why": "No permanent free plan commonly advertised; demo or trial may be Generate stylized and photorealistic images available"
+  },
+  {
+    "id": 62,
+    "name": "Adobe Firefly",
+    "url": "https://firefly.adobe.com",
+    "category": "Image Generation",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Commercial-friendly image generation and editing"
+  },
+  {
+    "id": 63,
+    "name": "Ideogram",
+    "url": "https://ideogram.ai",
+    "category": "Image Generation",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate images with strong text rendering"
+  },
+  {
+    "id": 64,
+    "name": "Leonardo AI",
+    "url": "https://leonardo.ai",
+    "category": "Image Generation",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Create art, assets, textures, and marketing images"
+  },
+  {
+    "id": 65,
+    "name": "Recraft",
+    "url": "https://www.recraft.ai",
+    "category": "Image Generation",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate vectors, icons, logos, and illustrations"
+  },
+  {
+    "id": 66,
+    "name": "DreamStudio",
+    "url": "https://dreamstudio.ai",
+    "category": "Image Generation",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Create images using Stable Diffusion models"
+  },
+  {
+    "id": 67,
+    "name": "Playground",
+    "url": "https://playground.com",
+    "category": "Image Generation",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate and edit images on a canvas"
+  },
+  {
+    "id": 68,
+    "name": "Microsoft Designer",
+    "url": "https://designer.microsoft.com",
+    "category": "Image Generation",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Create social graphics and generated images"
+  },
+  {
+    "id": 69,
+    "name": "Canva Magic Media",
+    "url": "https://www.canva.com/ai-image-generator",
+    "category": "Image Generation",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate images inside Canva designs"
+  },
+  {
+    "id": 70,
+    "name": "NightCafe",
+    "url": "https://nightcafe.studio",
+    "category": "Image Generation",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Community-based AI art generation"
+  },
+  {
+    "id": 71,
+    "name": "Craiyon",
+    "url": "https://www.craiyon.com",
+    "category": "Image Generation",
+    "access": "Free",
+    "freePlan": "Core access is free; speed, quality, file size, or advanced features may be limited",
+    "why": "Simple free text-to-image generation"
+  },
+  {
+    "id": 72,
+    "name": "getimg.ai",
+    "url": "https://getimg.ai",
+    "category": "Image Generation",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Image generation, editing, and model training"
+  },
+  {
+    "id": 73,
+    "name": "SeaArt AI",
+    "url": "https://www.seaart.ai",
+    "category": "Image Generation",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate artwork with many community models"
+  },
+  {
+    "id": 74,
+    "name": "Tensor.Art",
+    "url": "https://tensor.art",
+    "category": "Image Generation",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Run and share image-generation models"
+  },
+  {
+    "id": 75,
+    "name": "Mage.space",
+    "url": "https://www.mage.space",
+    "category": "Image Generation",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate images with Stable Diffusion workflows"
+  },
+  {
+    "id": 76,
+    "name": "Krea",
+    "url": "https://www.krea.ai",
+    "category": "Image Generation",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Real-time image generation and enhancement"
+  },
+  {
+    "id": 77,
+    "name": "Freepik AI Image Generator",
+    "url": "https://www.freepik.com/ai/image-generator",
+    "category": "Image Generation",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate stock-style graphics and visuals"
+  },
+  {
+    "id": 78,
+    "name": "Picsart AI Image Generator",
+    "url": "https://picsart.com/ai-image-generator",
+    "category": "Image Generation",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Create and edit images for social content"
+  },
+  {
+    "id": 79,
+    "name": "Fotor AI Image Generator",
+    "url": "https://www.fotor.com/features/ai-image-generator",
+    "category": "Image Generation",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate images and design assets"
+  },
+  {
+    "id": 80,
+    "name": "Dream by WOMBO",
+    "url": "https://dream.ai",
+    "category": "Image Generation",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Mobile-friendly AI artwork creation"
+  },
+  {
+    "id": 81,
+    "name": "Remove.bg",
+    "url": "https://www.remove.bg",
+    "category": "Image Editing and Enhancement",
+    "access": "Free",
+    "freePlan": "Core access is free; speed, quality, file size, or advanced features may be limited",
+    "why": "Automatically remove image backgrounds"
+  },
+  {
+    "id": 82,
+    "name": "Clipdrop",
+    "url": "https://clipdrop.co",
+    "category": "Image Editing and Enhancement",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Background, relighting, cleanup, and generative editing"
+  },
+  {
+    "id": 83,
+    "name": "Cleanup.pictures",
+    "url": "https://cleanup.pictures",
+    "category": "Image Editing and Enhancement",
+    "access": "Free",
+    "freePlan": "Core access is free; speed, quality, file size, or advanced features may be limited",
+    "why": "Remove unwanted objects from images"
+  },
+  {
+    "id": 84,
+    "name": "Topaz Photo AI",
+    "url": "https://www.topazlabs.com/topaz-photo-ai",
+    "category": "Image Editing and Enhancement",
+    "access": "Paid",
+    "freePlan": "",
+    "why": "No permanent free plan commonly advertised; demo or trial may be Upscale, sharpen, and denoise photos available"
+  },
+  {
+    "id": 85,
+    "name": "Let's Enhance",
+    "url": "https://letsenhance.io",
+    "category": "Image Editing and Enhancement",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Upscale and improve image resolution"
+  },
+  {
+    "id": 86,
+    "name": "Upscale.media",
+    "url": "https://www.upscale.media",
+    "category": "Image Editing and Enhancement",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Online image upscaling and enhancement"
+  },
+  {
+    "id": 87,
+    "name": "Pixelcut",
+    "url": "https://www.pixelcut.ai",
+    "category": "Image Editing and Enhancement",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Product-photo backgrounds and ecommerce editing"
+  },
+  {
+    "id": 88,
+    "name": "Photoroom",
+    "url": "https://www.photoroom.com",
+    "category": "Image Editing and Enhancement",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Product image cleanup and background generation"
+  },
+  {
+    "id": 89,
+    "name": "Luminar Neo",
+    "url": "https://skylum.com/luminar",
+    "category": "Image Editing and Enhancement",
+    "access": "Paid",
+    "freePlan": "",
+    "why": "No permanent free plan commonly advertised; demo or trial may be AI photo editing and enhancement available"
+  },
+  {
+    "id": 90,
+    "name": "Remini",
+    "url": "https://remini.ai",
+    "category": "Image Editing and Enhancement",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Restore and sharpen faces and old photos"
+  },
+  {
+    "id": 91,
+    "name": "VanceAI",
+    "url": "https://vanceai.com",
+    "category": "Image Editing and Enhancement",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Upscaling, denoising, and photo restoration"
+  },
+  {
+    "id": 92,
+    "name": "Cutout.Pro",
+    "url": "https://www.cutout.pro",
+    "category": "Image Editing and Enhancement",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Background removal and visual editing tools"
+  },
+  {
+    "id": 93,
+    "name": "insMind",
+    "url": "https://www.insmind.com",
+    "category": "Image Editing and Enhancement",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "AI product photography and background editing"
+  },
+  {
+    "id": 94,
+    "name": "PicWish",
+    "url": "https://picwish.com",
+    "category": "Image Editing and Enhancement",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Background removal and photo enhancement"
+  },
+  {
+    "id": 95,
+    "name": "Magic Eraser",
+    "url": "https://magiceraser.org",
+    "category": "Image Editing and Enhancement",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Erase objects from images online"
+  },
+  {
+    "id": 96,
+    "name": "Palette.fm",
+    "url": "https://palette.fm",
+    "category": "Image Editing and Enhancement",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Colorize black-and-white photos"
+  },
+  {
+    "id": 97,
+    "name": "WatermarkRemover.io",
+    "url": "https://www.watermarkremover.io",
+    "category": "Image Editing and Enhancement",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Remove simple image watermarks where legally permitted"
+  },
+  {
+    "id": 98,
+    "name": "RestorePhotos.io",
+    "url": "https://www.restorephotos.io",
+    "category": "Image Editing and Enhancement",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Restore blurry or damaged face photos"
+  },
+  {
+    "id": 99,
+    "name": "Nero AI Image Upscaler",
+    "url": "https://ai.nero.com/image-upscaler",
+    "category": "Image Editing and Enhancement",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Upscale and sharpen images"
+  },
+  {
+    "id": 100,
+    "name": "Img.Upscaler",
+    "url": "https://imgupscaler.com",
+    "category": "Image Editing and Enhancement",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Batch image enlargement and enhancement"
+  },
+  {
+    "id": 101,
+    "name": "Runway",
+    "url": "https://runwayml.com",
+    "category": "Video Generation",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate and edit cinematic AI video"
+  },
+  {
+    "id": 102,
+    "name": "Pika",
+    "url": "https://pika.art",
+    "category": "Video Generation",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Create short videos from text and images"
+  },
+  {
+    "id": 103,
+    "name": "Luma Dream Machine",
+    "url": "https://lumalabs.ai/dream-machine",
+    "category": "Video Generation",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate realistic video clips"
+  },
+  {
+    "id": 104,
+    "name": "Kling AI",
+    "url": "https://klingai.com",
+    "category": "Video Generation",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Create high-motion cinematic videos"
+  },
+  {
+    "id": 105,
+    "name": "Hailuo AI",
+    "url": "https://hailuoai.video",
+    "category": "Video Generation",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate short videos from prompts or images"
+  },
+  {
+    "id": 106,
+    "name": "Google Veo",
+    "url": "https://deepmind.google/models/veo",
+    "category": "Video Generation",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "High-quality text-to-video generation"
+  },
+  {
+    "id": 107,
+    "name": "OpenAI Sora",
+    "url": "https://openai.com/sora",
+    "category": "Video Generation",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate and remix video scenes"
+  },
+  {
+    "id": 108,
+    "name": "Adobe Firefly Video",
+    "url": "https://firefly.adobe.com",
+    "category": "Video Generation",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate video clips for creative workflows"
+  },
+  {
+    "id": 109,
+    "name": "PixVerse",
+    "url": "https://pixverse.ai",
+    "category": "Video Generation",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Create stylized text-to-video clips"
+  },
+  {
+    "id": 110,
+    "name": "Vidu",
+    "url": "https://www.vidu.com",
+    "category": "Video Generation",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate video from text, image, or references"
+  },
+  {
+    "id": 111,
+    "name": "Haiper",
+    "url": "https://haiper.ai",
+    "category": "Video Generation",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Fast generative video creation"
+  },
+  {
+    "id": 112,
+    "name": "Genmo",
+    "url": "https://www.genmo.ai",
+    "category": "Video Generation",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate creative videos and animations"
+  },
+  {
+    "id": 113,
+    "name": "LTX Studio",
+    "url": "https://ltx.studio",
+    "category": "Video Generation",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "AI filmmaking, storyboarding, and scene generation"
+  },
+  {
+    "id": 114,
+    "name": "Pollo AI",
+    "url": "https://pollo.ai",
+    "category": "Video Generation",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Access multiple AI video models"
+  },
+  {
+    "id": 115,
+    "name": "Kaiber",
+    "url": "https://kaiber.ai",
+    "category": "Video Generation",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Create music visuals and stylized animations"
+  },
+  {
+    "id": 116,
+    "name": "Stable Video Diffusion",
+    "url": "https://stability.ai/stable-video",
+    "category": "Video Generation",
+    "access": "Open Source",
+    "freePlan": "Software is free; local/cloud compute and API usage may cost extra",
+    "why": "Open generative video model"
+  },
+  {
+    "id": 117,
+    "name": "Moonvalley",
+    "url": "https://www.moonvalley.com",
+    "category": "Video Generation",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate film-oriented AI video"
+  },
+  {
+    "id": 118,
+    "name": "Higgsfield",
+    "url": "https://higgsfield.ai",
+    "category": "Video Generation",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Camera-motion focused AI video generation"
+  },
+  {
+    "id": 119,
+    "name": "DomoAI",
+    "url": "https://domoai.app",
+    "category": "Video Generation",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Animate images and transform video styles"
+  },
+  {
+    "id": 120,
+    "name": "LensGo",
+    "url": "https://lensgo.ai",
+    "category": "Video Generation",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate videos and train visual styles"
+  },
+  {
+    "id": 121,
+    "name": "CapCut",
+    "url": "https://www.capcut.com",
+    "category": "Video Editing and Repurposing",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "AI-assisted mobile and desktop video editing"
+  },
+  {
+    "id": 122,
+    "name": "Descript",
+    "url": "https://www.descript.com",
+    "category": "Video Editing and Repurposing",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Edit video and audio by editing text"
+  },
+  {
+    "id": 123,
+    "name": "OpusClip",
+    "url": "https://www.opus.pro",
+    "category": "Video Editing and Repurposing",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Turn long videos into short social clips"
+  },
+  {
+    "id": 124,
+    "name": "InVideo AI",
+    "url": "https://invideo.io/ai",
+    "category": "Video Editing and Repurposing",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate edited videos from prompts and scripts"
+  },
+  {
+    "id": 125,
+    "name": "VEED",
+    "url": "https://www.veed.io",
+    "category": "Video Editing and Repurposing",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Browser video editing, captions, and avatars"
+  },
+  {
+    "id": 126,
+    "name": "Wisecut",
+    "url": "https://www.wisecut.video",
+    "category": "Video Editing and Repurposing",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Automatically cut talking videos and add subtitles"
+  },
+  {
+    "id": 127,
+    "name": "Vizard",
+    "url": "https://vizard.ai",
+    "category": "Video Editing and Repurposing",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Repurpose webinars and podcasts into clips"
+  },
+  {
+    "id": 128,
+    "name": "Klap",
+    "url": "https://klap.app",
+    "category": "Video Editing and Repurposing",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Convert long videos to vertical shorts"
+  },
+  {
+    "id": 129,
+    "name": "Munch",
+    "url": "https://www.getmunch.com",
+    "category": "Video Editing and Repurposing",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Find and edit engaging short clips"
+  },
+  {
+    "id": 130,
+    "name": "Vidyo.ai",
+    "url": "https://vidyo.ai",
+    "category": "Video Editing and Repurposing",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "AI clipping and social-video repurposing"
+  },
+  {
+    "id": 131,
+    "name": "Filmora",
+    "url": "https://filmora.wondershare.com",
+    "category": "Video Editing and Repurposing",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Consumer video editor with AI features"
+  },
+  {
+    "id": 132,
+    "name": "Adobe Premiere Pro",
+    "url": "https://www.adobe.com/products/premiere.html",
+    "category": "Video Editing and Repurposing",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Professional editing with AI-assisted tools"
+  },
+  {
+    "id": 133,
+    "name": "DaVinci Resolve",
+    "url": "https://www.blackmagicdesign.com/products/davinciresol",
+    "category": "Video Editing and Repurposing",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Professional editing, color, audio, and neural tools ve"
+  },
+  {
+    "id": 134,
+    "name": "Gling",
+    "url": "https://www.gling.ai",
+    "category": "Video Editing and Repurposing",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Remove mistakes and silences from talking videos"
+  },
+  {
+    "id": 135,
+    "name": "Captions",
+    "url": "https://www.captions.ai",
+    "category": "Video Editing and Repurposing",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Mobile-first AI editing and talking videos"
+  },
+  {
+    "id": 136,
+    "name": "Submagic",
+    "url": "https://www.submagic.co",
+    "category": "Video Editing and Repurposing",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Create animated captions and short-form edits"
+  },
+  {
+    "id": 137,
+    "name": "Quso.ai",
+    "url": "https://quso.ai",
+    "category": "Video Editing and Repurposing",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Repurpose and schedule social video content"
+  },
+  {
+    "id": 138,
+    "name": "Riverside Magic Clips",
+    "url": "https://riverside.fm/magic-clips",
+    "category": "Video Editing and Repurposing",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate clips from recorded interviews"
+  },
+  {
+    "id": 139,
+    "name": "TimeBolt",
+    "url": "https://www.timebolt.io",
+    "category": "Video Editing and Repurposing",
+    "access": "Freemium",
+    "freePlan": "Time-limited trial or sample credits; paid plan needed afterward",
+    "why": "Remove silence and speed up editing"
+  },
+  {
+    "id": 140,
+    "name": "AutoPod",
+    "url": "https://www.autopod.fm",
+    "category": "Video Editing and Repurposing",
+    "access": "Freemium",
+    "freePlan": "Time-limited trial or sample credits; paid plan needed afterward",
+    "why": "Automate multicamera podcast editing in Premiere"
+  },
+  {
+    "id": 141,
+    "name": "ElevenLabs",
+    "url": "https://elevenlabs.io",
+    "category": "Voice and Text to Speech",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Realistic text-to-speech, dubbing, and voice cloning"
+  },
+  {
+    "id": 142,
+    "name": "Murf",
+    "url": "https://murf.ai",
+    "category": "Voice and Text to Speech",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Business voiceovers and studio editing"
+  },
+  {
+    "id": 143,
+    "name": "PlayHT",
+    "url": "https://play.ht",
+    "category": "Voice and Text to Speech",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Text-to-speech APIs and voice cloning"
+  },
+  {
+    "id": 144,
+    "name": "Speechify",
+    "url": "https://speechify.com",
+    "category": "Voice and Text to Speech",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Read documents and webpages aloud"
+  },
+  {
+    "id": 145,
+    "name": "LOVO",
+    "url": "https://lovo.ai",
+    "category": "Voice and Text to Speech",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Voiceovers for videos, ads, and training"
+  },
+  {
+    "id": 146,
+    "name": "Resemble AI",
+    "url": "https://www.resemble.ai",
+    "category": "Voice and Text to Speech",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Custom synthetic voices and speech APIs"
+  },
+  {
+    "id": 147,
+    "name": "WellSaid Labs",
+    "url": "https://wellsaidlabs.com",
+    "category": "Voice and Text to Speech",
+    "access": "Paid",
+    "freePlan": "",
+    "why": "No permanent free plan commonly advertised; demo or trial may be Professional studio-quality voice generation available"
+  },
+  {
+    "id": 148,
+    "name": "Typecast",
+    "url": "https://typecast.ai",
+    "category": "Voice and Text to Speech",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Expressive voices and virtual actors"
+  },
+  {
+    "id": 149,
+    "name": "NaturalReader",
+    "url": "https://www.naturalreaders.com",
+    "category": "Voice and Text to Speech",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Text-to-speech for documents and accessibility"
+  },
+  {
+    "id": 150,
+    "name": "Amazon Polly",
+    "url": "https://aws.amazon.com/polly",
+    "category": "Voice and Text to Speech",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Cloud text-to-speech API"
+  },
+  {
+    "id": 151,
+    "name": "Google Cloud",
+    "url": "https://cloud.google.com/text-to-speech",
+    "category": "Voice and Text to Speech",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Cloud neural speech synthesis Text-to-Speech"
+  },
+  {
+    "id": 152,
+    "name": "Azure AI Speech",
+    "url": "https://azure.microsoft.com/products/ai-services/ai-speec",
+    "category": "Voice and Text to Speech",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Speech recognition, synthesis, and translation h"
+  },
+  {
+    "id": 153,
+    "name": "OpenAI Text-to-Speech",
+    "url": "https://platform.openai.com/docs/guides/text-to-speech",
+    "category": "Voice and Text to Speech",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Developer API for synthetic speech"
+  },
+  {
+    "id": 154,
+    "name": "Listnr",
+    "url": "https://www.listnr.ai",
+    "category": "Voice and Text to Speech",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Create voiceovers and audio content"
+  },
+  {
+    "id": 155,
+    "name": "Narakeet",
+    "url": "https://www.narakeet.com",
+    "category": "Voice and Text to Speech",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Turn scripts and slides into narrated video"
+  },
+  {
+    "id": 156,
+    "name": "TTSMaker",
+    "url": "https://ttsmaker.com",
+    "category": "Voice and Text to Speech",
+    "access": "Free",
+    "freePlan": "Core access is free; speed, quality, file size, or advanced features may be limited",
+    "why": "Simple online text-to-speech generation"
+  },
+  {
+    "id": 157,
+    "name": "Voice.ai",
+    "url": "https://voice.ai",
+    "category": "Voice and Text to Speech",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Real-time voice changing and cloning"
+  },
+  {
+    "id": 158,
+    "name": "Altered Studio",
+    "url": "https://www.altered.ai",
+    "category": "Voice and Text to Speech",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Voice transformation and dubbing"
+  },
+  {
+    "id": 159,
+    "name": "Kits AI",
+    "url": "https://www.kits.ai",
+    "category": "Voice and Text to Speech",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Music-focused voice conversion and singing voices"
+  },
+  {
+    "id": 160,
+    "name": "Replica Studios",
+    "url": "https://replicastudios.com",
+    "category": "Voice and Text to Speech",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Character voices for games and stories"
+  },
+  {
+    "id": 161,
+    "name": "Suno",
+    "url": "https://suno.com",
+    "category": "Audio, Music, and Podcasting",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate complete songs from text prompts"
+  },
+  {
+    "id": 162,
+    "name": "Udio",
+    "url": "https://www.udio.com",
+    "category": "Audio, Music, and Podcasting",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Create and extend AI-generated music"
+  },
+  {
+    "id": 163,
+    "name": "AIVA",
+    "url": "https://www.aiva.ai",
+    "category": "Audio, Music, and Podcasting",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Compose instrumental music and soundtracks"
+  },
+  {
+    "id": 164,
+    "name": "Soundraw",
+    "url": "https://soundraw.io",
+    "category": "Audio, Music, and Podcasting",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate royalty-managed background music"
+  },
+  {
+    "id": 165,
+    "name": "Boomy",
+    "url": "https://boomy.com",
+    "category": "Audio, Music, and Podcasting",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Create and publish simple AI songs"
+  },
+  {
+    "id": 166,
+    "name": "Mubert",
+    "url": "https://mubert.com",
+    "category": "Audio, Music, and Podcasting",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate adaptive royalty-free music"
+  },
+  {
+    "id": 167,
+    "name": "Beatoven.ai",
+    "url": "https://www.beatoven.ai",
+    "category": "Audio, Music, and Podcasting",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Create mood-based background scores"
+  },
+  {
+    "id": 168,
+    "name": "Loudly",
+    "url": "https://www.loudly.com",
+    "category": "Audio, Music, and Podcasting",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate and customize music tracks"
+  },
+  {
+    "id": 169,
+    "name": "Soundful",
+    "url": "https://soundful.com",
+    "category": "Audio, Music, and Podcasting",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Create background music using templates"
+  },
+  {
+    "id": 170,
+    "name": "Stable Audio",
+    "url": "https://www.stableaudio.com",
+    "category": "Audio, Music, and Podcasting",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate music and sound effects"
+  },
+  {
+    "id": 171,
+    "name": "Adobe Podcast",
+    "url": "https://podcast.adobe.com",
+    "category": "Audio, Music, and Podcasting",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Enhance speech and record podcasts in-browser"
+  },
+  {
+    "id": 172,
+    "name": "Auphonic",
+    "url": "https://auphonic.com",
+    "category": "Audio, Music, and Podcasting",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Automatic audio leveling and podcast mastering"
+  },
+  {
+    "id": 173,
+    "name": "Krisp",
+    "url": "https://krisp.ai",
+    "category": "Audio, Music, and Podcasting",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Remove noise and transcribe meetings"
+  },
+  {
+    "id": 174,
+    "name": "Cleanvoice",
+    "url": "https://cleanvoice.ai",
+    "category": "Audio, Music, and Podcasting",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Remove filler words, mouth sounds, and silence"
+  },
+  {
+    "id": 175,
+    "name": "Podcastle",
+    "url": "https://podcastle.ai",
+    "category": "Audio, Music, and Podcasting",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Record, edit, and generate podcast audio"
+  },
+  {
+    "id": 176,
+    "name": "Wondercraft",
+    "url": "https://www.wondercraft.ai",
+    "category": "Audio, Music, and Podcasting",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Create podcasts and audio ads from text"
+  },
+  {
+    "id": 177,
+    "name": "Voicemod",
+    "url": "https://www.voicemod.net",
+    "category": "Audio, Music, and Podcasting",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Real-time voice effects and soundboards"
+  },
+  {
+    "id": 178,
+    "name": "Moises",
+    "url": "https://moises.ai",
+    "category": "Audio, Music, and Podcasting",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Separate stems, detect chords, and practice music"
+  },
+  {
+    "id": 179,
+    "name": "LALAL.AI",
+    "url": "https://www.lalal.ai",
+    "category": "Audio, Music, and Podcasting",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Separate vocals and instruments from audio"
+  },
+  {
+    "id": 180,
+    "name": "LANDR",
+    "url": "https://www.landr.com",
+    "category": "Audio, Music, and Podcasting",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "AI mastering and music distribution"
+  },
+  {
+    "id": 181,
+    "name": "Jasper",
+    "url": "https://www.jasper.ai",
+    "category": "Writing and Copywriting",
+    "access": "Paid",
+    "freePlan": "",
+    "why": "No permanent free plan commonly advertised; demo or trial may be Marketing content and brand-consistent copy available"
+  },
+  {
+    "id": 182,
+    "name": "Copy.ai",
+    "url": "https://www.copy.ai",
+    "category": "Writing and Copywriting",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Sales and marketing content workflows"
+  },
+  {
+    "id": 183,
+    "name": "Writesonic",
+    "url": "https://writesonic.com",
+    "category": "Writing and Copywriting",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Articles, ads, and AI search optimization"
+  },
+  {
+    "id": 184,
+    "name": "Rytr",
+    "url": "https://rytr.me",
+    "category": "Writing and Copywriting",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Short-form writing and content templates"
+  },
+  {
+    "id": 185,
+    "name": "Anyword",
+    "url": "https://anyword.com",
+    "category": "Writing and Copywriting",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Performance-focused marketing copy"
+  },
+  {
+    "id": 186,
+    "name": "Sudowrite",
+    "url": "https://www.sudowrite.com",
+    "category": "Writing and Copywriting",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Creative fiction writing and brainstorming"
+  },
+  {
+    "id": 187,
+    "name": "Writer",
+    "url": "https://writer.com",
+    "category": "Writing and Copywriting",
+    "access": "Paid",
+    "freePlan": "",
+    "why": "No permanent free plan commonly advertised; demo or trial may be Enterprise writing and AI agents available"
+  },
+  {
+    "id": 188,
+    "name": "HyperWrite",
+    "url": "https://www.hyperwriteai.com",
+    "category": "Writing and Copywriting",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Writing, research, and browser assistance"
+  },
+  {
+    "id": 189,
+    "name": "Simplified",
+    "url": "https://simplified.com",
+    "category": "Writing and Copywriting",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "AI writing, design, and social content"
+  },
+  {
+    "id": 190,
+    "name": "Peppertype.ai",
+    "url": "https://www.peppertype.ai",
+    "category": "Writing and Copywriting",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Marketing copy and content ideation"
+  },
+  {
+    "id": 191,
+    "name": "LongShot AI",
+    "url": "https://www.longshot.ai",
+    "category": "Writing and Copywriting",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Fact-aware long-form content generation"
+  },
+  {
+    "id": 192,
+    "name": "ContentBot",
+    "url": "https://contentbot.ai",
+    "category": "Writing and Copywriting",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Blog and marketing content automation"
+  },
+  {
+    "id": 193,
+    "name": "Scalenut",
+    "url": "https://www.scalenut.com",
+    "category": "Writing and Copywriting",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "SEO planning and long-form writing"
+  },
+  {
+    "id": 194,
+    "name": "KoalaWriter",
+    "url": "https://koala.sh",
+    "category": "Writing and Copywriting",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "SEO article generation and publishing"
+  },
+  {
+    "id": 195,
+    "name": "Narrato",
+    "url": "https://narrato.io",
+    "category": "Writing and Copywriting",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Content planning, creation, and workflows"
+  },
+  {
+    "id": 196,
+    "name": "TextCortex",
+    "url": "https://textcortex.com",
+    "category": "Writing and Copywriting",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Writing assistant and knowledge-base chat"
+  },
+  {
+    "id": 197,
+    "name": "WordHero",
+    "url": "https://wordhero.co",
+    "category": "Writing and Copywriting",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Marketing and blog content generation"
+  },
+  {
+    "id": 198,
+    "name": "ClosersCopy",
+    "url": "https://www.closerscopy.com",
+    "category": "Writing and Copywriting",
+    "access": "Freemium",
+    "freePlan": "Time-limited trial or sample credits; paid plan needed afterward",
+    "why": "Long-form sales copy and frameworks"
+  },
+  {
+    "id": 199,
+    "name": "Copymatic",
+    "url": "https://copymatic.ai",
+    "category": "Writing and Copywriting",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate ads, product copy, and blogs"
+  },
+  {
+    "id": 200,
+    "name": "ParagraphAI",
+    "url": "https://paragraphai.com",
+    "category": "Writing and Copywriting",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Mobile and browser writing assistant"
+  },
+  {
+    "id": 201,
+    "name": "Elicit",
+    "url": "https://elicit.com",
+    "category": "Research, Search, and Knowledge",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Literature reviews and research-paper analysis"
+  },
+  {
+    "id": 202,
+    "name": "Consensus",
+    "url": "https://consensus.app",
+    "category": "Research, Search, and Knowledge",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Search scientific papers and summarize evidence"
+  },
+  {
+    "id": 203,
+    "name": "Scite",
+    "url": "https://scite.ai",
+    "category": "Research, Search, and Knowledge",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Check how papers are cited and supported"
+  },
+  {
+    "id": 204,
+    "name": "Semantic Scholar",
+    "url": "https://www.semanticscholar.org",
+    "category": "Research, Search, and Knowledge",
+    "access": "Free",
+    "freePlan": "Core access is free; speed, quality, file size, or advanced features may be limited",
+    "why": "Discover and explore academic research"
+  },
+  {
+    "id": 205,
+    "name": "ResearchRabbit",
+    "url": "https://www.researchrabbit.ai",
+    "category": "Research, Search, and Knowledge",
+    "access": "Free",
+    "freePlan": "Core access is free; speed, quality, file size, or advanced features may be limited",
+    "why": "Visualize related papers and authors"
+  },
+  {
+    "id": 206,
+    "name": "Connected Papers",
+    "url": "https://www.connectedpapers.com",
+    "category": "Research, Search, and Knowledge",
+    "access": "Free",
+    "freePlan": "Core access is free; speed, quality, file size, or advanced features may be limited",
+    "why": "Map papers related to a seed publication"
+  },
+  {
+    "id": 207,
+    "name": "SciSpace",
+    "url": "https://scispace.com",
+    "category": "Research, Search, and Knowledge",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Read, explain, and search research papers"
+  },
+  {
+    "id": 208,
+    "name": "Scholarcy",
+    "url": "https://www.scholarcy.com",
+    "category": "Research, Search, and Knowledge",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Summarize papers, reports, and chapters"
+  },
+  {
+    "id": 209,
+    "name": "Litmaps",
+    "url": "https://www.litmaps.com",
+    "category": "Research, Search, and Knowledge",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Track literature and build citation maps"
+  },
+  {
+    "id": 210,
+    "name": "Inciteful",
+    "url": "https://inciteful.xyz",
+    "category": "Research, Search, and Knowledge",
+    "access": "Free",
+    "freePlan": "Core access is free; speed, quality, file size, or advanced features may be limited",
+    "why": "Discover papers through citation networks"
+  },
+  {
+    "id": 211,
+    "name": "Dimensions",
+    "url": "https://www.dimensions.ai",
+    "category": "Research, Search, and Knowledge",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Research discovery and analytics database"
+  },
+  {
+    "id": 212,
+    "name": "Lens.org",
+    "url": "https://www.lens.org",
+    "category": "Research, Search, and Knowledge",
+    "access": "Free",
+    "freePlan": "Core access is free; speed, quality, file size, or advanced features may be limited",
+    "why": "Search scholarly works and patents"
+  },
+  {
+    "id": 213,
+    "name": "Wolfram Alpha",
+    "url": "https://www.wolframalpha.com",
+    "category": "Research, Search, and Knowledge",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Computational answers and knowledge queries"
+  },
+  {
+    "id": 214,
+    "name": "Glean",
+    "url": "https://www.glean.com",
+    "category": "Research, Search, and Knowledge",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Enterprise search across workplace knowledge"
+  },
+  {
+    "id": 215,
+    "name": "Hebbia",
+    "url": "https://www.hebbia.ai",
+    "category": "Research, Search, and Knowledge",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Analyze large collections of business documents"
+  },
+  {
+    "id": 216,
+    "name": "Kagi Assistant",
+    "url": "https://kagi.com/assistant",
+    "category": "Research, Search, and Knowledge",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Private search and AI assistant"
+  },
+  {
+    "id": 217,
+    "name": "Exa",
+    "url": "https://exa.ai",
+    "category": "Research, Search, and Knowledge",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Semantic web search API for AI applications"
+  },
+  {
+    "id": 218,
+    "name": "Tavily",
+    "url": "https://tavily.com",
+    "category": "Research, Search, and Knowledge",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Search API designed for AI agents"
+  },
+  {
+    "id": 219,
+    "name": "You.com Research",
+    "url": "https://you.com",
+    "category": "Research, Search, and Knowledge",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "AI-assisted web research and source synthesis"
+  },
+  {
+    "id": 220,
+    "name": "NotebookLM",
+    "url": "https://notebooklm.google",
+    "category": "Research, Search, and Knowledge",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Ask questions and create summaries from your sources"
+  },
+  {
+    "id": 221,
+    "name": "ChatPDF",
+    "url": "https://www.chatpdf.com",
+    "category": "PDF and Document AI",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Ask questions about PDF documents"
+  },
+  {
+    "id": 222,
+    "name": "AskYourPDF",
+    "url": "https://askyourpdf.com",
+    "category": "PDF and Document AI",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Chat with PDFs and summarize documents"
+  },
+  {
+    "id": 223,
+    "name": "Humata",
+    "url": "https://www.humata.ai",
+    "category": "PDF and Document AI",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Analyze and explain documents"
+  },
+  {
+    "id": 224,
+    "name": "PDF.ai",
+    "url": "https://pdf.ai",
+    "category": "PDF and Document AI",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Conversational PDF reading"
+  },
+  {
+    "id": 225,
+    "name": "UPDF AI",
+    "url": "https://updf.com/ai",
+    "category": "PDF and Document AI",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Summarize, translate, and explain PDFs"
+  },
+  {
+    "id": 226,
+    "name": "Smallpdf AI PDF Assistant",
+    "url": "https://smallpdf.com/ai-pdf",
+    "category": "PDF and Document AI",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Chat with and summarize PDF files"
+  },
+  {
+    "id": 227,
+    "name": "Adobe Acrobat AI Assistant",
+    "url": "https://www.adobe.com/acrobat/generative-ai-pdf.html",
+    "category": "PDF and Document AI",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Summarize and query PDFs inside Acrobat"
+  },
+  {
+    "id": 228,
+    "name": "Foxit AI Assistant",
+    "url": "https://www.foxit.com/ai",
+    "category": "PDF and Document AI",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "AI reading and editing for PDFs"
+  },
+  {
+    "id": 229,
+    "name": "LightPDF AI",
+    "url": "https://lightpdf.com/chatdoc",
+    "category": "PDF and Document AI",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Chat with documents online"
+  },
+  {
+    "id": 230,
+    "name": "Documind",
+    "url": "https://documind.chat",
+    "category": "PDF and Document AI",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Create document chatbots and extract answers"
+  },
+  {
+    "id": 231,
+    "name": "Sharly AI",
+    "url": "https://sharly.ai",
+    "category": "PDF and Document AI",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Analyze multiple documents and generate insights"
+  },
+  {
+    "id": 232,
+    "name": "DocAnalyzer.ai",
+    "url": "https://docanalyzer.ai",
+    "category": "PDF and Document AI",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Extract and query information from documents"
+  },
+  {
+    "id": 233,
+    "name": "Afforai",
+    "url": "https://afforai.com",
+    "category": "PDF and Document AI",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Research assistant for documents and citations"
+  },
+  {
+    "id": 234,
+    "name": "FileGPT",
+    "url": "https://filegpt.app",
+    "category": "PDF and Document AI",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Chat with files, webpages, audio, and video"
+  },
+  {
+    "id": 235,
+    "name": "Coral AI",
+    "url": "https://www.getcoralai.com",
+    "category": "PDF and Document AI",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Summarize and query uploaded documents"
+  },
+  {
+    "id": 236,
+    "name": "Explainpaper",
+    "url": "https://www.explainpaper.com",
+    "category": "PDF and Document AI",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Explain difficult passages in academic papers"
+  },
+  {
+    "id": 237,
+    "name": "DocHub AI",
+    "url": "https://www.dochub.com",
+    "category": "PDF and Document AI",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Edit, sign, and process documents with AI"
+  },
+  {
+    "id": 238,
+    "name": "Rossum",
+    "url": "https://rossum.ai",
+    "category": "PDF and Document AI",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Automate business-document data extraction"
+  },
+  {
+    "id": 239,
+    "name": "Nanonets",
+    "url": "https://nanonets.com",
+    "category": "PDF and Document AI",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Extract structured data from documents"
+  },
+  {
+    "id": 240,
+    "name": "Docsumo",
+    "url": "https://www.docsumo.com",
+    "category": "PDF and Document AI",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Automate document data capture and review"
+  },
+  {
+    "id": 241,
+    "name": "Gamma",
+    "url": "https://gamma.app",
+    "category": "Presentations and Slides",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate presentations, documents, and webpages"
+  },
+  {
+    "id": 242,
+    "name": "Tome",
+    "url": "https://tome.app",
+    "category": "Presentations and Slides",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Create narrative presentations with AI"
+  },
+  {
+    "id": 243,
+    "name": "Beautiful.ai",
+    "url": "https://www.beautiful.ai",
+    "category": "Presentations and Slides",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Automatically design business presentations"
+  },
+  {
+    "id": 244,
+    "name": "Canva Magic Design",
+    "url": "https://www.canva.com/magic-design",
+    "category": "Presentations and Slides",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate presentation designs and content"
+  },
+  {
+    "id": 245,
+    "name": "Microsoft Copilot for",
+    "url": "https://www.microsoft.com/microsoft-365/copilot",
+    "category": "Presentations and Slides",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Create and revise PowerPoint decks PowerPoint"
+  },
+  {
+    "id": 246,
+    "name": "SlidesAI",
+    "url": "https://www.slidesai.io",
+    "category": "Presentations and Slides",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate Google Slides from text"
+  },
+  {
+    "id": 247,
+    "name": "Plus AI",
+    "url": "https://www.plusdocs.com",
+    "category": "Presentations and Slides",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Create and edit slides in Google Slides and PowerPoint"
+  },
+  {
+    "id": 248,
+    "name": "Pitch",
+    "url": "https://pitch.com",
+    "category": "Presentations and Slides",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Collaborative presentations with AI assistance"
+  },
+  {
+    "id": 249,
+    "name": "Decktopus",
+    "url": "https://www.decktopus.com",
+    "category": "Presentations and Slides",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate presentations and forms"
+  },
+  {
+    "id": 250,
+    "name": "Presentations.AI",
+    "url": "https://www.presentations.ai",
+    "category": "Presentations and Slides",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Create branded decks from prompts"
+  },
+  {
+    "id": 251,
+    "name": "MagicSlides",
+    "url": "https://www.magicslides.app",
+    "category": "Presentations and Slides",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate slides from text, URLs, and files"
+  },
+  {
+    "id": 252,
+    "name": "Sendsteps",
+    "url": "https://www.sendsteps.com",
+    "category": "Presentations and Slides",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Interactive AI presentations and quizzes"
+  },
+  {
+    "id": 253,
+    "name": "Prezi AI",
+    "url": "https://prezi.com/ai",
+    "category": "Presentations and Slides",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate dynamic, zoomable presentations"
+  },
+  {
+    "id": 254,
+    "name": "Visme AI",
+    "url": "https://www.visme.co/ai-presentation-maker",
+    "category": "Presentations and Slides",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Create visual presentations and reports"
+  },
+  {
+    "id": 255,
+    "name": "Simplified AI Presentation",
+    "url": "https://simplified.com/ai-presentation-maker",
+    "category": "Presentations and Slides",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate slide decks quickly Maker"
+  },
+  {
+    "id": 256,
+    "name": "PopAI",
+    "url": "https://www.popai.pro",
+    "category": "Presentations and Slides",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Create presentations and chat with documents"
+  },
+  {
+    "id": 257,
+    "name": "SlideSpeak",
+    "url": "https://slidespeak.co",
+    "category": "Presentations and Slides",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Summarize and generate PowerPoint presentations"
+  },
+  {
+    "id": 258,
+    "name": "Storydoc",
+    "url": "https://www.storydoc.com",
+    "category": "Presentations and Slides",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Create interactive sales presentations"
+  },
+  {
+    "id": 259,
+    "name": "DeckRobot",
+    "url": "https://deckrobot.com",
+    "category": "Presentations and Slides",
+    "access": "Freemium",
+    "freePlan": "Time-limited trial or sample credits; paid plan needed afterward",
+    "why": "Automate slide formatting and design"
+  },
+  {
+    "id": 260,
+    "name": "AutoSlide",
+    "url": "https://autoslide.ai",
+    "category": "Presentations and Slides",
+    "access": "Freemium",
+    "freePlan": "Time-limited trial or sample credits; paid plan needed afterward",
+    "why": "Generate simple slide decks using AI"
+  },
+  {
+    "id": 261,
+    "name": "Notion AI",
+    "url": "https://www.notion.so/product/ai",
+    "category": "Meetings, Notes, and Productivity",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Write, search, and summarize workspaces"
+  },
+  {
+    "id": 262,
+    "name": "Otter.ai",
+    "url": "https://otter.ai",
+    "category": "Meetings, Notes, and Productivity",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Transcribe and summarize meetings"
+  },
+  {
+    "id": 263,
+    "name": "Fireflies.ai",
+    "url": "https://fireflies.ai",
+    "category": "Meetings, Notes, and Productivity",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Record, transcribe, and search meetings"
+  },
+  {
+    "id": 264,
+    "name": "Fathom",
+    "url": "https://fathom.video",
+    "category": "Meetings, Notes, and Productivity",
+    "access": "Free",
+    "freePlan": "Core access is free; speed, quality, file size, or advanced features may be limited",
+    "why": "Free meeting recording and summaries"
+  },
+  {
+    "id": 265,
+    "name": "tl;dv",
+    "url": "https://tldv.io",
+    "category": "Meetings, Notes, and Productivity",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Record and summarize video meetings"
+  },
+  {
+    "id": 266,
+    "name": "Avoma",
+    "url": "https://www.avoma.com",
+    "category": "Meetings, Notes, and Productivity",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Meeting intelligence for sales and customer teams"
+  },
+  {
+    "id": 267,
+    "name": "Sembly AI",
+    "url": "https://www.sembly.ai",
+    "category": "Meetings, Notes, and Productivity",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Meeting notes, tasks, and insights"
+  },
+  {
+    "id": 268,
+    "name": "Read AI",
+    "url": "https://www.read.ai",
+    "category": "Meetings, Notes, and Productivity",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Meeting summaries and engagement analytics"
+  },
+  {
+    "id": 269,
+    "name": "MeetGeek",
+    "url": "https://meetgeek.ai",
+    "category": "Meetings, Notes, and Productivity",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Automated meeting notes and workflows"
+  },
+  {
+    "id": 270,
+    "name": "Supernormal",
+    "url": "https://supernormal.com",
+    "category": "Meetings, Notes, and Productivity",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Meeting notes and action items"
+  },
+  {
+    "id": 271,
+    "name": "Granola",
+    "url": "https://www.granola.ai",
+    "category": "Meetings, Notes, and Productivity",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "AI notepad for meetings"
+  },
+  {
+    "id": 272,
+    "name": "Krisp AI Meeting Assistant",
+    "url": "https://krisp.ai",
+    "category": "Meetings, Notes, and Productivity",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Noise cancellation, transcription, and summaries"
+  },
+  {
+    "id": 273,
+    "name": "Mem",
+    "url": "https://mem.ai",
+    "category": "Meetings, Notes, and Productivity",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "AI-organized notes and knowledge"
+  },
+  {
+    "id": 274,
+    "name": "Reflect",
+    "url": "https://reflect.app",
+    "category": "Meetings, Notes, and Productivity",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Networked notes with AI assistance"
+  },
+  {
+    "id": 275,
+    "name": "Taskade",
+    "url": "https://www.taskade.com",
+    "category": "Meetings, Notes, and Productivity",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "AI tasks, agents, mind maps, and collaboration"
+  },
+  {
+    "id": 276,
+    "name": "Motion",
+    "url": "https://www.usemotion.com",
+    "category": "Meetings, Notes, and Productivity",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "AI calendar planning and task scheduling"
+  },
+  {
+    "id": 277,
+    "name": "Reclaim AI",
+    "url": "https://reclaim.ai",
+    "category": "Meetings, Notes, and Productivity",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Automatically schedule habits, tasks, and meetings"
+  },
+  {
+    "id": 278,
+    "name": "Clockwise",
+    "url": "https://www.getclockwise.com",
+    "category": "Meetings, Notes, and Productivity",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Optimize team calendars and focus time"
+  },
+  {
+    "id": 279,
+    "name": "Sunsama",
+    "url": "https://www.sunsama.com",
+    "category": "Meetings, Notes, and Productivity",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Guided daily planning and task management"
+  },
+  {
+    "id": 280,
+    "name": "Akiflow",
+    "url": "https://akiflow.com",
+    "category": "Meetings, Notes, and Productivity",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Combine tasks and calendars with smart planning"
+  },
+  {
+    "id": 281,
+    "name": "Surfer SEO",
+    "url": "https://surferseo.com",
+    "category": "Marketing, SEO, and Social Media",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Optimize content for search engines"
+  },
+  {
+    "id": 282,
+    "name": "Frase",
+    "url": "https://www.frase.io",
+    "category": "Marketing, SEO, and Social Media",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Research and optimize SEO articles"
+  },
+  {
+    "id": 283,
+    "name": "Clearscope",
+    "url": "https://www.clearscope.io",
+    "category": "Marketing, SEO, and Social Media",
+    "access": "Paid",
+    "freePlan": "",
+    "why": "No permanent free plan commonly advertised; demo or trial may be Content optimization and keyword coverage available"
+  },
+  {
+    "id": 284,
+    "name": "MarketMuse",
+    "url": "https://www.marketmuse.com",
+    "category": "Marketing, SEO, and Social Media",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Content strategy and topical authority planning"
+  },
+  {
+    "id": 285,
+    "name": "NeuronWriter",
+    "url": "https://neuronwriter.com",
+    "category": "Marketing, SEO, and Social Media",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "SEO content briefs and optimization"
+  },
+  {
+    "id": 286,
+    "name": "Semrush Copilot",
+    "url": "https://www.semrush.com",
+    "category": "Marketing, SEO, and Social Media",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "AI insights across SEO and marketing data"
+  },
+  {
+    "id": 287,
+    "name": "Ahrefs AI Content Helper",
+    "url": "https://ahrefs.com",
+    "category": "Marketing, SEO, and Social Media",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Improve topic coverage using search data"
+  },
+  {
+    "id": 288,
+    "name": "Predis.ai",
+    "url": "https://predis.ai",
+    "category": "Marketing, SEO, and Social Media",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Create and schedule social media posts"
+  },
+  {
+    "id": 289,
+    "name": "Buffer AI Assistant",
+    "url": "https://buffer.com/ai-assistant",
+    "category": "Marketing, SEO, and Social Media",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Draft and repurpose social posts"
+  },
+  {
+    "id": 290,
+    "name": "Hootsuite OwlyWriter AI",
+    "url": "https://www.hootsuite.com/products/owlywriter-ai",
+    "category": "Marketing, SEO, and Social Media",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate social captions and content ideas"
+  },
+  {
+    "id": 291,
+    "name": "Ocoya",
+    "url": "https://www.ocoya.com",
+    "category": "Marketing, SEO, and Social Media",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Create and schedule social content"
+  },
+  {
+    "id": 292,
+    "name": "Taplio",
+    "url": "https://taplio.com",
+    "category": "Marketing, SEO, and Social Media",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "LinkedIn content creation and scheduling"
+  },
+  {
+    "id": 293,
+    "name": "Tweethunter",
+    "url": "https://tweethunter.io",
+    "category": "Marketing, SEO, and Social Media",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Create and schedule X/Twitter content"
+  },
+  {
+    "id": 294,
+    "name": "Flick",
+    "url": "https://www.flick.social",
+    "category": "Marketing, SEO, and Social Media",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Instagram content, hashtags, and scheduling"
+  },
+  {
+    "id": 295,
+    "name": "AdCreative.ai",
+    "url": "https://www.adcreative.ai",
+    "category": "Marketing, SEO, and Social Media",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate advertising creatives and copy"
+  },
+  {
+    "id": 296,
+    "name": "Pencil",
+    "url": "https://www.trypencil.com",
+    "category": "Marketing, SEO, and Social Media",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate and test ecommerce ad creatives"
+  },
+  {
+    "id": 297,
+    "name": "Omneky",
+    "url": "https://www.omneky.com",
+    "category": "Marketing, SEO, and Social Media",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Create and optimize multichannel ads"
+  },
+  {
+    "id": 298,
+    "name": "Unbounce Smart Copy",
+    "url": "https://unbounce.com/product/smart-copy",
+    "category": "Marketing, SEO, and Social Media",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate landing-page and campaign copy"
+  },
+  {
+    "id": 299,
+    "name": "Brandwatch Iris",
+    "url": "https://www.brandwatch.com",
+    "category": "Marketing, SEO, and Social Media",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Analyze consumer and social data with AI"
+  },
+  {
+    "id": 300,
+    "name": "Brand24",
+    "url": "https://brand24.com",
+    "category": "Marketing, SEO, and Social Media",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Monitor online mentions and sentiment"
+  },
+  {
+    "id": 301,
+    "name": "Intercom Fin",
+    "url": "https://www.intercom.com/fin",
+    "category": "Sales and Customer Support",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "AI customer-support agent"
+  },
+  {
+    "id": 302,
+    "name": "Zendesk AI",
+    "url": "https://www.zendesk.com/ai",
+    "category": "Sales and Customer Support",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Automate support and agent assistance"
+  },
+  {
+    "id": 303,
+    "name": "Freshworks Freddy AI",
+    "url": "https://www.freshworks.com/freddy-ai",
+    "category": "Sales and Customer Support",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "AI for customer service, sales, and IT"
+  },
+  {
+    "id": 304,
+    "name": "Salesforce Einstein",
+    "url": "https://www.salesforce.com/einstein",
+    "category": "Sales and Customer Support",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "AI insights and automation in Salesforce"
+  },
+  {
+    "id": 305,
+    "name": "HubSpot Breeze",
+    "url": "https://www.hubspot.com/products/artificial-intelligence",
+    "category": "Sales and Customer Support",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "AI assistants and agents for CRM"
+  },
+  {
+    "id": 306,
+    "name": "Gong",
+    "url": "https://www.gong.io",
+    "category": "Sales and Customer Support",
+    "access": "Paid",
+    "freePlan": "",
+    "why": "No permanent free plan commonly advertised; demo or trial may be Analyze sales calls and revenue conversations available"
+  },
+  {
+    "id": 307,
+    "name": "Clari Copilot",
+    "url": "https://www.clari.com/products/copilot",
+    "category": "Sales and Customer Support",
+    "access": "Paid",
+    "freePlan": "",
+    "why": "No permanent free plan commonly advertised; demo or trial may be Conversation intelligence for sales teams available"
+  },
+  {
+    "id": 308,
+    "name": "Chorus by ZoomInfo",
+    "url": "https://www.zoominfo.com/products/chorus",
+    "category": "Sales and Customer Support",
+    "access": "Paid",
+    "freePlan": "",
+    "why": "No permanent free plan commonly advertised; demo or trial may be Record and analyze sales conversations available"
+  },
+  {
+    "id": 309,
+    "name": "Lavender",
+    "url": "https://www.lavender.ai",
+    "category": "Sales and Customer Support",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Improve sales emails and personalization"
+  },
+  {
+    "id": 310,
+    "name": "Regie.ai",
+    "url": "https://www.regie.ai",
+    "category": "Sales and Customer Support",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate sales sequences and prospecting content"
+  },
+  {
+    "id": 311,
+    "name": "Clay",
+    "url": "https://www.clay.com",
+    "category": "Sales and Customer Support",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Enrich leads and automate personalized outreach"
+  },
+  {
+    "id": 312,
+    "name": "Apollo AI",
+    "url": "https://www.apollo.io",
+    "category": "Sales and Customer Support",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Prospecting, enrichment, and sales engagement"
+  },
+  {
+    "id": 313,
+    "name": "Reply.io Jason AI",
+    "url": "https://reply.io",
+    "category": "Sales and Customer Support",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Automate multichannel sales outreach"
+  },
+  {
+    "id": 314,
+    "name": "Smartlead",
+    "url": "https://www.smartlead.ai",
+    "category": "Sales and Customer Support",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Cold email campaigns and deliverability"
+  },
+  {
+    "id": 315,
+    "name": "Instantly",
+    "url": "https://instantly.ai",
+    "category": "Sales and Customer Support",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Cold email outreach and lead generation"
+  },
+  {
+    "id": 316,
+    "name": "Tidio Lyro",
+    "url": "https://www.tidio.com/lyro",
+    "category": "Sales and Customer Support",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "AI support chatbot for websites"
+  },
+  {
+    "id": 317,
+    "name": "Ada",
+    "url": "https://www.ada.cx",
+    "category": "Sales and Customer Support",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Automated customer-service AI agent"
+  },
+  {
+    "id": 318,
+    "name": "Forethought",
+    "url": "https://forethought.ai",
+    "category": "Sales and Customer Support",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "AI support automation and ticket assistance"
+  },
+  {
+    "id": 319,
+    "name": "Kustomer AI",
+    "url": "https://www.kustomer.com",
+    "category": "Sales and Customer Support",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Customer-service automation in a CRM"
+  },
+  {
+    "id": 320,
+    "name": "Yuma AI",
+    "url": "https://yuma.ai",
+    "category": "Sales and Customer Support",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "AI support agent for ecommerce brands"
+  },
+  {
+    "id": 321,
+    "name": "Zapier AI",
+    "url": "https://zapier.com/ai",
+    "category": "Automation and AI Agents",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Automate workflows across thousands of apps"
+  },
+  {
+    "id": 322,
+    "name": "Make",
+    "url": "https://www.make.com",
+    "category": "Automation and AI Agents",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Visual workflow automation with AI modules"
+  },
+  {
+    "id": 323,
+    "name": "n8n",
+    "url": "https://n8n.io",
+    "category": "Automation and AI Agents",
+    "access": "Open Source",
+    "freePlan": "Software is free; local/cloud compute and API usage may cost extra",
+    "why": "Open-source workflow automation and AI agents"
+  },
+  {
+    "id": 324,
+    "name": "Gumloop",
+    "url": "https://www.gumloop.com",
+    "category": "Automation and AI Agents",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "No-code AI workflow automation"
+  },
+  {
+    "id": 325,
+    "name": "Pipedream",
+    "url": "https://pipedream.com",
+    "category": "Automation and AI Agents",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Developer workflows, APIs, and AI automation"
+  },
+  {
+    "id": 326,
+    "name": "Bardeen",
+    "url": "https://www.bardeen.ai",
+    "category": "Automation and AI Agents",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Browser automation and AI playbooks"
+  },
+  {
+    "id": 327,
+    "name": "Relay.app",
+    "url": "https://www.relay.app",
+    "category": "Automation and AI Agents",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Human-in-the-loop business automation"
+  },
+  {
+    "id": 328,
+    "name": "Lindy",
+    "url": "https://www.lindy.ai",
+    "category": "Automation and AI Agents",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Create AI employees and workflow agents"
+  },
+  {
+    "id": 329,
+    "name": "Relevance AI",
+    "url": "https://relevanceai.com",
+    "category": "Automation and AI Agents",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Build AI agents and multi-agent teams"
+  },
+  {
+    "id": 330,
+    "name": "CrewAI",
+    "url": "https://www.crewai.com",
+    "category": "Automation and AI Agents",
+    "access": "Open Source",
+    "freePlan": "Software is free; local/cloud compute and API usage may cost extra",
+    "why": "Framework for collaborative AI agents"
+  },
+  {
+    "id": 331,
+    "name": "AutoGen",
+    "url": "https://microsoft.github.io/autogen",
+    "category": "Automation and AI Agents",
+    "access": "Open Source",
+    "freePlan": "Software is free; local/cloud compute and API usage may cost extra",
+    "why": "Framework for multi-agent AI applications"
+  },
+  {
+    "id": 332,
+    "name": "LangChain",
+    "url": "https://www.langchain.com",
+    "category": "Automation and AI Agents",
+    "access": "Open Source",
+    "freePlan": "Software is free; local/cloud compute and API usage may cost extra",
+    "why": "Framework for LLM applications and agents"
+  },
+  {
+    "id": 333,
+    "name": "LlamaIndex",
+    "url": "https://www.llamaindex.ai",
+    "category": "Automation and AI Agents",
+    "access": "Open Source",
+    "freePlan": "Software is free; local/cloud compute and API usage may cost extra",
+    "why": "Connect language models to private data"
+  },
+  {
+    "id": 334,
+    "name": "Dify",
+    "url": "https://dify.ai",
+    "category": "Automation and AI Agents",
+    "access": "Open Source",
+    "freePlan": "Software is free; local/cloud compute and API usage may cost extra",
+    "why": "Build and deploy LLM apps and workflows"
+  },
+  {
+    "id": 335,
+    "name": "Flowise",
+    "url": "https://flowiseai.com",
+    "category": "Automation and AI Agents",
+    "access": "Open Source",
+    "freePlan": "Software is free; local/cloud compute and API usage may cost extra",
+    "why": "Visual builder for LLM workflows"
+  },
+  {
+    "id": 336,
+    "name": "Langflow",
+    "url": "https://www.langflow.org",
+    "category": "Automation and AI Agents",
+    "access": "Open Source",
+    "freePlan": "Software is free; local/cloud compute and API usage may cost extra",
+    "why": "Visual Python framework for AI agents"
+  },
+  {
+    "id": 337,
+    "name": "Botpress",
+    "url": "https://botpress.com",
+    "category": "Automation and AI Agents",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Build conversational AI agents"
+  },
+  {
+    "id": 338,
+    "name": "Voiceflow",
+    "url": "https://www.voiceflow.com",
+    "category": "Automation and AI Agents",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Design chat and voice agents"
+  },
+  {
+    "id": 339,
+    "name": "Stack AI",
+    "url": "https://www.stack-ai.com",
+    "category": "Automation and AI Agents",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Enterprise AI workflow builder"
+  },
+  {
+    "id": 340,
+    "name": "Dust",
+    "url": "https://dust.tt",
+    "category": "Automation and AI Agents",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Build custom workplace AI assistants"
+  },
+  {
+    "id": 341,
+    "name": "DataRobot",
+    "url": "https://www.datarobot.com",
+    "category": "Data Science and Analytics",
+    "access": "Paid",
+    "freePlan": "",
+    "why": "No permanent free plan commonly advertised; demo or trial may be Enterprise automated machine learning available"
+  },
+  {
+    "id": 342,
+    "name": "H2O.ai",
+    "url": "https://h2o.ai",
+    "category": "Data Science and Analytics",
+    "access": "Open Source",
+    "freePlan": "Software is free; local/cloud compute and API usage may cost extra",
+    "why": "AutoML and enterprise AI platforms"
+  },
+  {
+    "id": 343,
+    "name": "Dataiku",
+    "url": "https://www.dataiku.com",
+    "category": "Data Science and Analytics",
+    "access": "Paid",
+    "freePlan": "",
+    "why": "No permanent free plan commonly advertised; demo or trial may be Collaborative data science and ML operations available"
+  },
+  {
+    "id": 344,
+    "name": "Akkio",
+    "url": "https://www.akkio.com",
+    "category": "Data Science and Analytics",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "No-code predictive analytics"
+  },
+  {
+    "id": 345,
+    "name": "Obviously AI",
+    "url": "https://www.obviously.ai",
+    "category": "Data Science and Analytics",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "No-code prediction and model building"
+  },
+  {
+    "id": 346,
+    "name": "Pecan AI",
+    "url": "https://www.pecan.ai",
+    "category": "Data Science and Analytics",
+    "access": "Paid",
+    "freePlan": "",
+    "why": "No permanent free plan commonly advertised; demo or trial may be Predictive analytics for business teams available"
+  },
+  {
+    "id": 347,
+    "name": "Tableau Pulse",
+    "url": "https://www.tableau.com/products/tableau-pulse",
+    "category": "Data Science and Analytics",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Personalized AI-powered metric insights"
+  },
+  {
+    "id": 348,
+    "name": "Power BI Copilot",
+    "url": "https://www.microsoft.com/power-platform/products/powe",
+    "category": "Data Science and Analytics",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate reports and analyze data using natural language r-bi"
+  },
+  {
+    "id": 349,
+    "name": "ThoughtSpot Sage",
+    "url": "https://www.thoughtspot.com",
+    "category": "Data Science and Analytics",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Natural-language business intelligence"
+  },
+  {
+    "id": 350,
+    "name": "Hex",
+    "url": "https://hex.tech",
+    "category": "Data Science and Analytics",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Collaborative notebooks and AI analytics"
+  },
+  {
+    "id": 351,
+    "name": "Julius AI",
+    "url": "https://julius.ai",
+    "category": "Data Science and Analytics",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Chat with data and create analyses"
+  },
+  {
+    "id": 352,
+    "name": "Rows AI",
+    "url": "https://rows.com/ai",
+    "category": "Data Science and Analytics",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Analyze and enrich spreadsheet data"
+  },
+  {
+    "id": 353,
+    "name": "Formula Bot",
+    "url": "https://formulabot.com",
+    "category": "Data Science and Analytics",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate spreadsheet formulas and analyze data"
+  },
+  {
+    "id": 354,
+    "name": "Polymer",
+    "url": "https://www.polymersearch.com",
+    "category": "Data Science and Analytics",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Create dashboards from uploaded data"
+  },
+  {
+    "id": 355,
+    "name": "Databricks Assistant",
+    "url": "https://www.databricks.com/product/databricks-assistant",
+    "category": "Data Science and Analytics",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "AI help for data and analytics workflows"
+  },
+  {
+    "id": 356,
+    "name": "Snowflake Cortex",
+    "url": "https://www.snowflake.com/en/data-cloud/cortex",
+    "category": "Data Science and Analytics",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generative AI and ML inside Snowflake"
+  },
+  {
+    "id": 357,
+    "name": "BigQuery Gemini",
+    "url": "https://cloud.google.com/gemini/docs/bigquery/overview",
+    "category": "Data Science and Analytics",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "AI assistance for SQL and data analysis"
+  },
+  {
+    "id": 358,
+    "name": "Einblick",
+    "url": "https://www.einblick.ai",
+    "category": "Data Science and Analytics",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Natural-language data notebooks"
+  },
+  {
+    "id": 359,
+    "name": "Seek AI",
+    "url": "https://www.seek.ai",
+    "category": "Data Science and Analytics",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Natural-language querying for business data"
+  },
+  {
+    "id": 360,
+    "name": "MindsDB",
+    "url": "https://mindsdb.com",
+    "category": "Data Science and Analytics",
+    "access": "Open Source",
+    "freePlan": "Software is free; local/cloud compute and API usage may cost extra",
+    "why": "Connect AI models directly to databases"
+  },
+  {
+    "id": 361,
+    "name": "Hugging Face",
+    "url": "https://huggingface.co",
+    "category": "Machine Learning Platforms and APIs",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Models, datasets, Spaces, and ML collaboration"
+  },
+  {
+    "id": 362,
+    "name": "OpenAI API",
+    "url": "https://platform.openai.com",
+    "category": "Machine Learning Platforms and APIs",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Build applications with OpenAI models"
+  },
+  {
+    "id": 363,
+    "name": "Anthropic API",
+    "url": "https://www.anthropic.com/api",
+    "category": "Machine Learning Platforms and APIs",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Build applications with Claude models"
+  },
+  {
+    "id": 364,
+    "name": "Google AI Studio",
+    "url": "https://aistudio.google.com",
+    "category": "Machine Learning Platforms and APIs",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Prototype and use Gemini APIs"
+  },
+  {
+    "id": 365,
+    "name": "Azure AI Foundry",
+    "url": "https://ai.azure.com",
+    "category": "Machine Learning Platforms and APIs",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Build, evaluate, and deploy enterprise AI"
+  },
+  {
+    "id": 366,
+    "name": "Amazon Bedrock",
+    "url": "https://aws.amazon.com/bedrock",
+    "category": "Machine Learning Platforms and APIs",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Access and deploy foundation models on AWS"
+  },
+  {
+    "id": 367,
+    "name": "Vertex AI",
+    "url": "https://cloud.google.com/vertex-ai",
+    "category": "Machine Learning Platforms and APIs",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Train, deploy, and manage ML and generative AI"
+  },
+  {
+    "id": 368,
+    "name": "Replicate",
+    "url": "https://replicate.com",
+    "category": "Machine Learning Platforms and APIs",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Run open models through simple APIs"
+  },
+  {
+    "id": 369,
+    "name": "Together AI",
+    "url": "https://www.together.ai",
+    "category": "Machine Learning Platforms and APIs",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Inference, fine-tuning, and model hosting"
+  },
+  {
+    "id": 370,
+    "name": "GroqCloud",
+    "url": "https://console.groq.com",
+    "category": "Machine Learning Platforms and APIs",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Very fast inference for supported models"
+  },
+  {
+    "id": 371,
+    "name": "OpenRouter",
+    "url": "https://openrouter.ai",
+    "category": "Machine Learning Platforms and APIs",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Single API for many language models"
+  },
+  {
+    "id": 372,
+    "name": "Cohere",
+    "url": "https://cohere.com",
+    "category": "Machine Learning Platforms and APIs",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Enterprise language and embedding models"
+  },
+  {
+    "id": 373,
+    "name": "Mistral AI La Plateforme",
+    "url": "https://console.mistral.ai",
+    "category": "Machine Learning Platforms and APIs",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "APIs for Mistral language models"
+  },
+  {
+    "id": 374,
+    "name": "Fireworks AI",
+    "url": "https://fireworks.ai",
+    "category": "Machine Learning Platforms and APIs",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Fast inference and fine-tuning platform"
+  },
+  {
+    "id": 375,
+    "name": "Baseten",
+    "url": "https://www.baseten.co",
+    "category": "Machine Learning Platforms and APIs",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Deploy and serve custom AI models"
+  },
+  {
+    "id": 376,
+    "name": "Modal",
+    "url": "https://modal.com",
+    "category": "Machine Learning Platforms and APIs",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Serverless compute for AI and Python workloads"
+  },
+  {
+    "id": 377,
+    "name": "RunPod",
+    "url": "https://www.runpod.io",
+    "category": "Machine Learning Platforms and APIs",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "GPU cloud and serverless AI endpoints"
+  },
+  {
+    "id": 378,
+    "name": "Fal.ai",
+    "url": "https://fal.ai",
+    "category": "Machine Learning Platforms and APIs",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Fast APIs for generative media models"
+  },
+  {
+    "id": 379,
+    "name": "DeepInfra",
+    "url": "https://deepinfra.com",
+    "category": "Machine Learning Platforms and APIs",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Hosted inference APIs for open models"
+  },
+  {
+    "id": 380,
+    "name": "Cerebras Inference",
+    "url": "https://inference.cerebras.ai",
+    "category": "Machine Learning Platforms and APIs",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "High-speed language-model inference"
+  },
+  {
+    "id": 381,
+    "name": "Ollama",
+    "url": "https://ollama.com",
+    "category": "Open Source Models and Local AI",
+    "access": "Open Source",
+    "freePlan": "Software is free; local/cloud compute and API usage may cost extra",
+    "why": "Run language models locally"
+  },
+  {
+    "id": 382,
+    "name": "LM Studio",
+    "url": "https://lmstudio.ai",
+    "category": "Open Source Models and Local AI",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Download and chat with local models"
+  },
+  {
+    "id": 383,
+    "name": "Jan",
+    "url": "https://jan.ai",
+    "category": "Open Source Models and Local AI",
+    "access": "Open Source",
+    "freePlan": "Software is free; local/cloud compute and API usage may cost extra",
+    "why": "Open-source local AI assistant"
+  },
+  {
+    "id": 384,
+    "name": "GPT4All",
+    "url": "https://www.nomic.ai/gpt4all",
+    "category": "Open Source Models and Local AI",
+    "access": "Open Source",
+    "freePlan": "Software is free; local/cloud compute and API usage may cost extra",
+    "why": "Run private local language models"
+  },
+  {
+    "id": 385,
+    "name": "Open WebUI",
+    "url": "https://openwebui.com",
+    "category": "Open Source Models and Local AI",
+    "access": "Open Source",
+    "freePlan": "Software is free; local/cloud compute and API usage may cost extra",
+    "why": "Self-hosted interface for local and remote models"
+  },
+  {
+    "id": 386,
+    "name": "LocalAI",
+    "url": "https://localai.io",
+    "category": "Open Source Models and Local AI",
+    "access": "Open Source",
+    "freePlan": "Software is free; local/cloud compute and API usage may cost extra",
+    "why": "Open-source local alternative to AI APIs"
+  },
+  {
+    "id": 387,
+    "name": "AnythingLLM",
+    "url": "https://anythingllm.com",
+    "category": "Open Source Models and Local AI",
+    "access": "Open Source",
+    "freePlan": "Software is free; local/cloud compute and API usage may cost extra",
+    "why": "Private document chat and AI workspace"
+  },
+  {
+    "id": 388,
+    "name": "KoboldCpp",
+    "url": "https://github.com/LostRuins/koboldcpp",
+    "category": "Open Source Models and Local AI",
+    "access": "Open Source",
+    "freePlan": "Software is free; local/cloud compute and API usage may cost extra",
+    "why": "Run GGUF language models locally"
+  },
+  {
+    "id": 389,
+    "name": "text-generation-webui",
+    "url": "https://github.com/oobabooga/text-generation-webui",
+    "category": "Open Source Models and Local AI",
+    "access": "Open Source",
+    "freePlan": "Software is free; local/cloud compute and API usage may cost extra",
+    "why": "Web interface for local language models"
+  },
+  {
+    "id": 390,
+    "name": "llama.cpp",
+    "url": "https://github.com/ggml-org/llama.cpp",
+    "category": "Open Source Models and Local AI",
+    "access": "Open Source",
+    "freePlan": "Software is free; local/cloud compute and API usage may cost extra",
+    "why": "Efficient local LLM inference"
+  },
+  {
+    "id": 391,
+    "name": "vLLM",
+    "url": "https://vllm.ai",
+    "category": "Open Source Models and Local AI",
+    "access": "Open Source",
+    "freePlan": "Software is free; local/cloud compute and API usage may cost extra",
+    "why": "High-throughput LLM serving"
+  },
+  {
+    "id": 392,
+    "name": "Msty",
+    "url": "https://msty.app",
+    "category": "Open Source Models and Local AI",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Desktop app for local and online models"
+  },
+  {
+    "id": 393,
+    "name": "Pinokio",
+    "url": "https://pinokio.computer",
+    "category": "Open Source Models and Local AI",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Install and run AI applications locally"
+  },
+  {
+    "id": 394,
+    "name": "ComfyUI",
+    "url": "https://www.comfy.org",
+    "category": "Open Source Models and Local AI",
+    "access": "Open Source",
+    "freePlan": "Software is free; local/cloud compute and API usage may cost extra",
+    "why": "Node-based generative image workflows"
+  },
+  {
+    "id": 395,
+    "name": "AUTOMATIC1111 Stable",
+    "url": "https://github.com/AUTOMATIC1111/stable-diffusion-web",
+    "category": "Open Source Models and Local AI",
+    "access": "Open Source",
+    "freePlan": "Software is free; local/cloud compute and API usage may cost extra",
+    "why": "Local Stable Diffusion image generation Diffusion WebUI ui"
+  },
+  {
+    "id": 396,
+    "name": "InvokeAI",
+    "url": "https://invoke.ai",
+    "category": "Open Source Models and Local AI",
+    "access": "Open Source",
+    "freePlan": "Software is free; local/cloud compute and API usage may cost extra",
+    "why": "Professional open-source image generation"
+  },
+  {
+    "id": 397,
+    "name": "Fooocus",
+    "url": "https://github.com/lllyasviel/Fooocus",
+    "category": "Open Source Models and Local AI",
+    "access": "Open Source",
+    "freePlan": "Software is free; local/cloud compute and API usage may cost extra",
+    "why": "Simple local Stable Diffusion interface"
+  },
+  {
+    "id": 398,
+    "name": "Krita AI Diffusion",
+    "url": "https://github.com/Acly/krita-ai-diffusion",
+    "category": "Open Source Models and Local AI",
+    "access": "Open Source",
+    "freePlan": "Software is free; local/cloud compute and API usage may cost extra",
+    "why": "AI image generation inside Krita"
+  },
+  {
+    "id": 399,
+    "name": "Open Interpreter",
+    "url": "https://www.openinterpreter.com",
+    "category": "Open Source Models and Local AI",
+    "access": "Open Source",
+    "freePlan": "Software is free; local/cloud compute and API usage may cost extra",
+    "why": "Let language models run code locally"
+  },
+  {
+    "id": 400,
+    "name": "SillyTavern",
+    "url": "https://sillytavern.app",
+    "category": "Open Source Models and Local AI",
+    "access": "Open Source",
+    "freePlan": "Software is free; local/cloud compute and API usage may cost extra",
+    "why": "Local interface for character and roleplay models"
+  },
+  {
+    "id": 401,
+    "name": "Canva",
+    "url": "https://www.canva.com",
+    "category": "Design, UI, and Branding",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "AI-assisted graphic design and content creation"
+  },
+  {
+    "id": 402,
+    "name": "Figma AI",
+    "url": "https://www.figma.com/ai",
+    "category": "Design, UI, and Branding",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate, rename, search, and edit interface designs"
+  },
+  {
+    "id": 403,
+    "name": "Uizard",
+    "url": "https://uizard.io",
+    "category": "Design, UI, and Branding",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Turn text and sketches into UI designs"
+  },
+  {
+    "id": 404,
+    "name": "Galileo AI",
+    "url": "https://www.usegalileo.ai",
+    "category": "Design, UI, and Branding",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate user-interface designs from prompts"
+  },
+  {
+    "id": 405,
+    "name": "Khroma",
+    "url": "https://www.khroma.co",
+    "category": "Design, UI, and Branding",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate personalized color palettes"
+  },
+  {
+    "id": 406,
+    "name": "Looka",
+    "url": "https://looka.com",
+    "category": "Design, UI, and Branding",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Create logos and brand kits"
+  },
+  {
+    "id": 407,
+    "name": "Brandmark",
+    "url": "https://brandmark.io",
+    "category": "Design, UI, and Branding",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate logos and visual identities"
+  },
+  {
+    "id": 408,
+    "name": "LogoAI",
+    "url": "https://www.logoai.com",
+    "category": "Design, UI, and Branding",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "AI logo and brand design"
+  },
+  {
+    "id": 409,
+    "name": "Designs.ai",
+    "url": "https://designs.ai",
+    "category": "Design, UI, and Branding",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Logos, videos, graphics, and copy"
+  },
+  {
+    "id": 410,
+    "name": "Microsoft Designer",
+    "url": "https://designer.microsoft.com",
+    "category": "Design, UI, and Branding",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Create social and marketing graphics"
+  },
+  {
+    "id": 411,
+    "name": "Adobe Express",
+    "url": "https://www.adobe.com/express",
+    "category": "Design, UI, and Branding",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Quick design, video, and social content with AI"
+  },
+  {
+    "id": 412,
+    "name": "Visily",
+    "url": "https://www.visily.ai",
+    "category": "Design, UI, and Branding",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Collaborative wireframing and UI generation"
+  },
+  {
+    "id": 413,
+    "name": "Diagram",
+    "url": "https://diagram.com",
+    "category": "Design, UI, and Branding",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "AI design tools for Figma workflows"
+  },
+  {
+    "id": 414,
+    "name": "Magician for Figma",
+    "url": "https://magician.design",
+    "category": "Design, UI, and Branding",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate icons, copy, and images in Figma"
+  },
+  {
+    "id": 415,
+    "name": "Relume",
+    "url": "https://www.relume.io",
+    "category": "Design, UI, and Branding",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate sitemaps, wireframes, and web components"
+  },
+  {
+    "id": 416,
+    "name": "Motiff",
+    "url": "https://www.motiff.com",
+    "category": "Design, UI, and Branding",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "AI-powered interface design platform"
+  },
+  {
+    "id": 417,
+    "name": "Autodraw",
+    "url": "https://www.autodraw.com",
+    "category": "Design, UI, and Branding",
+    "access": "Free",
+    "freePlan": "Core access is free; speed, quality, file size, or advanced features may be limited",
+    "why": "Turn rough sketches into clean icons"
+  },
+  {
+    "id": 418,
+    "name": "Fontjoy",
+    "url": "https://fontjoy.com",
+    "category": "Design, UI, and Branding",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate compatible font pairings"
+  },
+  {
+    "id": 419,
+    "name": "PatternedAI",
+    "url": "https://www.patterned.ai",
+    "category": "Design, UI, and Branding",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate seamless patterns for products"
+  },
+  {
+    "id": 420,
+    "name": "Illustroke",
+    "url": "https://illustroke.com",
+    "category": "Design, UI, and Branding",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate vector illustrations from text"
+  },
+  {
+    "id": 421,
+    "name": "Luma AI",
+    "url": "https://lumalabs.ai",
+    "category": "3D, Architecture, and Games",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Create 3D captures and generative media"
+  },
+  {
+    "id": 422,
+    "name": "Meshy",
+    "url": "https://www.meshy.ai",
+    "category": "3D, Architecture, and Games",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate 3D models and textures from text or images"
+  },
+  {
+    "id": 423,
+    "name": "Tripo AI",
+    "url": "https://www.tripo3d.ai",
+    "category": "3D, Architecture, and Games",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Fast text and image to 3D generation"
+  },
+  {
+    "id": 424,
+    "name": "Spline AI",
+    "url": "https://spline.design/ai",
+    "category": "3D, Architecture, and Games",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Create and edit interactive 3D scenes"
+  },
+  {
+    "id": 425,
+    "name": "Kaedim",
+    "url": "https://www.kaedim3d.com",
+    "category": "3D, Architecture, and Games",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Convert images into production-ready 3D models"
+  },
+  {
+    "id": 426,
+    "name": "Masterpiece X",
+    "url": "https://www.masterpiecex.com",
+    "category": "3D, Architecture, and Games",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate and edit 3D assets"
+  },
+  {
+    "id": 427,
+    "name": "Scenario",
+    "url": "https://www.scenario.com",
+    "category": "3D, Architecture, and Games",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Train image models for consistent game assets"
+  },
+  {
+    "id": 428,
+    "name": "Leonardo AI for Games",
+    "url": "https://leonardo.ai",
+    "category": "3D, Architecture, and Games",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate game concepts, textures, and assets"
+  },
+  {
+    "id": 429,
+    "name": "Promethean AI",
+    "url": "https://www.prometheanai.com",
+    "category": "3D, Architecture, and Games",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Assist artists in building 3D environments"
+  },
+  {
+    "id": 430,
+    "name": "Inworld",
+    "url": "https://inworld.ai",
+    "category": "3D, Architecture, and Games",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Create AI characters for games and experiences"
+  },
+  {
+    "id": 431,
+    "name": "Convai",
+    "url": "https://www.convai.com",
+    "category": "3D, Architecture, and Games",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Conversational characters for games and XR"
+  },
+  {
+    "id": 432,
+    "name": "Charisma.ai",
+    "url": "https://charisma.ai",
+    "category": "3D, Architecture, and Games",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Interactive story and character engine"
+  },
+  {
+    "id": 433,
+    "name": "Rosebud AI",
+    "url": "https://rosebud.ai",
+    "category": "3D, Architecture, and Games",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate playable games with AI"
+  },
+  {
+    "id": 434,
+    "name": "Ludo.ai",
+    "url": "https://ludo.ai",
+    "category": "3D, Architecture, and Games",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Game design ideation and market research"
+  },
+  {
+    "id": 435,
+    "name": "Layer AI",
+    "url": "https://www.layer.ai",
+    "category": "3D, Architecture, and Games",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate and manage game art assets"
+  },
+  {
+    "id": 436,
+    "name": "Blockade Labs Skybox AI",
+    "url": "https://www.blockadelabs.com",
+    "category": "3D, Architecture, and Games",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate 360-degree skybox environments"
+  },
+  {
+    "id": 437,
+    "name": "GetFloorPlan",
+    "url": "https://getfloorplan.com",
+    "category": "3D, Architecture, and Games",
+    "access": "Freemium",
+    "freePlan": "Time-limited trial or sample credits; paid plan needed afterward",
+    "why": "Convert floor plans into 3D visualizations"
+  },
+  {
+    "id": 438,
+    "name": "Maket",
+    "url": "https://www.maket.ai",
+    "category": "3D, Architecture, and Games",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate residential floor plans"
+  },
+  {
+    "id": 439,
+    "name": "TestFit",
+    "url": "https://www.testfit.io",
+    "category": "3D, Architecture, and Games",
+    "access": "Freemium",
+    "freePlan": "Time-limited trial or sample credits; paid plan needed afterward",
+    "why": "AI-assisted real-estate site planning"
+  },
+  {
+    "id": 440,
+    "name": "Hypar",
+    "url": "https://hypar.io",
+    "category": "3D, Architecture, and Games",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generative design platform for buildings"
+  },
+  {
+    "id": 441,
+    "name": "Khanmigo",
+    "url": "https://www.khanacademy.org/khan-labs",
+    "category": "Education and Learning",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "AI tutor and teaching assistant"
+  },
+  {
+    "id": 442,
+    "name": "Quizlet Q-Chat",
+    "url": "https://quizlet.com",
+    "category": "Education and Learning",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "AI tutoring and study support"
+  },
+  {
+    "id": 443,
+    "name": "Duolingo Max",
+    "url": "https://www.duolingo.com",
+    "category": "Education and Learning",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "AI roleplay and explanations for language learning"
+  },
+  {
+    "id": 444,
+    "name": "Socratic",
+    "url": "https://socratic.org",
+    "category": "Education and Learning",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Homework help using camera and search"
+  },
+  {
+    "id": 445,
+    "name": "Photomath",
+    "url": "https://photomath.com",
+    "category": "Education and Learning",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Scan and explain mathematics problems"
+  },
+  {
+    "id": 446,
+    "name": "Symbolab",
+    "url": "https://www.symbolab.com",
+    "category": "Education and Learning",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Step-by-step mathematics solver"
+  },
+  {
+    "id": 447,
+    "name": "Gauth",
+    "url": "https://www.gauthmath.com",
+    "category": "Education and Learning",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Homework assistance across subjects"
+  },
+  {
+    "id": 448,
+    "name": "Study Fetch",
+    "url": "https://www.studyfetch.com",
+    "category": "Education and Learning",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Turn course material into study tools"
+  },
+  {
+    "id": 449,
+    "name": "Knowt",
+    "url": "https://knowt.com",
+    "category": "Education and Learning",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate flashcards, quizzes, and notes"
+  },
+  {
+    "id": 450,
+    "name": "Quizgecko",
+    "url": "https://quizgecko.com",
+    "category": "Education and Learning",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Create quizzes and flashcards from content"
+  },
+  {
+    "id": 451,
+    "name": "QuestionWell",
+    "url": "https://questionwell.org",
+    "category": "Education and Learning",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate classroom questions and assessments"
+  },
+  {
+    "id": 452,
+    "name": "MagicSchool AI",
+    "url": "https://www.magicschool.ai",
+    "category": "Education and Learning",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "AI tools for teachers and schools"
+  },
+  {
+    "id": 453,
+    "name": "Curipod",
+    "url": "https://curipod.com",
+    "category": "Education and Learning",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Create interactive classroom lessons"
+  },
+  {
+    "id": 454,
+    "name": "Diffit",
+    "url": "https://www.diffit.me",
+    "category": "Education and Learning",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Adapt reading materials for different levels"
+  },
+  {
+    "id": 455,
+    "name": "Eduaide.Ai",
+    "url": "https://www.eduaide.ai",
+    "category": "Education and Learning",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Lesson planning and teaching resources"
+  },
+  {
+    "id": 456,
+    "name": "Gradescope",
+    "url": "https://www.gradescope.com",
+    "category": "Education and Learning",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "AI-assisted grading and feedback"
+  },
+  {
+    "id": 457,
+    "name": "Wolfram Problem Generator",
+    "url": "https://www.wolframalpha.com/problem-generator",
+    "category": "Education and Learning",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate practice mathematics problems"
+  },
+  {
+    "id": 458,
+    "name": "Mindgrasp",
+    "url": "https://www.mindgrasp.ai",
+    "category": "Education and Learning",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Create notes, summaries, and quizzes from lectures"
+  },
+  {
+    "id": 459,
+    "name": "Caktus AI",
+    "url": "https://www.caktus.ai",
+    "category": "Education and Learning",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Student writing, coding, and study assistance"
+  },
+  {
+    "id": 460,
+    "name": "SchoolAI",
+    "url": "https://schoolai.com",
+    "category": "Education and Learning",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "AI learning spaces and teacher tools"
+  },
+  {
+    "id": 461,
+    "name": "Teal",
+    "url": "https://www.tealhq.com",
+    "category": "Recruitment, Resume, and Career",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Resume building and job-search tracking"
+  },
+  {
+    "id": 462,
+    "name": "Kickresume",
+    "url": "https://www.kickresume.com",
+    "category": "Recruitment, Resume, and Career",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Generate resumes, cover letters, and websites"
+  },
+  {
+    "id": 463,
+    "name": "Rezi",
+    "url": "https://www.rezi.ai",
+    "category": "Recruitment, Resume, and Career",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Create ATS-focused resumes"
+  },
+  {
+    "id": 464,
+    "name": "Resume.io",
+    "url": "https://resume.io",
+    "category": "Recruitment, Resume, and Career",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Resume and cover-letter builder"
+  },
+  {
+    "id": 465,
+    "name": "Enhancv",
+    "url": "https://enhancv.com",
+    "category": "Recruitment, Resume, and Career",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Design and optimize professional resumes"
+  },
+  {
+    "id": 466,
+    "name": "Resume Worded",
+    "url": "https://resumeworded.com",
+    "category": "Recruitment, Resume, and Career",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "AI feedback for resumes and LinkedIn"
+  },
+  {
+    "id": 467,
+    "name": "Jobscan",
+    "url": "https://www.jobscan.co",
+    "category": "Recruitment, Resume, and Career",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Compare resumes against job descriptions"
+  },
+  {
+    "id": 468,
+    "name": "Huntr",
+    "url": "https://huntr.co",
+    "category": "Recruitment, Resume, and Career",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Job tracker and resume tailoring"
+  },
+  {
+    "id": 469,
+    "name": "Careerflow",
+    "url": "https://www.careerflow.ai",
+    "category": "Recruitment, Resume, and Career",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Job-search copilot and LinkedIn optimization"
+  },
+  {
+    "id": 470,
+    "name": "Final Round AI",
+    "url": "https://www.finalroundai.com",
+    "category": "Recruitment, Resume, and Career",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Interview preparation and live assistance"
+  },
+  {
+    "id": 471,
+    "name": "Huru",
+    "url": "https://huru.ai",
+    "category": "Recruitment, Resume, and Career",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Practice job interviews with AI"
+  },
+  {
+    "id": 472,
+    "name": "Interview Warmup",
+    "url": "https://grow.google/certificates/interview-warmup",
+    "category": "Recruitment, Resume, and Career",
+    "access": "Free",
+    "freePlan": "Core access is free; speed, quality, file size, or advanced features may be limited",
+    "why": "Practice interview answers with feedback"
+  },
+  {
+    "id": 473,
+    "name": "Yoodli",
+    "url": "https://yoodli.ai",
+    "category": "Recruitment, Resume, and Career",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Speech and interview communication coaching"
+  },
+  {
+    "id": 474,
+    "name": "Big Interview",
+    "url": "https://biginterview.com",
+    "category": "Recruitment, Resume, and Career",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Interview training and practice"
+  },
+  {
+    "id": 475,
+    "name": "LinkedIn AI",
+    "url": "https://www.linkedin.com",
+    "category": "Recruitment, Resume, and Career",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Job search, writing, and recruiting assistance"
+  },
+  {
+    "id": 476,
+    "name": "HireVue",
+    "url": "https://www.hirevue.com",
+    "category": "Recruitment, Resume, and Career",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "AI-assisted hiring assessments and interviews"
+  },
+  {
+    "id": 477,
+    "name": "Eightfold AI",
+    "url": "https://eightfold.ai",
+    "category": "Recruitment, Resume, and Career",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Talent intelligence and recruiting"
+  },
+  {
+    "id": 478,
+    "name": "Paradox Olivia",
+    "url": "https://www.paradox.ai",
+    "category": "Recruitment, Resume, and Career",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Conversational recruiting automation"
+  },
+  {
+    "id": 479,
+    "name": "Manatal",
+    "url": "https://www.manatal.com",
+    "category": "Recruitment, Resume, and Career",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "AI recruitment and applicant tracking"
+  },
+  {
+    "id": 480,
+    "name": "Fetcher",
+    "url": "https://fetcher.ai",
+    "category": "Recruitment, Resume, and Career",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Automated candidate sourcing and outreach"
+  },
+  {
+    "id": 481,
+    "name": "Harvey",
+    "url": "https://www.harvey.ai",
+    "category": "Business, Legal, and Finance",
+    "access": "Paid",
+    "freePlan": "",
+    "why": "No permanent free plan commonly advertised; demo or trial may be Generative AI for legal professionals available"
+  },
+  {
+    "id": 482,
+    "name": "CoCounsel",
+    "url": "https://legal.thomsonreuters.com/en/products/cocounsel",
+    "category": "Business, Legal, and Finance",
+    "access": "Paid",
+    "freePlan": "",
+    "why": "No permanent free plan commonly advertised; demo or trial may be Legal research, review, and drafting available"
+  },
+  {
+    "id": 483,
+    "name": "Lexis+ AI",
+    "url": "https://www.lexisnexis.com/en-us/products/lexis-plus-ai.p",
+    "category": "Business, Legal, and Finance",
+    "access": "Paid",
+    "freePlan": "",
+    "why": "No permanent free plan commonly advertised; demo or trial may be Conversational legal research and drafting age available"
+  },
+  {
+    "id": 484,
+    "name": "Spellbook",
+    "url": "https://www.spellbook.legal",
+    "category": "Business, Legal, and Finance",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Review and draft contracts in Microsoft Word"
+  },
+  {
+    "id": 485,
+    "name": "Luminance",
+    "url": "https://www.luminance.com",
+    "category": "Business, Legal, and Finance",
+    "access": "Paid",
+    "freePlan": "",
+    "why": "No permanent free plan commonly advertised; demo or trial may be Contract review and legal document analysis available"
+  },
+  {
+    "id": 486,
+    "name": "Ironclad AI",
+    "url": "https://ironcladapp.com/ai",
+    "category": "Business, Legal, and Finance",
+    "access": "Paid",
+    "freePlan": "",
+    "why": "No permanent free plan commonly advertised; demo or trial may be Contract lifecycle automation available"
+  },
+  {
+    "id": 487,
+    "name": "Robin AI",
+    "url": "https://www.robinai.com",
+    "category": "Business, Legal, and Finance",
+    "access": "Paid",
+    "freePlan": "",
+    "why": "No permanent free plan commonly advertised; demo or trial may be Contract review and legal assistance available"
+  },
+  {
+    "id": 488,
+    "name": "Diligen",
+    "url": "https://www.diligen.com",
+    "category": "Business, Legal, and Finance",
+    "access": "Paid",
+    "freePlan": "",
+    "why": "No permanent free plan commonly advertised; demo or trial may be AI contract analysis and due diligence available"
+  },
+  {
+    "id": 489,
+    "name": "DocuSign AI",
+    "url": "https://www.docusign.com/products/ai",
+    "category": "Business, Legal, and Finance",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Agreement analysis and contract workflows"
+  },
+  {
+    "id": 490,
+    "name": "Ramp Intelligence",
+    "url": "https://ramp.com/intelligence",
+    "category": "Business, Legal, and Finance",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Automate finance operations and expenses"
+  },
+  {
+    "id": 491,
+    "name": "Brex AI",
+    "url": "https://www.brex.com/product/ai",
+    "category": "Business, Legal, and Finance",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Automate spend management and finance tasks"
+  },
+  {
+    "id": 492,
+    "name": "Vic.ai",
+    "url": "https://www.vic.ai",
+    "category": "Business, Legal, and Finance",
+    "access": "Paid",
+    "freePlan": "",
+    "why": "No permanent free plan commonly advertised; demo or trial may be Automate accounts payable available"
+  },
+  {
+    "id": 493,
+    "name": "Zeni",
+    "url": "https://www.zeni.ai",
+    "category": "Business, Legal, and Finance",
+    "access": "Paid",
+    "freePlan": "",
+    "why": "No permanent free plan commonly advertised; demo or trial may be AI bookkeeping and finance operations available"
+  },
+  {
+    "id": 494,
+    "name": "Digits",
+    "url": "https://digits.com",
+    "category": "Business, Legal, and Finance",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "AI accounting and financial reporting"
+  },
+  {
+    "id": 495,
+    "name": "Datarails FP&A; Genius",
+    "url": "https://www.datarails.com",
+    "category": "Business, Legal, and Finance",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Conversational financial planning and analysis"
+  },
+  {
+    "id": 496,
+    "name": "AlphaSense",
+    "url": "https://www.alpha-sense.com",
+    "category": "Business, Legal, and Finance",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Search financial and business intelligence"
+  },
+  {
+    "id": 497,
+    "name": "FinChat",
+    "url": "https://finchat.io",
+    "category": "Business, Legal, and Finance",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Research public companies and financial data"
+  },
+  {
+    "id": 498,
+    "name": "Kensho",
+    "url": "https://www.kensho.com",
+    "category": "Business, Legal, and Finance",
+    "access": "Paid",
+    "freePlan": "",
+    "why": "No permanent free plan commonly advertised; demo or trial may be AI analytics for financial and business data available"
+  },
+  {
+    "id": 499,
+    "name": "Numerai",
+    "url": "https://numer.ai",
+    "category": "Business, Legal, and Finance",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Crowdsourced machine learning for investing research"
+  },
+  {
+    "id": 500,
+    "name": "Booke AI",
+    "url": "https://booke.ai",
+    "category": "Business, Legal, and Finance",
+    "access": "Freemium",
+    "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
+    "why": "Bookkeeping automation and transaction categorization"
+  },
+  {
+    "id": 501,
+    "name": "Qwen Chat",
+    "url": "https://chat.qwen.ai/",
+    "category": "General AI Assistants",
+    "access": "Freemium",
+    "freePlan": "Core access is free; limits/features vary by model and region",
+    "why": "General AI chat, reasoning, coding and multimodal tasks"
+  },
+  {
+    "id": 502,
+    "name": "Kimi",
+    "url": "https://www.kimi.com/",
+    "category": "General AI Assistants",
+    "access": "Freemium",
+    "freePlan": "Free access with usage/model limits that may change",
+    "why": "Long-context research, writing and agentic tasks"
+  },
+  {
+    "id": 503,
+    "name": "Z.ai",
+    "url": "https://z.ai/",
+    "category": "General AI Assistants",
+    "access": "Freemium",
+    "freePlan": "Free access may be limited by model, credits or rate limits",
+    "why": "GLM-based chat, reasoning and coding"
+  },
+  {
+    "id": 504,
+    "name": "Doubao",
+    "url": "https://www.doubao.com/",
+    "category": "General AI Assistants",
+    "access": "Freemium",
+    "freePlan": "Core access is generally free; quotas vary",
+    "why": "Chinese-language assistant, multimodal tasks and productivity"
+  },
+  {
+    "id": 505,
+    "name": "ERNIE Bot",
+    "url": "https://ernie.baidu.com/",
+    "category": "General AI Assistants",
+    "access": "Freemium",
+    "freePlan": "Free access/features vary by account and region",
+    "why": "Baidu's general AI assistant and multimodal workflows"
+  },
+  {
+    "id": 506,
+    "name": "Tencent Hunyuan",
+    "url": "https://hunyuan.tencent.com/",
+    "category": "General AI Assistants",
+    "access": "Freemium",
+    "freePlan": "Free access or demos may have quotas",
+    "why": "Chinese multimodal generation and AI assistance"
+  },
+  {
+    "id": 507,
+    "name": "01.AI",
+    "url": "https://www.01.ai/",
+    "category": "General AI Assistants",
+    "access": "Freemium",
+    "freePlan": "Access and model limits vary by service",
+    "why": "Yi-family models for chat, reasoning and coding"
+  },
+  {
+    "id": 508,
+    "name": "InternLM",
+    "url": "https://internlm.intern-ai.org.cn/",
+    "category": "General AI Assistants",
+    "access": "Open Source",
+    "freePlan": "Models/software can be used freely; compute and hosting may cost",
+    "why": "Open-source LLMs for local and developer use"
+  },
+  {
+    "id": 509,
+    "name": "Genspark",
+    "url": "https://www.genspark.ai/",
+    "category": "General AI Assistants",
+    "access": "Freemium",
+    "freePlan": "Limited credits or agent usage on free access",
+    "why": "AI agents for research, creation and productivity"
+  },
+  {
+    "id": 510,
+    "name": "Manus",
+    "url": "https://manus.im/",
+    "category": "General AI Assistants",
+    "access": "Freemium",
+    "freePlan": "Limited agent credits/tasks; plans and quotas vary",
+    "why": "Autonomous agents for research, analysis and task execution"
+  },
+  {
+    "id": 511,
+    "name": "Augment Code",
+    "url": "https://www.augmentcode.com/",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Limited usage/credits on entry access",
+    "why": "Repository-aware coding and software engineering"
+  },
+  {
+    "id": 512,
+    "name": "Supermaven",
+    "url": "https://supermaven.com/",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Free access with limits; advanced usage may require a plan",
+    "why": "Fast code completion and long-context coding"
+  },
+  {
+    "id": 513,
+    "name": "Kiro",
+    "url": "https://kiro.dev/",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Free/preview access with usage limits; verify current plan",
+    "why": "Spec-driven AI IDE for building software"
+  },
+  {
+    "id": 514,
+    "name": "Trae",
+    "url": "https://www.trae.ai/",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Free access with usage/rate limits that may change",
+    "why": "AI-native coding IDE and agent workflows"
+  },
+  {
+    "id": 515,
+    "name": "Firebase Studio",
+    "url": "https://firebase.google.com/products/studio",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Free access may include quotas for workspaces/AI usage",
+    "why": "Build full-stack apps with Firebase and AI assistance"
+  },
+  {
+    "id": 516,
+    "name": "BLACKBOX AI",
+    "url": "https://www.blackbox.ai/",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Limited messages/features on free access",
+    "why": "AI coding, code search and developer agents"
+  },
+  {
+    "id": 517,
+    "name": "GitLab Duo",
+    "url": "https://about.gitlab.com/gitlab-duo/",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Availability depends on GitLab plan and feature",
+    "why": "AI assistance across coding, review and DevSecOps"
+  },
+  {
+    "id": 518,
+    "name": "Warp AI",
+    "url": "https://www.warp.dev/",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Limited AI requests/credits may apply",
+    "why": "AI-powered terminal and developer workflows"
+  },
+  {
+    "id": 519,
+    "name": "Tabby",
+    "url": "https://www.tabbyml.com/",
+    "category": "Coding and Software Development",
+    "access": "Open Source",
+    "freePlan": "Software is free; model hosting/compute may cost",
+    "why": "Self-hosted code completion and private AI coding"
+  },
+  {
+    "id": 520,
+    "name": "Devin",
+    "url": "https://devin.ai/",
+    "category": "Coding and Software Development",
+    "access": "Paid",
+    "freePlan": "Trial or limited access may be available; verify current plans",
+    "why": "Autonomous software-engineering agent"
+  },
+  {
+    "id": 521,
+    "name": "Artbreeder",
+    "url": "https://www.artbreeder.com/",
+    "category": "Image Generation",
+    "access": "Freemium",
+    "freePlan": "Free generation with limits; credits/features vary",
+    "why": "Blend and evolve characters, portraits and artwork"
+  },
+  {
+    "id": 522,
+    "name": "OpenArt",
+    "url": "https://openart.ai/",
+    "category": "Image Generation",
+    "access": "Freemium",
+    "freePlan": "Free credits/usage with paid upgrades",
+    "why": "Multi-model image generation, editing and creative exploration"
+  },
+  {
+    "id": 523,
+    "name": "PicLumen",
+    "url": "https://www.piclumen.com/",
+    "category": "Image Generation",
+    "access": "Freemium",
+    "freePlan": "Free daily/credit-based generation with limits",
+    "why": "Free-oriented image generation with multiple models"
+  },
+  {
+    "id": 524,
+    "name": "PixAI",
+    "url": "https://pixai.art/",
+    "category": "Image Generation",
+    "access": "Freemium",
+    "freePlan": "Daily/credit limits; premium features vary",
+    "why": "Anime and character image generation"
+  },
+  {
+    "id": 525,
+    "name": "Starryai",
+    "url": "https://starryai.com/",
+    "category": "Image Generation",
+    "access": "Freemium",
+    "freePlan": "Limited free generations/credits",
+    "why": "Mobile-friendly AI art generation"
+  },
+  {
+    "id": 526,
+    "name": "Dezgo",
+    "url": "https://dezgo.com/",
+    "category": "Image Generation",
+    "access": "Freemium",
+    "freePlan": "Free generation with limits and optional paid usage",
+    "why": "Simple Stable Diffusion-style image generation"
+  },
+  {
+    "id": 527,
+    "name": "DeepAI",
+    "url": "https://deepai.org/",
+    "category": "Image Generation",
+    "access": "Freemium",
+    "freePlan": "Limited free generations/API use",
+    "why": "Image generation plus developer-facing AI APIs"
+  },
+  {
+    "id": 528,
+    "name": "Hotpot AI",
+    "url": "https://hotpot.ai/",
+    "category": "Image Generation",
+    "access": "Freemium",
+    "freePlan": "Free tools may have output/credit limits",
+    "why": "AI art, graphics and image editing utilities"
+  },
+  {
+    "id": 529,
+    "name": "Dreamina",
+    "url": "https://dreamina.capcut.com/",
+    "category": "Image Generation",
+    "access": "Freemium",
+    "freePlan": "Credits/usage limits vary by region and account",
+    "why": "Creative image generation and visual ideation"
+  },
+  {
+    "id": 530,
+    "name": "ImagineArt",
+    "url": "https://www.imagine.art/",
+    "category": "Image Generation",
+    "access": "Freemium",
+    "freePlan": "Limited free credits/features",
+    "why": "Multi-model image generation and creative workflows"
+  },
+  {
+    "id": 531,
+    "name": "Vmake",
+    "url": "https://vmake.ai/",
+    "category": "Image Editing and Enhancement",
+    "access": "Freemium",
+    "freePlan": "Limited free credits/exports",
+    "why": "Product photography, background editing and enhancement"
+  },
+  {
+    "id": 532,
+    "name": "Erase.bg",
+    "url": "https://www.erase.bg/",
+    "category": "Image Editing and Enhancement",
+    "access": "Freemium",
+    "freePlan": "Free image processing with resolution/usage limits",
+    "why": "Fast AI background removal"
+  },
+  {
+    "id": 533,
+    "name": "Retouch4me",
+    "url": "https://retouch4.me/",
+    "category": "Image Editing and Enhancement",
+    "access": "Paid",
+    "freePlan": "Trial/demo access may be available; verify current plan",
+    "why": "Professional photo retouching plugins and automation"
+  },
+  {
+    "id": 534,
+    "name": "Media.io AI Photo Editor",
+    "url": "https://www.media.io/",
+    "category": "Image Editing and Enhancement",
+    "access": "Freemium",
+    "freePlan": "Limited free processing/exports",
+    "why": "Browser-based AI editing, cleanup and enhancement"
+  },
+  {
+    "id": 535,
+    "name": "BeFunky AI",
+    "url": "https://www.befunky.com/",
+    "category": "Image Editing and Enhancement",
+    "access": "Freemium",
+    "freePlan": "Some AI features are free; advanced features may require paid access",
+    "why": "Easy online photo editing and AI effects"
+  },
+  {
+    "id": 536,
+    "name": "AirBrush AI",
+    "url": "https://airbrush.com/",
+    "category": "Image Editing and Enhancement",
+    "access": "Freemium",
+    "freePlan": "Limited free edits/exports",
+    "why": "Portrait retouching and AI photo enhancement"
+  },
+  {
+    "id": 537,
+    "name": "Designify",
+    "url": "https://www.designify.com/",
+    "category": "Image Editing and Enhancement",
+    "access": "Freemium",
+    "freePlan": "Limited free image transformations",
+    "why": "Automatically create polished product/design images"
+  },
+  {
+    "id": 538,
+    "name": "Upscayl",
+    "url": "https://upscayl.org/",
+    "category": "Image Editing and Enhancement",
+    "access": "Open Source",
+    "freePlan": "Free/open-source desktop software; local compute required",
+    "why": "Local AI image upscaling without a subscription"
+  },
+  {
+    "id": 539,
+    "name": "HitPaw Photo AI",
+    "url": "https://www.hitpaw.com/photo-ai.html",
+    "category": "Image Editing and Enhancement",
+    "access": "Paid",
+    "freePlan": "Trial/demo limitations may apply",
+    "why": "Upscaling, denoise, face enhancement and photo restoration"
+  },
+  {
+    "id": 540,
+    "name": "Evoto AI",
+    "url": "https://www.evoto.ai/",
+    "category": "Image Editing and Enhancement",
+    "access": "Freemium",
+    "freePlan": "Trial/export limits vary",
+    "why": "Professional portrait and batch photo retouching"
+  },
+  {
+    "id": 541,
+    "name": "Hedra",
+    "url": "https://www.hedra.com/",
+    "category": "Video Generation",
+    "access": "Freemium",
+    "freePlan": "Limited credits/usage on free access",
+    "why": "Create expressive AI characters and videos"
+  },
+  {
+    "id": 542,
+    "name": "Viggle",
+    "url": "https://viggle.ai/",
+    "category": "Video Generation",
+    "access": "Freemium",
+    "freePlan": "Free credits/queue limits may apply",
+    "why": "Character animation and motion transfer"
+  },
+  {
+    "id": 543,
+    "name": "Wan Video",
+    "url": "https://wan.video/",
+    "category": "Video Generation",
+    "access": "Open Source",
+    "freePlan": "Open models/software may require local or hosted compute",
+    "why": "Open video generation models and workflows"
+  },
+  {
+    "id": 544,
+    "name": "HeyGen",
+    "url": "https://www.heygen.com/",
+    "category": "Video Generation",
+    "access": "Freemium",
+    "freePlan": "Limited video credits/features on free access",
+    "why": "AI avatars, translation and business video creation"
+  },
+  {
+    "id": 545,
+    "name": "Synthesia",
+    "url": "https://www.synthesia.io/",
+    "category": "Video Generation",
+    "access": "Paid",
+    "freePlan": "Demo/trial availability varies",
+    "why": "Enterprise AI avatar and training videos"
+  },
+  {
+    "id": 546,
+    "name": "Colossyan",
+    "url": "https://www.colossyan.com/",
+    "category": "Video Generation",
+    "access": "Paid",
+    "freePlan": "Trial/demo limits may apply",
+    "why": "AI presenter and training-video creation"
+  },
+  {
+    "id": 547,
+    "name": "D-ID",
+    "url": "https://www.d-id.com/",
+    "category": "Video Generation",
+    "access": "Freemium",
+    "freePlan": "Limited credits/trial usage",
+    "why": "Talking avatars and image-to-video generation"
+  },
+  {
+    "id": 548,
+    "name": "DeepBrain AI",
+    "url": "https://www.deepbrain.io/",
+    "category": "Video Generation",
+    "access": "Paid",
+    "freePlan": "Trial/demo access may be available",
+    "why": "AI avatars and presenter videos"
+  },
+  {
+    "id": 549,
+    "name": "Elai.io",
+    "url": "https://elai.io/",
+    "category": "Video Generation",
+    "access": "Freemium",
+    "freePlan": "Limited video minutes/credits",
+    "why": "Avatar-based learning and marketing videos"
+  },
+  {
+    "id": 550,
+    "name": "Tavus",
+    "url": "https://www.tavus.io/",
+    "category": "Video Generation",
+    "access": "Paid",
+    "freePlan": "Primarily paid/business access; demo may be available",
+    "why": "Personalized AI video generation at scale"
+  },
+  {
+    "id": 551,
+    "name": "Fish Audio",
+    "url": "https://fish.audio/",
+    "category": "Voice and Text to Speech",
+    "access": "Freemium",
+    "freePlan": "Limited generation credits/features",
+    "why": "Natural-sounding speech and voice cloning"
+  },
+  {
+    "id": 552,
+    "name": "Cartesia",
+    "url": "https://cartesia.ai/",
+    "category": "Voice and Text to Speech",
+    "access": "Freemium",
+    "freePlan": "API access may include limited credits; verify current quota",
+    "why": "Low-latency voice generation for agents"
+  },
+  {
+    "id": 553,
+    "name": "Hume AI",
+    "url": "https://www.hume.ai/",
+    "category": "Voice and Text to Speech",
+    "access": "Freemium",
+    "freePlan": "Developer access may include limited usage",
+    "why": "Emotion-aware voice and conversational AI"
+  },
+  {
+    "id": 554,
+    "name": "Respeecher",
+    "url": "https://www.respeecher.com/",
+    "category": "Voice and Text to Speech",
+    "access": "Paid",
+    "freePlan": "Trial/demo options may be limited",
+    "why": "Professional voice conversion and synthetic speech"
+  },
+  {
+    "id": 555,
+    "name": "Moshi",
+    "url": "https://moshi.chat/",
+    "category": "Voice and Text to Speech",
+    "access": "Open Source",
+    "freePlan": "Open model/software; hardware/hosting costs may apply",
+    "why": "Real-time open conversational voice AI"
+  },
+  {
+    "id": 556,
+    "name": "Rime",
+    "url": "https://rime.ai/",
+    "category": "Voice and Text to Speech",
+    "access": "Freemium",
+    "freePlan": "API credits/limits vary by plan",
+    "why": "Fast text-to-speech for conversational applications"
+  },
+  {
+    "id": 557,
+    "name": "Parler-TTS",
+    "url": "https://github.com/huggingface/parler-tts",
+    "category": "Voice and Text to Speech",
+    "access": "Open Source",
+    "freePlan": "Model/software is free; compute required",
+    "why": "Open text-to-speech model with controllable voice style"
+  },
+  {
+    "id": 558,
+    "name": "PlayAI",
+    "url": "https://play.ai/",
+    "category": "Voice and Text to Speech",
+    "access": "Freemium",
+    "freePlan": "Limited voice-generation/API access may apply",
+    "why": "Voice agents, TTS and conversational audio"
+  },
+  {
+    "id": 559,
+    "name": "AssemblyAI",
+    "url": "https://www.assemblyai.com/",
+    "category": "Voice and Text to Speech",
+    "access": "Freemium",
+    "freePlan": "Limited transcription/API credits may be available",
+    "why": "Speech-to-text, audio intelligence and transcription APIs"
+  },
+  {
+    "id": 560,
+    "name": "Deepgram",
+    "url": "https://deepgram.com/",
+    "category": "Voice and Text to Speech",
+    "access": "Freemium",
+    "freePlan": "Developer credits/free usage may apply",
+    "why": "Fast speech recognition and voice APIs"
+  },
+  {
+    "id": 561,
+    "name": "Grammarly",
+    "url": "https://www.grammarly.com/",
+    "category": "Writing and Copywriting",
+    "access": "Freemium",
+    "freePlan": "Core writing help is free; advanced AI features are limited",
+    "why": "Grammar, rewriting and AI-assisted writing"
+  },
+  {
+    "id": 562,
+    "name": "QuillBot",
+    "url": "https://quillbot.com/",
+    "category": "Writing and Copywriting",
+    "access": "Freemium",
+    "freePlan": "Free limits on paraphrasing, words or advanced modes",
+    "why": "Paraphrasing, summarizing and writing assistance"
+  },
+  {
+    "id": 563,
+    "name": "Wordtune",
+    "url": "https://www.wordtune.com/",
+    "category": "Writing and Copywriting",
+    "access": "Freemium",
+    "freePlan": "Limited daily rewrites/AI usage",
+    "why": "Rewrite and improve tone, clarity and phrasing"
+  },
+  {
+    "id": 564,
+    "name": "Lex.page",
+    "url": "https://lex.page/",
+    "category": "Writing and Copywriting",
+    "access": "Freemium",
+    "freePlan": "Limited AI usage/features may apply",
+    "why": "AI-first collaborative writing workspace"
+  },
+  {
+    "id": 565,
+    "name": "Jenni AI",
+    "url": "https://jenni.ai/",
+    "category": "Writing and Copywriting",
+    "access": "Freemium",
+    "freePlan": "Limited AI words/credits on free access",
+    "why": "Academic writing, citations and long-form drafting"
+  },
+  {
+    "id": 566,
+    "name": "Article Forge",
+    "url": "https://www.articleforge.com/",
+    "category": "Writing and Copywriting",
+    "access": "Paid",
+    "freePlan": "Trial access may be limited",
+    "why": "Long-form article generation and content workflows"
+  },
+  {
+    "id": 567,
+    "name": "Neuroflash",
+    "url": "https://neuroflash.com/",
+    "category": "Writing and Copywriting",
+    "access": "Freemium",
+    "freePlan": "Limited words/features on free access",
+    "why": "Marketing copy, brand voice and content generation"
+  },
+  {
+    "id": 568,
+    "name": "Hypotenuse AI",
+    "url": "https://www.hypotenuse.ai/",
+    "category": "Writing and Copywriting",
+    "access": "Freemium",
+    "freePlan": "Limited generations/trial credits",
+    "why": "Product descriptions, blogs and ecommerce content"
+  },
+  {
+    "id": 569,
+    "name": "CopySmith",
+    "url": "https://copysmith.ai/",
+    "category": "Writing and Copywriting",
+    "access": "Paid",
+    "freePlan": "Trial/demo access may be available",
+    "why": "Product content and ecommerce copy workflows"
+  },
+  {
+    "id": 570,
+    "name": "ProWritingAid",
+    "url": "https://prowritingaid.com/",
+    "category": "Writing and Copywriting",
+    "access": "Freemium",
+    "freePlan": "Limited reports/features on free access",
+    "why": "Deep writing feedback, editing and style improvement"
+  },
+  {
+    "id": 571,
+    "name": "Undermind",
+    "url": "https://www.undermind.ai/",
+    "category": "Research, Search, and Knowledge",
+    "access": "Paid",
+    "freePlan": "Research access/trial may be limited",
+    "why": "Deep literature discovery and evidence synthesis"
+  },
+  {
+    "id": 572,
+    "name": "OpenEvidence",
+    "url": "https://www.openevidence.com/",
+    "category": "Research, Search, and Knowledge",
+    "access": "Free",
+    "freePlan": "Access can depend on eligibility/use case",
+    "why": "Evidence-focused answers for medical research and knowledge"
+  },
+  {
+    "id": 573,
+    "name": "Iris.ai",
+    "url": "https://iris.ai/",
+    "category": "Research, Search, and Knowledge",
+    "access": "Freemium",
+    "freePlan": "Limited access/features may apply",
+    "why": "Scientific literature discovery and analysis"
+  },
+  {
+    "id": 574,
+    "name": "Rayyan",
+    "url": "https://www.rayyan.ai/",
+    "category": "Research, Search, and Knowledge",
+    "access": "Freemium",
+    "freePlan": "Free review workflows with limits on advanced features",
+    "why": "Systematic literature screening and collaboration"
+  },
+  {
+    "id": 575,
+    "name": "ASReview",
+    "url": "https://asreview.nl/",
+    "category": "Research, Search, and Knowledge",
+    "access": "Open Source",
+    "freePlan": "Free/open-source software; local compute required",
+    "why": "AI-assisted systematic-review screening"
+  },
+  {
+    "id": 576,
+    "name": "Paperpal",
+    "url": "https://paperpal.com/",
+    "category": "Research, Search, and Knowledge",
+    "access": "Freemium",
+    "freePlan": "Limited AI writing/checking usage",
+    "why": "Academic writing, language editing and research support"
+  },
+  {
+    "id": 577,
+    "name": "Trinka AI",
+    "url": "https://www.trinka.ai/",
+    "category": "Research, Search, and Knowledge",
+    "access": "Freemium",
+    "freePlan": "Limited checks/AI features on free access",
+    "why": "Academic and technical writing improvement"
+  },
+  {
+    "id": 578,
+    "name": "ScholarAI",
+    "url": "https://scholarai.io/",
+    "category": "Research, Search, and Knowledge",
+    "access": "Freemium",
+    "freePlan": "Usage and document limits vary",
+    "why": "Research discovery, paper analysis and evidence extraction"
+  },
+  {
+    "id": 579,
+    "name": "Scinapse",
+    "url": "https://scinapse.io/",
+    "category": "Research, Search, and Knowledge",
+    "access": "Free",
+    "freePlan": "Core discovery is free; advanced services may vary",
+    "why": "Academic paper and author discovery"
+  },
+  {
+    "id": 580,
+    "name": "Paperguide",
+    "url": "https://paperguide.ai/",
+    "category": "Research, Search, and Knowledge",
+    "access": "Freemium",
+    "freePlan": "Limited AI/research usage on free access",
+    "why": "Research organization, reading and writing assistance"
+  },
+  {
+    "id": 581,
+    "name": "Slidesgo AI",
+    "url": "https://slidesgo.com/ai-presentations",
+    "category": "Presentations and Slides",
+    "access": "Freemium",
+    "freePlan": "Limited AI generations/templates on free access",
+    "why": "Generate editable presentation drafts quickly"
+  },
+  {
+    "id": 582,
+    "name": "Kroma AI",
+    "url": "https://kroma.ai/",
+    "category": "Presentations and Slides",
+    "access": "Freemium",
+    "freePlan": "Plan-based access; verify current limits",
+    "why": "Visual storytelling and presentation design"
+  },
+  {
+    "id": 583,
+    "name": "Zoho Show AI",
+    "url": "https://www.zoho.com/show/",
+    "category": "Presentations and Slides",
+    "access": "Freemium",
+    "freePlan": "Free workspace with feature/account limits",
+    "why": "Create and collaborate on presentations with AI assistance"
+  },
+  {
+    "id": 584,
+    "name": "SlidesPilot",
+    "url": "https://www.slidespilot.com/",
+    "category": "Presentations and Slides",
+    "access": "Freemium",
+    "freePlan": "Limited AI credits/exports",
+    "why": "Turn documents and prompts into PowerPoint decks"
+  },
+  {
+    "id": 585,
+    "name": "SlideModel AI",
+    "url": "https://slidemodel.com/ai-presentation-maker/",
+    "category": "Presentations and Slides",
+    "access": "Freemium",
+    "freePlan": "Limited generations/features may apply",
+    "why": "AI presentation generation with editable templates"
+  },
+  {
+    "id": 586,
+    "name": "Presentory AI",
+    "url": "https://presentory.wondershare.com/",
+    "category": "Presentations and Slides",
+    "access": "Freemium",
+    "freePlan": "Trial/export limits may apply",
+    "why": "Create polished presentations from ideas and content"
+  },
+  {
+    "id": 587,
+    "name": "Prezent AI",
+    "url": "https://www.prezent.ai/",
+    "category": "Presentations and Slides",
+    "access": "Paid",
+    "freePlan": "Primarily business/enterprise; demo access available",
+    "why": "Brand-controlled enterprise presentation creation"
+  },
+  {
+    "id": 588,
+    "name": "ChatSlide",
+    "url": "https://www.chatslide.ai/",
+    "category": "Presentations and Slides",
+    "access": "Freemium",
+    "freePlan": "Free credits/exports may be limited",
+    "why": "Convert files, links and prompts into editable decks and media"
+  },
+  {
+    "id": 589,
+    "name": "Slidebean AI",
+    "url": "https://slidebean.com/",
+    "category": "Presentations and Slides",
+    "access": "Paid",
+    "freePlan": "Trial/demo access may be available",
+    "why": "Startup pitch decks and investor-focused presentation design"
+  },
+  {
+    "id": 590,
+    "name": "DeckFlow",
+    "url": "https://deckflowai.com/",
+    "category": "Presentations and Slides",
+    "access": "Freemium",
+    "freePlan": "Free starting credits; paid plans add more capacity",
+    "why": "AI presentation generation for class, work and fundraising"
+  },
+  {
+    "id": 591,
+    "name": "Superhuman AI",
+    "url": "https://superhuman.com/",
+    "category": "Meetings, Notes, and Productivity",
+    "access": "Paid",
+    "freePlan": "Primarily paid; trial/plan availability varies",
+    "why": "AI email writing, triage and productivity"
+  },
+  {
+    "id": 592,
+    "name": "Shortwave AI",
+    "url": "https://www.shortwave.com/",
+    "category": "Meetings, Notes, and Productivity",
+    "access": "Freemium",
+    "freePlan": "Free tier with limits; AI features may vary by plan",
+    "why": "AI-powered email search, summaries and drafting"
+  },
+  {
+    "id": 593,
+    "name": "ClickUp Brain",
+    "url": "https://clickup.com/ai",
+    "category": "Meetings, Notes, and Productivity",
+    "access": "Freemium",
+    "freePlan": "AI availability depends on workspace plan/credits",
+    "why": "AI knowledge, tasks, docs and project assistance"
+  },
+  {
+    "id": 594,
+    "name": "Asana Intelligence",
+    "url": "https://asana.com/ai",
+    "category": "Meetings, Notes, and Productivity",
+    "access": "Freemium",
+    "freePlan": "AI features depend on plan/eligibility",
+    "why": "Summaries, project insights and workflow assistance"
+  },
+  {
+    "id": 595,
+    "name": "Atlassian Rovo",
+    "url": "https://www.atlassian.com/software/rovo",
+    "category": "Meetings, Notes, and Productivity",
+    "access": "Freemium",
+    "freePlan": "Availability and limits depend on Atlassian plan",
+    "why": "Enterprise search, chat and AI agents"
+  },
+  {
+    "id": 596,
+    "name": "SaneBox AI",
+    "url": "https://www.sanebox.com/",
+    "category": "Meetings, Notes, and Productivity",
+    "access": "Paid",
+    "freePlan": "Trial may be available; core service is paid",
+    "why": "AI-assisted email organization and inbox management"
+  },
+  {
+    "id": 597,
+    "name": "Todoist AI",
+    "url": "https://todoist.com/",
+    "category": "Meetings, Notes, and Productivity",
+    "access": "Freemium",
+    "freePlan": "Free task management; AI capabilities may have limits",
+    "why": "Task planning, organization and productivity assistance"
+  },
+  {
+    "id": 598,
+    "name": "Amie",
+    "url": "https://amie.so/",
+    "category": "Meetings, Notes, and Productivity",
+    "access": "Freemium",
+    "freePlan": "Plan limits vary",
+    "why": "Calendar, tasks and communication in one productivity workspace"
+  },
+  {
+    "id": 599,
+    "name": "Magical AI",
+    "url": "https://www.getmagical.com/",
+    "category": "Meetings, Notes, and Productivity",
+    "access": "Freemium",
+    "freePlan": "Free automation with limits on advanced features",
+    "why": "Text expansion, repetitive-task automation and scheduling"
+  },
+  {
+    "id": 600,
+    "name": "Routine",
+    "url": "https://routine.co/",
+    "category": "Meetings, Notes, and Productivity",
+    "access": "Freemium",
+    "freePlan": "Free productivity features with plan limits",
+    "why": "Calendar, tasks and personal planning workspace"
+  }
+]

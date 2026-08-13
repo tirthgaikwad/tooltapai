@@ -9,6 +9,8 @@ import PageLayout from '@/components/layout/PageLayout';
 import ToolCard from '@/components/tools/ToolCard';
 import ToolLogo from '@/components/tools/ToolLogo';
 import AccessBadge from '@/components/tools/AccessBadge';
+import PromptWorkshopSheet from '@/components/tools/PromptWorkshopSheet';
+import { getPromptWorkshop } from '@/data/mockWorkshops';
 import { Button } from '@/components/ui/button';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { useApp } from '@/contexts/AppContext';
@@ -27,6 +29,7 @@ export default function ToolDetailPage() {
   const [reportOpen, setReportOpen] = useState(false);
   const [reportReason, setReportReason] = useState('');
   const [reportSubmitted, setReportSubmitted] = useState(false);
+  const [workshopOpen, setWorkshopOpen] = useState(false);
 
   // Find the tool by slug (generated from name)
   const tool = useMemo(() => {
@@ -158,6 +161,15 @@ export default function ToolDetailPage() {
                   <ExternalLink className="w-4 h-4" />
                   Visit Official Website
                 </Button>
+
+                {tool && getPromptWorkshop(tool) && (
+                  <button
+                    onClick={() => setWorkshopOpen(true)}
+                    className="h-11 bg-white/5 border border-white/10 text-white/80 hover:text-white hover:border-[#F2994A]/50 transition-all text-xs sm:text-sm px-4 rounded-xl font-semibold flex items-center justify-center gap-2 active:scale-95 shadow-sm"
+                  >
+                    <span>🛠️ Prompt Workshop</span>
+                  </button>
+                )}
 
                 <div className="flex items-center gap-2">
                   <Tooltip>
@@ -480,6 +492,12 @@ export default function ToolDetailPage() {
           </div>
         </div>
       )}
+
+      <PromptWorkshopSheet
+        tool={tool}
+        isOpen={workshopOpen}
+        onClose={() => setWorkshopOpen(false)}
+      />
     </PageLayout>
   );
 }

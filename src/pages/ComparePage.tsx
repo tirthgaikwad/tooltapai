@@ -28,10 +28,14 @@ import AccessBadge from '@/components/tools/AccessBadge';
 import ToolLogo from '@/components/tools/ToolLogo';
 import ScoreMeterBar from '@/components/tools/ScoreMeterBar';
 import ShareComparisonButton from '@/components/tools/ShareComparisonButton';
+import FinalVerdictBanner from '@/components/tools/FinalVerdictBanner';
+import RadarMatrixChart from '@/components/tools/RadarMatrixChart';
+import BasisOfComparisonGrid from '@/components/tools/BasisOfComparisonGrid';
 import { Button } from '@/components/ui/button';
 import { useApp } from '@/contexts/AppContext';
 import { normalizeSlug } from '@/lib/slugs';
 import { cn } from '@/lib/utils';
+import { calculateVectorScores, calculateComparisonVerdict, type VectorScoreResult } from '@/lib/vectorScores';
 import type { Tool } from '@/types/tool';
 
 export interface CriteriaScore {
@@ -163,7 +167,21 @@ export default function ComparePage() {
     }
   }, [compareList]);
 
-  // Pre-calculate scores for all tools in compare list
+  // Pre-calculate 5-vector scores for all tools in compare list
+  const vectorScoresMap = useMemo(() => {
+    const map = new Map<number, VectorScoreResult>();
+    compareList.forEach((t) => {
+      map.set(t.id, calculateVectorScores(t));
+    });
+    return map;
+  }, [compareList]);
+
+  // Calculate comparison verdict
+  const verdict = useMemo(() => {
+    return calculateComparisonVerdict(compareList, vectorScoresMap);
+  }, [compareList, vectorScoresMap]);
+
+  // Pre-calculate criteria scores for traditional table view
   const toolScoresMap = useMemo(() => {
     const map = new Map<number, CriteriaScore>();
     compareList.forEach((t) => {
@@ -172,22 +190,8 @@ export default function ComparePage() {
     return map;
   }, [compareList]);
 
-  // Find the winner tool (highest overallScore)
-  const winningTool = useMemo(() => {
-    if (compareList.length < 2) return null;
-    let winner = compareList[0];
-    let maxScore = toolScoresMap.get(winner.id)?.overallScore || 0;
-
-    for (let i = 1; i < compareList.length; i++) {
-      const tool = compareList[i];
-      const score = toolScoresMap.get(tool.id)?.overallScore || 0;
-      if (score > maxScore) {
-        maxScore = score;
-        winner = tool;
-      }
-    }
-    return winner;
-  }, [compareList, toolScoresMap]);
+  // Find the winner tool
+  const winningTool = verdict?.winner || null;
 
   // Keep mobile selected tool synced
   const activeMobileTool = useMemo(() => {
@@ -232,13 +236,13 @@ export default function ComparePage() {
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-semibold mb-3">
               <GitCompare className="w-3.5 h-3.5" />
-              Side-by-Side Tool Comparison
+              Multi-Vector Tool Matrix & Comparison
             </div>
             <h1 className="font-heading font-bold text-2xl sm:text-3xl md:text-4xl text-foreground tracking-tight mb-2">
               Compare AI Tools
             </h1>
             <p className="text-muted-foreground text-xs sm:text-sm max-w-xl">
-              Evaluate features, weighted performance criteria, and pricing limits side-by-side to find the best tool.
+              Evaluate performance vectors, multi-dimensional radar metrics, and pricing limits side-by-side.
             </p>
           </div>
           {!isEmpty && (
@@ -267,52 +271,34 @@ export default function ComparePage() {
               <span className="inline-flex items-center gap-1 font-semibold text-amber-400">
                 <GitCompare className="w-3.5 h-3.5" /> Compare
               </span>{' '}
-              button to view weighted performance ratings and feature breakdowns.
+              button to view multi-vector radar charts and quantitative breakdowns.
             </p>
             <Button asChild size="sm" className="bg-primary hover:bg-primary/90 text-white rounded-xl h-10 px-6 font-semibold">
               <Link to="/search">Browse AI Tools</Link>
             </Button>
           </div>
         ) : (
-          <div ref={captureRef} id="comparison-capture-area" className="space-y-6 bg-[#18181C] p-4 sm:p-6 rounded-3xl border border-white/5">
-            {/* Overall Winner Summary Banner Banner across top */}
-            {winningTool && compareList.length >= 2 && (
-              <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-amber-500/20 via-orange-500/15 to-[#1E1E24] border-2 border-[#F2994A]/60 p-5 sm:p-6 shadow-2xl">
-                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                  <div className="flex items-start gap-3.5 min-w-0">
-                    <div className="w-12 h-12 rounded-xl bg-amber-500/20 border border-amber-500/50 flex items-center justify-center shrink-0 shadow-lg">
-                      <Trophy className="w-6 h-6 text-amber-400" />
-                    </div>
-                    <div className="min-w-0">
-                      <div className="flex items-center gap-2 mb-1">
-                        <span className="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-500/20 px-2.5 py-0.5 rounded-full border border-amber-500/30">
-                          🏆 Overall Winner ({toolScoresMap.get(winningTool.id)?.overallScore}/5.0)
-                        </span>
-                        <AccessBadge access={winningTool.access} size="sm" />
-                      </div>
-                      <h2 className="font-heading font-bold text-lg sm:text-xl text-foreground truncate">
-                        {winningTool.name}
-                      </h2>
-                      <p className="text-xs sm:text-sm text-muted-foreground mt-0.5 line-clamp-2">
-                        {winningTool.why}
-                      </p>
-                    </div>
-                  </div>
-
-                  <Button
-                    onClick={() => {
-                      addToHistory(winningTool);
-                      window.open(winningTool.url, '_blank', 'noopener,noreferrer');
-                    }}
-                    size="sm"
-                    className="h-10 px-5 text-xs font-bold bg-amber-500 hover:bg-amber-600 text-black rounded-xl gap-2 shrink-0 shadow-xl w-full sm:w-auto"
-                  >
-                    <CheckCircle2 className="w-4 h-4" />
-                    Visit Winning Tool
-                  </Button>
-                </div>
-              </div>
+          <div ref={captureRef} id="comparison-capture-area" className="space-y-8 bg-[#18181C] p-4 sm:p-6 rounded-3xl border border-white/5">
+            {/* 1. Dynamic Final Verdict Banner */}
+            {verdict && (
+              <FinalVerdictBanner
+                verdict={verdict}
+                tools={compareList}
+                scoresMap={vectorScoresMap}
+              />
             )}
+
+            {/* 2. Multi-Vector Radar Matrix Chart */}
+            <RadarMatrixChart
+              tools={compareList}
+              scoresMap={vectorScoresMap}
+            />
+
+            {/* 3. Basis of Comparison Methodology Grid */}
+            <BasisOfComparisonGrid
+              tools={compareList}
+              scoresMap={vectorScoresMap}
+            />
 
             {/* ================= MOBILE VIEW (< 768px) ================= */}
             <div className="block md:hidden space-y-5">

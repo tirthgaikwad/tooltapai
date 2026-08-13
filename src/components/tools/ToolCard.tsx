@@ -8,9 +8,11 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/comp
 import AccessBadge from './AccessBadge';
 import ToolLogo from './ToolLogo';
 import QuickViewModal from './QuickViewModal';
+import PromptWorkshopSheet from './PromptWorkshopSheet';
 import type { Tool } from '@/types/tool';
 import { useApp } from '@/contexts/AppContext';
 import { getFreePlanDetails } from '@/lib/freePlanUtils';
+import { getPromptWorkshop } from '@/data/mockWorkshops';
 import { cn } from '@/lib/utils';
 
 interface Props {
@@ -43,11 +45,13 @@ const cardVariants = {
 function ToolCard({ tool, showBestFree, rank, animated = true, animationDelay = 0, index }: Props) {
   const { isBookmarked, toggleBookmark, isInCompare, toggleCompare, compareList, addToHistory, studentMode } = useApp();
   const [quickViewOpen, setQuickViewOpen] = useState(false);
+  const [workshopOpen, setWorkshopOpen] = useState(false);
   const rafId = useRef<number | null>(null);
 
   const bookmarked = isBookmarked(tool.id);
   const inCompare = isInCompare(tool.id);
   const compareDisabled = !inCompare && compareList.length >= 3;
+  const workshop = getPromptWorkshop(tool);
 
   const toolSlug = tool.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
   const planDetails = getFreePlanDetails(tool);
@@ -236,7 +240,7 @@ function ToolCard({ tool, showBestFree, rank, animated = true, animationDelay = 
                 className="h-11 min-h-[44px] text-xs font-semibold bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl gap-1.5 w-full active:scale-95 shadow-md"
               >
                 <ExternalLink className="w-3.5 h-3.5" />
-                Visit
+                Visit Website
               </Button>
 
               <Button
@@ -250,6 +254,16 @@ function ToolCard({ tool, showBestFree, rank, animated = true, animationDelay = 
                 </Link>
               </Button>
             </div>
+
+            {/* Prompt Workshop trigger button when available */}
+            {workshop && (
+              <button
+                onClick={() => setWorkshopOpen(true)}
+                className="bg-white/5 border border-white/10 text-white/80 hover:text-white hover:border-[#F2994A]/50 transition-all text-xs px-3 py-1.5 rounded-lg font-semibold flex items-center justify-center gap-1.5 w-full active:scale-95 shadow-sm"
+              >
+                <span>🛠️ Prompt Workshop</span>
+              </button>
+            )}
 
             {/* Quick icon actions: Bookmark, Compare, Quick View, Share */}
             <div className="flex items-center justify-between pt-1">
@@ -342,6 +356,12 @@ function ToolCard({ tool, showBestFree, rank, animated = true, animationDelay = 
             tool={tool}
             isOpen={quickViewOpen}
             onClose={() => setQuickViewOpen(false)}
+          />
+
+          <PromptWorkshopSheet
+            tool={tool}
+            isOpen={workshopOpen}
+            onClose={() => setWorkshopOpen(false)}
           />
         </div>
       </div>

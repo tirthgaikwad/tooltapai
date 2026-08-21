@@ -1,10 +1,11 @@
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, Suspense } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Search, ChevronDown, SlidersHorizontal, Bot, Grid3X3 } from 'lucide-react';
 import PageLayout from '@/components/layout/PageLayout';
 import PageMeta from '@/components/common/PageMeta';
 import ToolCard from '@/components/tools/ToolCard';
 import DeferredToolGrid from '@/components/tools/DeferredToolGrid';
+import SuspenseToolGrid from '@/components/tools/SuspenseToolGrid';
 import AutoHidingFilterBar from '@/components/common/AutoHidingFilterBar';
 import AccessBadge from '@/components/tools/AccessBadge';
 import { ToolGridSkeleton } from '@/components/tools/ToolCardSkeleton';
@@ -211,32 +212,39 @@ export default function CategoryDetailPage() {
           </div>
         </AutoHidingFilterBar>
 
-        {/* Tools grid & Empty state handling */}
-        {isFiltering ? (
-          <ToolGridSkeleton count={8} />
-        ) : filtered.length === 0 ? (
-          <div className="text-center py-16 bg-[#1E1E24] border border-white/10 rounded-2xl p-8 space-y-4">
-            <div className="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center mx-auto text-xl">
-              🔍
+        {/* Tools grid & Empty state handling with Suspense */}
+        <Suspense fallback={<ToolGridSkeleton count={8} />}>
+          {isFiltering ? (
+            <ToolGridSkeleton count={8} />
+          ) : filtered.length === 0 ? (
+            <div className="text-center py-16 bg-[#1E1E24] border border-white/10 rounded-2xl p-8 space-y-4">
+              <div className="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center mx-auto text-xl">
+                🔍
+              </div>
+              <h2 className="font-heading font-bold text-lg text-foreground">No tools match your current filter criteria</h2>
+              <p className="text-muted-foreground text-xs sm:text-sm max-w-md mx-auto leading-relaxed">
+                Try adjusting your search keywords, clearing access filters, or turning off Student Mode.
+              </p>
+              <div className="flex justify-center gap-3 pt-2">
+                <Button onClick={() => { setSearchQ(''); setAccess('all'); }} size="sm" className="bg-primary text-primary-foreground font-semibold rounded-xl h-10 px-5">
+                  Clear Filters
+                </Button>
+                <Button asChild size="sm" variant="outline" className="border-white/10 rounded-xl h-10 px-5">
+                  <Link to="/categories">
+                    <Grid3X3 className="w-4 h-4 mr-1.5" /> All Categories
+                  </Link>
+                </Button>
+              </div>
             </div>
-            <h2 className="font-heading font-bold text-lg text-foreground">No tools match your current filter criteria</h2>
-            <p className="text-muted-foreground text-xs sm:text-sm max-w-md mx-auto leading-relaxed">
-              Try adjusting your search keywords, clearing access filters, or turning off Student Mode.
-            </p>
-            <div className="flex justify-center gap-3 pt-2">
-              <Button onClick={() => { setSearchQ(''); setAccess('all'); }} size="sm" className="bg-primary text-primary-foreground font-semibold rounded-xl h-10 px-5">
-                Clear Filters
-              </Button>
-              <Button asChild size="sm" variant="outline" className="border-white/10 rounded-xl h-10 px-5">
-                <Link to="/categories">
-                  <Grid3X3 className="w-4 h-4 mr-1.5" /> All Categories
-                </Link>
-              </Button>
-            </div>
-          </div>
-        ) : (
-          <DeferredToolGrid tools={filtered} />
-        )}
+          ) : (
+            <SuspenseToolGrid
+              tools={filtered}
+              fallback={<ToolGridSkeleton count={8} />}
+              emptyTitle="No tools match your current filter criteria"
+              emptyMessage="Try adjusting your search keywords, clearing access filters, or turning off Student Mode."
+            />
+          )}
+        </Suspense>
       </div>
     </PageLayout>
   );

@@ -142,7 +142,7 @@ function ToolCard({ tool, showBestFree, rank, animated = true, animationDelay = 
           style={{ perspective: '1000px' }}
         >
           <div
-            className="tool-card group relative flex flex-col bg-[#1E1E24] card-gradient border border-white/[0.08] rounded-2xl p-4 sm:p-5 hover:-translate-y-1 transition-all duration-300 ease-out preserve-3d overflow-hidden h-full"
+            className="tool-card group relative flex flex-col bg-[#18181C] border border-white/[0.07] rounded-xl p-5 hover:border-white/20 transition-all duration-200 preserve-3d overflow-hidden h-full"
             style={{
               transform: 'translateZ(0) rotateX(var(--rotate-x, 0deg)) rotateY(var(--rotate-y, 0deg))',
               transformStyle: 'preserve-3d',
@@ -152,12 +152,12 @@ function ToolCard({ tool, showBestFree, rank, animated = true, animationDelay = 
               '--mouse-y': '0px',
             } as React.CSSProperties}
           >
-            {/* Dual-Layer Glass Border Glow Overlay (1px Outer Border Spotlight) */}
+            {/* Subtle Spotlight Border Glow Overlay */}
             <div
-              className="pointer-events-none absolute -inset-px rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100 z-10"
+              className="pointer-events-none absolute -inset-px rounded-xl opacity-0 transition-opacity duration-200 group-hover:opacity-100 z-10"
               style={{
                 padding: '1px',
-                background: `radial-gradient(350px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(242, 153, 74, 0.35), rgba(224, 90, 71, 0.15), transparent 80%)`,
+                background: `radial-gradient(300px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(242, 153, 74, 0.25), transparent 80%)`,
                 WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
                 mask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
                 WebkitMaskComposite: 'xor',
@@ -165,189 +165,189 @@ function ToolCard({ tool, showBestFree, rank, animated = true, animationDelay = 
               }}
             />
 
-            {/* Interior Radial Spotlight Fill */}
+            {/* Top Row: Tool Icon + Title & Category + Pricing Badge */}
+            <div className="relative z-10 flex items-start justify-between gap-3" style={{ transform: 'translateZ(15px)' }}>
+              <div className="flex items-center gap-3 min-w-0">
+                <ToolLogo
+                  name={tool.name}
+                  category={tool.category}
+                  url={tool.url}
+                  className="w-10 h-10 rounded-lg text-sm shrink-0 shadow-sm border border-white/10"
+                />
+                <div className="min-w-0">
+                  <h3 className="font-semibold text-white text-base truncate leading-snug">
+                    <Link
+                      to={`/tools/${toolSlug}`}
+                      onClick={() => addToHistory(tool)}
+                      className="hover:text-primary transition-colors"
+                    >
+                      {tool.name}
+                    </Link>
+                  </h3>
+                  <p className="text-xs text-white/50 truncate mt-0.5">{tool.category}</p>
+                </div>
+              </div>
+
+              <div className="shrink-0 flex items-center gap-1.5">
+                {(showBestFree || (studentMode && tool.access !== 'Paid')) && tool.access !== 'Paid' ? (
+                  <span className="inline-flex items-center gap-1 text-[11px] font-medium text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 rounded-full">
+                    <GraduationCap className="w-3 h-3" />
+                    Free
+                  </span>
+                ) : rank ? (
+                  <span className="inline-flex items-center text-[11px] font-medium text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2 py-0.5 rounded-full">
+                    {rank}
+                  </span>
+                ) : null}
+                <AccessBadge access={tool.access} size="sm" />
+              </div>
+            </div>
+
+            {/* Middle: Description constrained to 2 clean lines */}
+            <p
+              className="relative z-10 text-white/65 text-sm line-clamp-2 my-3 flex-1 leading-relaxed min-h-[2.5rem]"
+              style={{ transform: 'translateZ(10px)' }}
+            >
+              {tool.why}
+            </p>
+
+            {/* Plan Limit Breakdown Indicator (Minimalist dark pill) */}
             <div
-              className="pointer-events-none absolute -inset-px rounded-2xl transition-opacity duration-300 z-0"
-              style={{
-                opacity: 'var(--spotlight-opacity, 0)',
-                background: `radial-gradient(350px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(242, 153, 74, 0.12), rgba(224, 90, 71, 0.05), transparent 80%)`,
-              }}
-            />
-
-          {/* Top Badges */}
-          <div className="relative z-10 flex items-center justify-between gap-2 mb-3" style={{ transform: 'translateZ(15px)' }}>
-            {/* Best Free or Rank badge */}
-            {(showBestFree || (studentMode && tool.access !== 'Paid')) && tool.access !== 'Paid' ? (
-              <div className="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-0.5 rounded-full shadow-sm">
-                <GraduationCap className="w-3.5 h-3.5" />
-                Best Free
+              className="relative z-10 bg-white/[0.03] border border-white/[0.06] px-2.5 py-1.5 rounded-lg text-xs font-medium flex items-center gap-2 mb-3 backdrop-blur-sm"
+              style={{ transform: 'translateZ(12px)' }}
+            >
+              <span className={cn('w-1.5 h-1.5 rounded-full shrink-0', dotColorClass)} />
+              <div className="flex items-center justify-between w-full gap-1.5 min-w-0">
+                <span className={cn('font-semibold shrink-0 text-[11px]', statusTextClass)}>
+                  {planDetails.status}:
+                </span>
+                <span className="text-white/60 truncate text-[11px] font-normal" title={planDetails.summary}>
+                  {planDetails.summary}
+                </span>
               </div>
-            ) : rank ? (
-              <div className="inline-flex items-center text-[11px] font-semibold text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2.5 py-0.5 rounded-full shadow-sm">
-                {rank}
-              </div>
-            ) : (
-              <div />
-            )}
+            </div>
 
-            <AccessBadge access={tool.access} />
-          </div>
-
-          {/* Header: Logo + Name + Category */}
-          <div className="relative z-10 flex items-start gap-3 mb-3" style={{ transform: 'translateZ(18px)' }}>
-            <ToolLogo name={tool.name} category={tool.category} url={tool.url} className="w-11 h-11 rounded-xl text-base shrink-0 shadow-md border border-white/10" />
-            <div className="flex-1 min-w-0">
-              <h3 className="font-heading font-bold text-base text-high-emphasis truncate leading-snug">
+            {/* Bottom Actions Row */}
+            <div className="relative z-10 flex flex-col gap-2 mt-auto pt-2 border-t border-white/[0.06]" style={{ transform: 'translateZ(15px)' }}>
+              <div className="flex items-center justify-between gap-2">
                 <Link
-                  to={`/tools/${toolSlug}`}
-                  onClick={() => addToHistory(tool)}
-                  className="hover:text-primary transition-colors"
+                  to={`/categories/${tool.category.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`}
+                  className="text-[11px] font-medium text-white/50 hover:text-white/80 bg-white/[0.03] border border-white/[0.06] px-2.5 py-1 rounded-full truncate max-w-[130px] transition-colors"
                 >
-                  {tool.name}
+                  {tool.category.split(',')[0]}
                 </Link>
-              </h3>
-              <p className="text-xs text-med-emphasis truncate mt-0.5">{tool.category}</p>
-            </div>
-          </div>
 
-          {/* Short description */}
-          <p className="relative z-10 text-xs sm:text-sm text-med-emphasis leading-relaxed mb-3 flex-1 line-clamp-2 min-h-[2.5rem]" style={{ transform: 'translateZ(10px)' }}>
-            {tool.why}
-          </p>
+                <div className="flex items-center gap-1.5 shrink-0">
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Button
+                        variant="ghost"
+                        size="icon"
+                        className={cn(
+                          'h-8 w-8 rounded-lg border border-white/[0.06] shrink-0 transition-all',
+                          bookmarked
+                            ? 'text-amber-400 bg-amber-500/10 border-amber-500/20'
+                            : 'text-white/60 hover:text-white hover:bg-white/[0.06]'
+                        )}
+                        onClick={() => toggleBookmark(tool)}
+                        aria-label={bookmarked ? 'Remove bookmark' : 'Bookmark tool'}
+                      >
+                        {bookmarked ? <BookmarkCheck className="w-3.5 h-3.5" /> : <Bookmark className="w-3.5 h-3.5" />}
+                      </Button>
+                    </TooltipTrigger>
+                    <TooltipContent side="top" className="text-xs bg-[#18181C] border-white/10">
+                      {bookmarked ? 'Bookmarked' : 'Bookmark'}
+                    </TooltipContent>
+                  </Tooltip>
 
-          {/* Plan Limit Breakdown Indicator (Dark Glassmorphism) */}
-          <div
-            className="relative z-10 bg-neutral-900/90 border border-white/10 px-3 py-2 rounded-lg text-xs font-medium flex items-center gap-2 mb-3 shadow-sm backdrop-blur-sm"
-            style={{ transform: 'translateZ(12px)' }}
-          >
-            <span className={cn('w-2 h-2 rounded-full shrink-0', dotColorClass)} />
-            <div className="flex items-center justify-between w-full gap-1.5 min-w-0">
-              <span className={cn('font-semibold shrink-0 text-[11px]', statusTextClass)}>
-                {planDetails.status}:
-              </span>
-              <span className="text-med-emphasis truncate text-[11px] font-normal" title={planDetails.summary}>
-                {planDetails.summary}
-              </span>
-            </div>
-          </div>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Button
+                        variant="ghost"
+                        size="icon"
+                        disabled={compareDisabled}
+                        className={cn(
+                          'h-8 w-8 rounded-lg border border-white/[0.06] shrink-0 transition-all',
+                          inCompare
+                            ? 'text-amber-400 bg-amber-500/15 border-amber-500/30'
+                            : 'text-white/60 hover:text-white hover:bg-white/[0.06]',
+                          compareDisabled && 'opacity-30 cursor-not-allowed'
+                        )}
+                        onClick={() => toggleCompare(tool)}
+                        aria-label={inCompare ? 'Remove from compare' : 'Compare tool'}
+                      >
+                        <GitCompare className="w-3.5 h-3.5" />
+                      </Button>
+                    </TooltipTrigger>
+                    <TooltipContent side="top" className="text-xs bg-[#18181C] border-white/10">
+                      {inCompare ? 'In Compare' : 'Compare'}
+                    </TooltipContent>
+                  </Tooltip>
 
-          {/* Actions row */}
-          <div className="relative z-10 flex flex-col gap-2 mt-auto pt-2 border-t border-white/[0.06]" style={{ transform: 'translateZ(15px)' }}>
-            <div className="grid grid-cols-2 gap-2">
-              <Button
-                onClick={handleVisit}
-                size="sm"
-                className="h-11 min-h-[44px] text-xs font-semibold bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl gap-1.5 w-full active:scale-95 shadow-md"
-              >
-                <ExternalLink className="w-3.5 h-3.5" />
-                Visit Website
-              </Button>
-
-              <Button
-                asChild
-                variant="outline"
-                size="sm"
-                className="h-11 min-h-[44px] text-xs font-semibold border-white/10 hover:bg-white/[0.06] text-high-emphasis rounded-xl gap-1 w-full active:scale-95"
-              >
-                <Link to={`/tools/${toolSlug}`} onClick={() => addToHistory(tool)}>
-                  Details <ArrowRight className="w-3 h-3" />
-                </Link>
-              </Button>
-            </div>
-
-            {/* Prompt Workshop trigger button when available */}
-            {workshop && (
-              <button
-                onClick={() => setWorkshopOpen(true)}
-                className="bg-white/5 border border-white/10 text-white/80 hover:text-white hover:border-[#F2994A]/50 transition-all text-xs px-3 py-1.5 rounded-lg font-semibold flex items-center justify-center gap-1.5 w-full active:scale-95 shadow-sm"
-              >
-                <span>🛠️ Prompt Workshop</span>
-              </button>
-            )}
-
-            {/* Quick icon actions: Bookmark, Compare, Quick View, Share */}
-            <div className="flex items-center justify-between pt-1">
-              <div className="flex items-center gap-1.5">
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <Button
-                      variant="ghost"
-                      size="icon"
-                      className={cn(
-                        'h-10 w-10 sm:h-8 sm:w-8 min-h-[44px] min-w-[44px] sm:min-h-0 sm:min-w-0 flex items-center justify-center rounded-xl border border-white/[0.06] shrink-0 transition-all',
-                        bookmarked
-                          ? 'text-amber-400 bg-amber-500/10 border-amber-500/20'
-                          : 'text-med-emphasis hover:text-high-emphasis hover:bg-white/[0.06]'
-                      )}
-                      onClick={() => toggleBookmark(tool)}
-                      aria-label={bookmarked ? 'Remove bookmark' : 'Bookmark tool'}
-                    >
-                      {bookmarked ? <BookmarkCheck className="w-4 h-4 sm:w-3.5 sm:h-3.5" /> : <Bookmark className="w-4 h-4 sm:w-3.5 sm:h-3.5" />}
-                    </Button>
-                  </TooltipTrigger>
-                  <TooltipContent side="top" className="text-xs bg-[#1C1D22] border-white/10">
-                    {bookmarked ? 'Remove bookmark' : 'Bookmark'}
-                  </TooltipContent>
-                </Tooltip>
-
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      disabled={compareDisabled}
-                      className={cn(
-                        'h-10 sm:h-8 px-2.5 sm:px-0 sm:w-8 min-h-[44px] min-w-[44px] sm:min-h-0 sm:min-w-0 flex items-center justify-center rounded-xl border border-white/[0.06] shrink-0 transition-all text-xs font-semibold gap-1',
-                        inCompare
-                          ? 'text-amber-400 bg-amber-500/15 border-amber-500/30'
-                          : 'text-med-emphasis hover:text-high-emphasis hover:bg-white/[0.06]',
-                        compareDisabled && 'opacity-30 cursor-not-allowed'
-                      )}
-                      onClick={() => toggleCompare(tool)}
-                      aria-label={inCompare ? 'Remove from compare' : 'Compare tool'}
-                    >
-                      <GitCompare className="w-4 h-4 sm:w-3.5 sm:h-3.5" />
-                      <span className="inline sm:hidden text-[11px] font-semibold">
-                        {inCompare ? 'Added' : 'Compare'}
-                      </span>
-                    </Button>
-                  </TooltipTrigger>
-                  <TooltipContent side="top" className="text-xs bg-[#1C1D22] border-white/10">
-                    {inCompare ? 'Remove from compare' : compareDisabled ? 'Max 3 tools' : 'Add to compare'}
-                  </TooltipContent>
-                </Tooltip>
+                  <Button
+                    onClick={handleVisit}
+                    size="sm"
+                    className="h-8 px-3 text-xs font-semibold bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg gap-1 shadow-sm active:scale-95"
+                  >
+                    <span>Visit</span>
+                    <ExternalLink className="w-3 h-3" />
+                  </Button>
+                </div>
               </div>
 
-              <div className="flex items-center gap-1.5">
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <Button
-                      variant="ghost"
-                      size="icon"
-                      className="h-10 w-10 sm:h-8 sm:w-8 min-h-[44px] min-w-[44px] sm:min-h-0 sm:min-w-0 flex items-center justify-center rounded-xl border border-white/[0.06] text-med-emphasis hover:text-high-emphasis hover:bg-white/[0.06] transition-all"
-                      onClick={() => setQuickViewOpen(true)}
-                      aria-label="Quick View"
-                    >
-                      <Eye className="w-4 h-4 sm:w-3.5 sm:h-3.5" />
-                    </Button>
-                  </TooltipTrigger>
-                  <TooltipContent side="top" className="text-xs bg-[#1C1D22] border-white/10">Quick View</TooltipContent>
-                </Tooltip>
+              {/* Secondary Details & Workshop Trigger */}
+              <div className="flex items-center justify-between gap-1.5 pt-1">
+                <Button
+                  asChild
+                  variant="ghost"
+                  size="sm"
+                  className="h-7 px-2 text-[11px] font-medium text-white/60 hover:text-white hover:bg-white/[0.04] rounded-lg gap-1"
+                >
+                  <Link to={`/tools/${toolSlug}`} onClick={() => addToHistory(tool)}>
+                    Details <ArrowRight className="w-3 h-3" />
+                  </Link>
+                </Button>
 
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <Button
-                      variant="ghost"
-                      size="icon"
-                      className="h-10 w-10 sm:h-8 sm:w-8 min-h-[44px] min-w-[44px] sm:min-h-0 sm:min-w-0 flex items-center justify-center rounded-xl border border-white/[0.06] text-med-emphasis hover:text-high-emphasis hover:bg-white/[0.06] transition-all"
-                      onClick={handleShare}
-                      aria-label="Share tool"
+                <div className="flex items-center gap-1">
+                  {workshop && (
+                    <button
+                      onClick={() => setWorkshopOpen(true)}
+                      className="bg-white/[0.03] border border-white/[0.06] text-white/70 hover:text-white hover:border-[#F2994A]/40 transition-all text-[11px] px-2 py-0.5 rounded-md font-medium flex items-center gap-1"
                     >
-                      <Share2 className="w-4 h-4 sm:w-3.5 sm:h-3.5" />
-                    </Button>
-                  </TooltipTrigger>
-                  <TooltipContent side="top" className="text-xs bg-[#1C1D22] border-white/10">Share</TooltipContent>
-                </Tooltip>
+                      <span>🛠️ Workshop</span>
+                    </button>
+                  )}
+
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Button
+                        variant="ghost"
+                        size="icon"
+                        className="h-7 w-7 rounded-lg text-white/50 hover:text-white hover:bg-white/[0.06] transition-all"
+                        onClick={() => setQuickViewOpen(true)}
+                        aria-label="Quick View"
+                      >
+                        <Eye className="w-3.5 h-3.5" />
+                      </Button>
+                    </TooltipTrigger>
+                    <TooltipContent side="top" className="text-xs bg-[#18181C] border-white/10">Quick View</TooltipContent>
+                  </Tooltip>
+
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <Button
+                        variant="ghost"
+                        size="icon"
+                        className="h-7 w-7 rounded-lg text-white/50 hover:text-white hover:bg-white/[0.06] transition-all"
+                        onClick={handleShare}
+                        aria-label="Share tool"
+                      >
+                        <Share2 className="w-3.5 h-3.5" />
+                      </Button>
+                    </TooltipTrigger>
+                    <TooltipContent side="top" className="text-xs bg-[#18181C] border-white/10">Share</TooltipContent>
+                  </Tooltip>
+                </div>
               </div>
             </div>
           </div>
@@ -364,8 +364,7 @@ function ToolCard({ tool, showBestFree, rank, animated = true, animationDelay = 
             onClose={() => setWorkshopOpen(false)}
           />
         </div>
-      </div>
-    </TooltipProvider>
+      </TooltipProvider>
     </motion.div>
   );
 }

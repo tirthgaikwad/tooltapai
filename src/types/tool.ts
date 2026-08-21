@@ -47,6 +47,31 @@ export interface CompareItem {
   addedAt: number;
 }
 
+export type UserRole = 'general' | 'student' | 'developer' | 'creator' | 'marketer';
+
+export interface WorkflowStep {
+  stepNumber: number;
+  title: string;
+  roleDescription: string;
+  recommendedToolName: string;
+  freeAlternativeName?: string;
+  promptTemplate: string;
+  inputFormat: string;
+  outputFormat: string;
+}
+
+export interface WorkflowPipeline {
+  id: string;
+  title: string;
+  persona: UserRole;
+  description: string;
+  estimatedTime: string;
+  savingsVsPro: string;
+  difficulty: 'Beginner' | 'Intermediate' | 'Advanced';
+  tags: string[];
+  steps: WorkflowStep[];
+}
+
 export const CATEGORIES = [
   'General AI Assistants',
   'Coding and Software Development',

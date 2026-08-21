@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState, useMemo, useEffect } from 'react';
 import Fuse from 'fuse.js';
 import { toast } from 'sonner';
-import type { Tool, FilterAccess, SortOption } from '@/types/tool';
+import type { Tool, FilterAccess, SortOption, UserRole } from '@/types/tool';
 import toolsData from '@/data/tools.json';
 import { createSearchIndex } from '@/lib/search';
 import { useBookmarks, useRecentlyViewed, useRecentSearches } from '@/hooks/useBookmarks';
@@ -14,6 +14,14 @@ interface AppContextValue {
   fuseIndex: Fuse<Tool>;
   studentMode: boolean;
   setStudentMode: (v: boolean) => void;
+  userRole: UserRole;
+  setUserRole: (role: UserRole) => void;
+  commandPaletteOpen: boolean;
+  setCommandPaletteOpen: (v: boolean) => void;
+  pricingCalculatorOpen: boolean;
+  setPricingCalculatorOpen: (v: boolean) => void;
+  pipelinePlannerOpen: boolean;
+  setPipelinePlannerOpen: (v: boolean) => void;
   accessFilter: FilterAccess;
   setAccessFilter: (v: FilterAccess) => void;
   categoryFilter: string;
@@ -63,6 +71,35 @@ function AppInnerProvider({ children }: { children: React.ReactNode }) {
     }
   });
 
+  const [userRole, setUserRoleRaw] = useState<UserRole>(() => {
+    try {
+      return (localStorage.getItem('tooltap-user-role') as UserRole) || 'general';
+    } catch {
+      return 'general';
+    }
+  });
+
+  const setUserRole = (role: UserRole) => {
+    setUserRoleRaw(role);
+    try {
+      localStorage.setItem('tooltap-user-role', role);
+    } catch {
+      // Silently fail
+    }
+    const roleLabels: Record<UserRole, string> = {
+      general: 'All AI Workflows',
+      student: 'Student & Academic Preset',
+      developer: 'Developer & Engineering Preset',
+      creator: 'Creator & Media Preset',
+      marketer: 'Marketing & Business Preset',
+    };
+    toast.success(`Active persona: ${roleLabels[role]}`, { duration: 2500, id: 'user-role' });
+  };
+
+  const [commandPaletteOpen, setCommandPaletteOpen] = useState(false);
+  const [pricingCalculatorOpen, setPricingCalculatorOpen] = useState(false);
+  const [pipelinePlannerOpen, setPipelinePlannerOpen] = useState(false);
+
   const setStudentMode = (v: boolean) => {
     setStudentModeRaw(v);
     try {
@@ -93,6 +130,14 @@ function AppInnerProvider({ children }: { children: React.ReactNode }) {
     fuseIndex,
     studentMode,
     setStudentMode,
+    userRole,
+    setUserRole,
+    commandPaletteOpen,
+    setCommandPaletteOpen,
+    pricingCalculatorOpen,
+    setPricingCalculatorOpen,
+    pipelinePlannerOpen,
+    setPipelinePlannerOpen,
     accessFilter,
     setAccessFilter,
     categoryFilter,

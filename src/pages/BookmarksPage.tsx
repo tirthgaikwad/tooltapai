@@ -1,9 +1,12 @@
+import { Suspense } from 'react';
 import { Link } from 'react-router-dom';
 import { Bookmark, Clock, Trash2, X, Sparkles, Grid3X3 } from 'lucide-react';
 import PageLayout from '@/components/layout/PageLayout';
 import PageMeta from '@/components/common/PageMeta';
 import ToolCard from '@/components/tools/ToolCard';
 import ToolLogo from '@/components/tools/ToolLogo';
+import SuspenseToolGrid from '@/components/tools/SuspenseToolGrid';
+import { ToolGridSkeleton } from '@/components/tools/ToolCardSkeleton';
 import { Button } from '@/components/ui/button';
 import { useApp } from '@/contexts/AppContext';
 
@@ -67,10 +70,14 @@ export default function BookmarksPage() {
             </div>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
-            {bookmarks.map((tool, i) => (
-              <ToolCard key={tool.id} tool={tool} animationDelay={i * 30} />
-            ))}
+          <div className="mb-12">
+            <Suspense fallback={<ToolGridSkeleton count={6} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" />}>
+              <SuspenseToolGrid
+                tools={bookmarks}
+                gridClassName="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+                skeletonCount={6}
+              />
+            </Suspense>
           </div>
         )}
 

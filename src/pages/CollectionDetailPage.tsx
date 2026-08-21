@@ -1,9 +1,11 @@
-import { useMemo } from 'react';
+import { useMemo, Suspense } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { GraduationCap, Code2, ImageIcon, Video, Package, ArrowLeft, Layers } from 'lucide-react';
 import PageLayout from '@/components/layout/PageLayout';
 import PageMeta from '@/components/common/PageMeta';
 import ToolCard from '@/components/tools/ToolCard';
+import SuspenseToolGrid from '@/components/tools/SuspenseToolGrid';
+import { ToolGridSkeleton } from '@/components/tools/ToolCardSkeleton';
 import { useApp } from '@/contexts/AppContext';
 import { Button } from '@/components/ui/button';
 
@@ -130,18 +132,16 @@ export default function CollectionDetailPage() {
           </p>
         </div>
 
-        {/* Tools Grid */}
-        {collection.tools.length === 0 ? (
-          <div className="text-center py-12 text-muted-foreground text-sm">
-            No tools found in this collection.
-          </div>
-        ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {collection.tools.map((tool) => (
-              <ToolCard key={tool.id} tool={tool} />
-            ))}
-          </div>
-        )}
+        {/* Tools Grid with Suspense */}
+        <Suspense fallback={<ToolGridSkeleton count={6} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" />}>
+          <SuspenseToolGrid
+            tools={collection.tools}
+            gridClassName="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+            skeletonCount={6}
+            emptyTitle="No tools found in this collection"
+            emptyMessage="We could not find tools matching this curated criteria at this time."
+          />
+        </Suspense>
       </div>
     </PageLayout>
   );

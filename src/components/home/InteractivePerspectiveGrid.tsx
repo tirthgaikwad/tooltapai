@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { motion, useMotionValue, useSpring, useTransform } from 'motion/react';
 import PerspectiveGrid from '@/components/ui/perspective-grid';
 
@@ -28,30 +28,31 @@ export function InteractivePerspectiveGrid({
   const translateX = useTransform(smoothX, [-0.5, 0.5], [-20, 20]);
   const translateY = useTransform(smoothY, [-0.5, 0.5], [-20, 20]);
 
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (
-      !containerRef.current ||
-      window.innerWidth < 768 ||
-      !window.matchMedia('(hover: hover) and (pointer: fine)').matches
-    ) return;
-    const rect = containerRef.current.getBoundingClientRect();
-    const x = (e.clientX - rect.left) / rect.width - 0.5;
-    const y = (e.clientY - rect.top) / rect.height - 0.5;
-    mouseX.set(x);
-    mouseY.set(y);
-  };
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      if (
+        !containerRef.current ||
+        window.innerWidth < 768 ||
+        !window.matchMedia('(hover: hover) and (pointer: fine)').matches
+      ) return;
+      const rect = containerRef.current.getBoundingClientRect();
+      if (rect.width === 0 || rect.height === 0) return;
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      mouseX.set(x);
+      mouseY.set(y);
+    };
 
-  const handleMouseLeave = () => {
-    mouseX.set(0);
-    mouseY.set(0);
-  };
+    window.addEventListener('mousemove', handleMouseMove, { passive: true });
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, [mouseX, mouseY]);
 
   return (
     <div
       ref={containerRef}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-      className="absolute inset-0 z-0 overflow-hidden pointer-events-none md:pointer-events-auto"
+      className="absolute inset-0 z-0 overflow-hidden pointer-events-none"
       style={{ perspective: '1200px' }}
     >
       <motion.div

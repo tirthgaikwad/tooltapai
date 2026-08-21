@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo, useCallback } from 'react';
+import { useState, useEffect, useMemo, useCallback, useTransition, Suspense } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { SlidersHorizontal, ChevronDown, X, GraduationCap } from 'lucide-react';
 import PageLayout from '@/components/layout/PageLayout';
@@ -8,6 +8,7 @@ import SuggestionChips from '@/components/search/SuggestionChips';
 import ToolCard from '@/components/tools/ToolCard';
 import ToolSection from '@/components/tools/ToolSection';
 import DeferredToolGrid from '@/components/tools/DeferredToolGrid';
+import SuspenseToolGrid from '@/components/tools/SuspenseToolGrid';
 import { ToolGridSkeleton } from '@/components/tools/ToolCardSkeleton';
 import AutoHidingFilterBar from '@/components/common/AutoHidingFilterBar';
 import { Button } from '@/components/ui/button';
@@ -330,43 +331,51 @@ export default function SearchPage() {
         </div>
 
         {/* Results */}
-        {isSearching ? (
-          <ToolGridSkeleton count={8} />
-        ) : results.length === 0 ? (
-          <div className="text-center py-16 bg-[#1E1E24] border border-white/10 rounded-2xl p-8 space-y-4">
-            <div className="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center mx-auto text-xl">
-              🔍
+        <Suspense fallback={<ToolGridSkeleton count={8} />}>
+          {isSearching ? (
+            <ToolGridSkeleton count={8} />
+          ) : results.length === 0 ? (
+            <div className="text-center py-16 bg-[#1E1E24] border border-white/10 rounded-2xl p-8 space-y-4">
+              <div className="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center mx-auto text-xl">
+                🔍
+              </div>
+              <h2 className="font-heading font-bold text-lg text-foreground">No matching AI tools found</h2>
+              <p className="text-muted-foreground text-xs sm:text-sm max-w-sm mx-auto leading-relaxed">
+                Try a different search query or clear your active filters to see all available tools.
+              </p>
+              <div className="pt-2">
+                <Button onClick={clearFilters} size="sm" className="bg-primary text-primary-foreground font-semibold rounded-xl h-10 px-5">
+                  Reset Filters
+                </Button>
+              </div>
             </div>
-            <h2 className="font-heading font-bold text-lg text-foreground">No matching AI tools found</h2>
-            <p className="text-muted-foreground text-xs sm:text-sm max-w-sm mx-auto leading-relaxed">
-              Try a different search query or clear your active filters to see all available tools.
-            </p>
-            <div className="pt-2">
-              <Button onClick={clearFilters} size="sm" className="bg-primary text-primary-foreground font-semibold rounded-xl h-10 px-5">
-                Reset Filters
-              </Button>
+          ) : query.trim() && ranked ? (
+            <div className="space-y-12">
+              {(Object.entries(ranked) as [string, typeof ranked.bestOverall][]).map(([key, sectionTools]) => {
+                if (!sectionTools.length) return null;
+                const label = RANK_LABELS[key] ?? key;
+                return (
+                  <div key={key} className="bg-[#1E1E24] border border-white/[0.08] rounded-2xl p-5 sm:p-7 shadow-xl">
+                    <ToolSection
+                      title={label}
+                      tools={sectionTools}
+                      showBestFree={key === 'bestFree' || key === 'bestForStudents'}
+                      cols={3}
+                    />
+                  </div>
+                );
+              })}
             </div>
-          </div>
-        ) : query.trim() && ranked ? (
-          <div className="space-y-12">
-            {(Object.entries(ranked) as [string, typeof ranked.bestOverall][]).map(([key, sectionTools]) => {
-              if (!sectionTools.length) return null;
-              const label = RANK_LABELS[key] ?? key;
-              return (
-                <div key={key} className="bg-[#1E1E24] border border-white/[0.08] rounded-2xl p-5 sm:p-7 shadow-xl">
-                  <ToolSection
-                    title={label}
-                    tools={sectionTools}
-                    showBestFree={key === 'bestFree' || key === 'bestForStudents'}
-                    cols={3}
-                  />
-                </div>
-              );
-            })}
-          </div>
-        ) : (
-          <DeferredToolGrid tools={results} />
-        )}
+          ) : (
+            <SuspenseToolGrid
+              tools={results}
+              fallback={<ToolGridSkeleton count={8} />}
+              emptyTitle="No matching AI tools found"
+              emptyMessage="Try a different search query or clear your active filters."
+              onResetFilters={clearFilters}
+            />
+          )}
+        </Suspense>
       </div>
     </PageLayout>
   );

@@ -4,6 +4,9 @@ import IntersectObserver from '@/components/common/IntersectObserver';
 import ScrollManager from '@/components/common/ScrollManager';
 import { Toaster } from '@/components/ui/sonner';
 import { AppProvider } from '@/contexts/AppContext';
+import { CommandPalette } from '@/components/search/CommandPalette';
+import { PricingSimulatorModal } from '@/components/tools/PricingSimulatorModal';
+import { PipelinePlannerModal } from '@/components/workflow/PipelinePlannerModal';
 import { routes } from './routes';
 
 const App: React.FC = () => {
@@ -19,6 +22,9 @@ const App: React.FC = () => {
             ))}
           </Routes>
         </div>
+        <CommandPalette />
+        <PricingSimulatorModal />
+        <PipelinePlannerModal />
         <Toaster theme="dark" position="bottom-right" richColors />
       </Router>
     </AppProvider>

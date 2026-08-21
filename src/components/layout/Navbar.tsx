@@ -2,14 +2,13 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {
   Compass, Grid3X3, GitCompare,
-  Bookmark, Menu, X, Sparkles, Layers,
-  HelpCircle, BookOpen
+  Bookmark, Menu, X, Layers,
+  HelpCircle
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
 import { Badge } from '@/components/ui/badge';
-import { Switch } from '@/components/ui/switch';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+import { TooltipProvider } from '@/components/ui/tooltip';
 import { useApp } from '@/contexts/AppContext';
 import { useBodyScrollLock } from '@/hooks/useBodyScrollLock';
 import { ToolTapLogo } from '@/components/common/ToolTapLogo';
@@ -27,7 +26,7 @@ const navLinks = [
 
 export default function Navbar() {
   const location = useLocation();
-  const { studentMode, setStudentMode, compareList, bookmarks } = useApp();
+  const { compareList, bookmarks } = useApp();
   const [mobileOpen, setMobileOpen] = useState(false);
 
   // Body scroll locking when mobile menu is active

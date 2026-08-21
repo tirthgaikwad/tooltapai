@@ -104,7 +104,7 @@ function CategoryCard({ category, count, index = 0 }: Props) {
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
         className={cn(
-          'category-card group relative flex flex-col justify-between p-5 rounded-2xl bg-[#1E1E24] card-gradient border border-white/[0.08] card-hover animate-float-up opacity-0 [animation-fill-mode:forwards] h-full overflow-hidden transition-transform duration-150 ease-out preserve-3d'
+          'category-card group relative flex flex-col justify-between p-5 rounded-xl bg-[#18181C] border border-white/[0.07] hover:border-white/20 transition-all duration-200 animate-float-up opacity-0 [animation-fill-mode:forwards] h-full overflow-hidden preserve-3d'
         )}
         style={{
           animationDelay: `${index * 30}ms`,
@@ -116,30 +116,30 @@ function CategoryCard({ category, count, index = 0 }: Props) {
       >
         {/* Spotlight overlay */}
         <div
-          className="pointer-events-none absolute -inset-px rounded-2xl transition-opacity duration-300 z-0"
+          className="pointer-events-none absolute -inset-px rounded-xl transition-opacity duration-200 z-0"
           style={{
             opacity: 'var(--spotlight-opacity, 0)',
-            background: `radial-gradient(250px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(242, 153, 74, 0.15), transparent 80%)`,
+            background: `radial-gradient(220px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(242, 153, 74, 0.15), transparent 80%)`,
           }}
         />
 
         <div className="relative z-10" style={{ transform: 'translateZ(15px)' }}>
           <div className="flex items-center justify-between mb-4">
-            <div className={cn('w-11 h-11 rounded-xl bg-gradient-to-br flex items-center justify-center shrink-0 border border-white/5 shadow-md', bgGradient)}>
+            <div className={cn('w-10 h-10 rounded-lg bg-gradient-to-br flex items-center justify-center shrink-0 border border-white/10 shadow-sm', bgGradient)}>
               <Icon className={cn('w-5 h-5', color)} />
             </div>
-            <span className="text-xs font-medium text-med-emphasis bg-white/[0.04] border border-white/[0.06] px-2.5 py-1 rounded-full">
+            <span className="text-[11px] font-medium text-white/50 bg-white/[0.03] border border-white/[0.06] px-2 py-0.5 rounded-full">
               {count} {count === 1 ? 'tool' : 'tools'}
             </span>
           </div>
 
-          <h3 className="font-heading font-semibold text-sm sm:text-base text-high-emphasis leading-snug mb-1 group-hover:text-primary transition-colors">
+          <h3 className="font-semibold text-sm sm:text-base text-white leading-snug mb-1 group-hover:text-primary transition-colors">
             {category}
           </h3>
         </div>
 
-        <div className="relative z-10 flex items-center gap-1 text-xs font-semibold text-med-emphasis group-hover:text-primary transition-colors mt-4" style={{ transform: 'translateZ(12px)' }}>
-          <span>Explore category</span>
+        <div className="relative z-10 flex items-center gap-1 text-xs font-medium text-white/50 group-hover:text-amber-400 transition-colors mt-4" style={{ transform: 'translateZ(12px)' }}>
+          <span>Explore</span>
           <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
         </div>
       </Link>

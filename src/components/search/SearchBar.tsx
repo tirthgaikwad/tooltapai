@@ -140,15 +140,15 @@ export default function SearchBar({ size = 'hero', autoFocus = false, initialVal
       <div className="relative w-full">
         <div
           className={cn(
-            'relative flex items-center rounded-2xl border transition-all duration-200 bg-[#1E1E24]',
+            'relative flex items-center rounded-2xl border transition-all duration-200 bg-[#18181C]/90 backdrop-blur-xl shadow-2xl',
             isHero ? 'h-14 sm:h-16' : 'h-12',
             focused
               ? 'border-amber-500/60 ring-2 ring-amber-500/20 shadow-[0_16px_48px_rgba(0,0,0,0.6)]'
-              : 'border-white/[0.08] hover:border-white/[0.15]',
+              : 'border-white/10 hover:border-white/20',
           )}
         >
           {/* Left search icon */}
-          <Search className={cn('absolute left-4 shrink-0 text-med-emphasis pointer-events-none', isHero ? 'w-5 h-5' : 'w-4 h-4')} />
+          <Search className={cn('absolute left-4 shrink-0 text-white/50 pointer-events-none', isHero ? 'w-5 h-5' : 'w-4 h-4')} />
 
           {/* Input field */}
           <input
@@ -163,7 +163,7 @@ export default function SearchBar({ size = 'hero', autoFocus = false, initialVal
             placeholder={PLACEHOLDERS[placeholderIdx]}
             aria-expanded={showDropdown}
             className={cn(
-              'w-full bg-transparent text-high-emphasis placeholder:text-low-emphasis outline-none font-medium',
+              'w-full bg-transparent text-white placeholder:text-white/40 outline-none font-medium',
               isHero ? 'pl-11 sm:pl-12 pr-32 sm:pr-44 text-sm sm:text-base' : 'pl-10 pr-28 text-xs sm:text-sm',
             )}
           />
@@ -184,7 +184,7 @@ export default function SearchBar({ size = 'hero', autoFocus = false, initialVal
                 inputRef.current?.focus();
               }}
               className={cn(
-                'absolute text-med-emphasis hover:text-high-emphasis transition-colors p-1.5 rounded-full hover:bg-white/10 flex items-center justify-center shrink-0 z-10 touch-manipulation',
+                'absolute text-white/50 hover:text-white transition-colors p-1.5 rounded-full hover:bg-white/10 flex items-center justify-center shrink-0 z-10 touch-manipulation',
                 isHero ? 'right-28 sm:right-36' : 'right-20 sm:right-24'
               )}
               aria-label="Clear search"
@@ -193,21 +193,21 @@ export default function SearchBar({ size = 'hero', autoFocus = false, initialVal
             </button>
           ) : null}
 
-          {/* Search Button - ALWAYS VISIBLE */}
+          {/* Search Button - ALWAYS VISIBLE with precise padding */}
           <button
             type="button"
             onClick={() => handleSubmit(value)}
             className={cn(
-              'absolute right-2 flex items-center justify-center gap-1.5 rounded-xl bg-primary font-semibold text-primary-foreground transition-all hover:bg-primary/90 active:scale-95 shadow-md shrink-0 z-10',
-              isHero ? 'h-10 sm:h-11 px-3 sm:px-5 text-xs sm:text-sm' : 'h-8 px-3 text-xs'
+              'absolute right-2 flex items-center justify-center gap-1.5 rounded-xl bg-primary font-semibold text-primary-foreground transition-all hover:bg-primary/90 active:scale-95 shadow-md shrink-0 z-10 px-5 py-2.5',
+              isHero ? 'h-10 sm:h-11 text-xs sm:text-sm' : 'h-8 px-3 text-xs'
             )}
           >
             {loading ? (
-              <Loader2 className="w-5 h-5 pr-[5px] animate-spin" />
+              <Loader2 className="w-4 h-4 animate-spin" />
             ) : (
               <>
                 <span>Search</span>
-                <ArrowRight className="w-[20px] h-[20px] pr-[5px]" />
+                <ArrowRight className="w-4 h-4" />
               </>
             )}
           </button>
@@ -218,13 +218,7 @@ export default function SearchBar({ size = 'hero', autoFocus = false, initialVal
           <div
             id="searchbar-dropdown"
             role="listbox"
-            style={{
-              backdropFilter: 'blur(12px)',
-              WebkitBackdropFilter: 'blur(12px)',
-              backgroundColor: 'rgba(30, 30, 36, 0.85)',
-              boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
-            }}
-            className="absolute left-0 top-[calc(100%+8px)] z-[100] max-h-[340px] w-full overflow-y-auto rounded-2xl border border-white/10 p-2 animate-in fade-in-0 slide-in-from-top-2 duration-150"
+            className="absolute left-0 top-[calc(100%+8px)] z-[100] max-h-[340px] w-full overflow-y-auto rounded-2xl border border-white/10 p-2 bg-[#18181C]/95 backdrop-blur-xl shadow-[0_16px_48px_rgba(0,0,0,0.6)] animate-in fade-in-0 slide-in-from-top-2 duration-150"
           >
             {hasQuery ? (
               suggestions.length > 0 ? (

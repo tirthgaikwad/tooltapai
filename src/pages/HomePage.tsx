@@ -123,7 +123,9 @@ export default function HomePage() {
       />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         {/* SECTION 1: HERO SEARCH + TASK CHIPS + ROLE SELECTOR */}
-        <section className="relative overflow-hidden py-16 sm:py-20 md:py-24 text-center rounded-3xl bg-[#18181C] border border-white/[0.08] shadow-2xl w-full">
+        <section className="relative overflow-hidden py-16 sm:py-20 md:py-24 text-center rounded-3xl bg-[#18181C] border border-white/[0.08] shadow-2xl w-full transform-gpu [transform:translateZ(0)]">
+          {/* Ambient Background Gradient Backlight for 3D Centerpiece */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[350px] bg-gradient-to-tr from-[#F2994A]/25 via-[#E05A47]/15 to-transparent rounded-full blur-[100px] pointer-events-none -z-20 transform-gpu [transform:translateZ(0)]" />
           <CinematicBackground />
           <InteractivePerspectiveGrid className="absolute inset-0 z-0 opacity-20 pointer-events-none" />
           <Hero3DCanvas />
@@ -162,7 +164,7 @@ export default function HomePage() {
 
             {/* Hero Search Bar */}
             <div
-              className="relative z-[70] mx-auto mb-6 w-full max-w-2xl animate-float-up opacity-0 [animation-fill-mode:forwards]"
+              className="relative z-20 mx-auto mb-6 w-full max-w-2xl animate-float-up opacity-0 [animation-fill-mode:forwards]"
               style={{ animationDelay: '180ms' }}
             >
               <SearchBar size="hero" />
@@ -187,7 +189,7 @@ export default function HomePage() {
 
             {/* Prominent Student Mode Toggle Banner */}
             <div
-              className="relative z-10 max-w-md mx-auto bg-[#141417]/90 border border-white/10 rounded-2xl p-3.5 sm:p-4 shadow-xl backdrop-blur-md flex items-center justify-between gap-4 animate-float-up opacity-0 [animation-fill-mode:forwards]"
+              className="relative z-10 max-w-md mx-auto bg-[#141417]/95 border border-white/10 rounded-2xl p-3.5 sm:p-4 shadow-xl backdrop-blur-sm transform-gpu [transform:translateZ(0)] flex items-center justify-between gap-4 animate-float-up opacity-0 [animation-fill-mode:forwards]"
               style={{ animationDelay: '300ms' }}
             >
               <div className="flex items-center gap-3 text-left">
@@ -223,23 +225,23 @@ export default function HomePage() {
         {/* SECTION 2: FEATURED / TRENDING TOOL OF THE WEEK CARD */}
         {featuredTool && (
           <section>
-            <div className="relative rounded-2xl p-6 sm:p-8 bg-[#18181C] border border-white/[0.08] hover:border-white/20 transition-all duration-200 shadow-xl">
-              <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+            <div className="relative rounded-2xl p-6 sm:p-8 bg-[#18181C] border border-white/[0.08] hover:border-white/20 transition-all duration-200 shadow-xl overflow-hidden">
+              <div className="flex flex-col xl:flex-row items-start xl:items-center justify-between gap-6">
                 
-                <div className="space-y-4 max-w-2xl">
+                <div className="space-y-4 max-w-2xl min-w-0 flex-1">
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-400 text-xs font-semibold uppercase tracking-wider">
                     <Flame className="w-3.5 h-3.5 text-amber-400 fill-amber-400" />
                     Featured Tool of the Week
                   </div>
 
-                  <div className="flex items-center gap-4">
-                    <ToolLogo name={featuredTool.name} category={featuredTool.category} url={featuredTool.url} size="lg" className="w-12 h-12 rounded-xl shadow-md border border-white/10" />
-                    <div>
-                      <h2 className="font-bold text-2xl text-white tracking-tight flex items-center gap-3">
-                        {featuredTool.name}
-                        <AccessBadge access={featuredTool.access} />
+                  <div className="flex items-center gap-4 min-w-0">
+                    <ToolLogo name={featuredTool.name} category={featuredTool.category} url={featuredTool.url} size="lg" className="w-12 h-12 rounded-xl shadow-md border border-white/10 shrink-0" />
+                    <div className="min-w-0 flex-1">
+                      <h2 className="font-bold text-xl sm:text-2xl text-white tracking-tight flex flex-wrap items-center gap-2.5">
+                        <span>{featuredTool.name}</span>
+                        <AccessBadge access={featuredTool.access} size="sm" />
                       </h2>
-                      <p className="text-xs text-amber-400/90 font-medium mt-0.5">
+                      <p className="text-xs text-amber-400/90 font-medium mt-1">
                         {featuredTool.category}
                       </p>
                     </div>
@@ -250,32 +252,33 @@ export default function HomePage() {
                   </p>
 
                   <div className="flex flex-wrap items-center gap-2 text-xs">
-                    <div className="bg-white/5 border border-white/[0.08] px-3 py-1.5 rounded-xl text-white/80 font-medium flex items-center gap-1.5">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+                    <div className="bg-white/5 border border-white/[0.08] px-3 py-1.5 rounded-xl text-white/80 font-medium flex items-center gap-1.5 shrink-0">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
                       <span>Free Plan: <strong className="text-white">{featuredTool.freePlan}</strong></span>
                     </div>
-                    <div className="bg-white/5 border border-white/[0.08] px-3 py-1.5 rounded-xl text-white/80 font-medium flex items-center gap-1.5">
-                      <Star className="w-3.5 h-3.5 text-amber-400 fill-amber-400" />
+                    <div className="bg-white/5 border border-white/[0.08] px-3 py-1.5 rounded-xl text-white/80 font-medium flex items-center gap-1.5 shrink-0">
+                      <Star className="w-3.5 h-3.5 text-amber-400 fill-amber-400 shrink-0" />
                       <span>Rating: <strong className="text-white">4.9 / 5.0</strong></span>
                     </div>
                   </div>
                 </div>
 
                 {/* Actions & CTA Box */}
-                <div className="w-full lg:w-auto shrink-0 flex flex-col sm:flex-row lg:flex-col gap-3 pt-4 lg:pt-0 border-t lg:border-t-0 border-white/[0.08]">
+                <div className="w-full xl:w-auto shrink-0 flex flex-col sm:flex-row xl:flex-col gap-3 pt-4 xl:pt-0 border-t xl:border-t-0 border-white/[0.08]">
                   <Button
                     asChild
                     size="lg"
-                    className="h-11 px-5 bg-amber-500 hover:bg-amber-500/90 text-black font-bold rounded-xl gap-2 shadow-lg touch-manipulation text-xs sm:text-sm active:scale-95"
+                    className="h-11 px-5 w-full sm:w-auto justify-center bg-amber-500 hover:bg-amber-500/90 text-black font-bold rounded-xl gap-2 shadow-lg touch-manipulation text-xs sm:text-sm active:scale-95 shrink-0"
                   >
                     <a
                       href={featuredTool.url}
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={() => addToHistory(featuredTool)}
+                      className="inline-flex items-center justify-center gap-2"
                     >
-                      <ExternalLink className="w-4 h-4" />
-                      Visit Official Site
+                      <ExternalLink className="w-4 h-4 shrink-0" />
+                      <span>Visit Official Site</span>
                     </a>
                   </Button>
 
@@ -283,10 +286,11 @@ export default function HomePage() {
                     asChild
                     variant="outline"
                     size="lg"
-                    className="h-11 px-5 border-white/10 hover:bg-white/[0.06] text-white font-semibold rounded-xl gap-2 touch-manipulation text-xs sm:text-sm active:scale-95"
+                    className="h-11 px-5 w-full sm:w-auto justify-center border-white/10 hover:bg-white/[0.06] text-white font-semibold rounded-xl gap-2 touch-manipulation text-xs sm:text-sm active:scale-95 shrink-0"
                   >
-                    <Link to={`/tools/${featuredTool.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}>
-                      Explore Details <ArrowRight className="w-4 h-4" />
+                    <Link to={`/tools/${featuredTool.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`} className="inline-flex items-center justify-center gap-2">
+                      <span>Explore Details</span>
+                      <ArrowRight className="w-4 h-4 shrink-0" />
                     </Link>
                   </Button>
                 </div>

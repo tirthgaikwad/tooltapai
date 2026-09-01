@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
   Search, Sparkles, ExternalLink, ArrowRight,
   GitCompare, Bookmark, BookmarkCheck, GraduationCap,
-  Layers, Code2, Palette, TrendingUp, SlidersHorizontal,
-  Calculator, Workflow, Check, X
+  Code2, Palette, TrendingUp, SlidersHorizontal,
+  Calculator, Workflow, Check, X, Clock, Trash2
 } from 'lucide-react';
 import { Dialog, DialogContent } from '@/components/ui/dialog';
 import { Badge } from '@/components/ui/badge';
@@ -34,10 +34,15 @@ export function CommandPalette() {
     addToHistory,
     compareList,
     bookmarks,
+    recentSearches,
+    addSearch,
+    removeSearch,
+    clearSearches,
   } = useApp();
 
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   // Global keydown listener for Cmd+K / Ctrl+K / '/'
   useEffect(() => {
@@ -65,6 +70,15 @@ export function CommandPalette() {
       setSelectedIndex(0);
     }
   }, [commandPaletteOpen]);
+
+  // Filtered recent searches matching current query
+  const relevantRecentSearches = useMemo(() => {
+    if (!searchQuery.trim()) {
+      return recentSearches;
+    }
+    const q = searchQuery.toLowerCase().trim();
+    return recentSearches.filter(s => s.toLowerCase().includes(q));
+  }, [searchQuery, recentSearches]);
 
   // Filtered tools based on search
   const filteredTools = useMemo(() => {
@@ -166,7 +180,39 @@ export function CommandPalette() {
     return roles.filter(r => r.name.toLowerCase().includes(q));
   }, [searchQuery]);
 
-  const totalItems = filteredTools.length + quickActions.length + (searchQuery.trim() ? 0 : personaActions.length);
+  // Build unified flat list of interactive items for consistent keyboard navigation
+  const items = useMemo(() => {
+    const list: Array<
+      | { type: 'recent'; query: string }
+      | { type: 'direct-search'; query: string }
+      | { type: 'tool'; tool: Tool }
+      | { type: 'action'; action: (typeof quickActions)[number] }
+      | { type: 'persona'; role: (typeof personaActions)[number] }
+    > = [];
+
+    // 1. Direct Search if user typed a query
+    if (searchQuery.trim()) {
+      list.push({ type: 'direct-search', query: searchQuery.trim() });
+    }
+
+    // 2. Recent Searches
+    if (relevantRecentSearches.length > 0) {
+      relevantRecentSearches.forEach(q => list.push({ type: 'recent', query: q }));
+    }
+
+    // 3. Filtered Tools
+    filteredTools.forEach(tool => list.push({ type: 'tool', tool }));
+
+    // 4. Quick Actions
+    quickActions.forEach(action => list.push({ type: 'action', action }));
+
+    // 5. Persona Actions (only when query is empty)
+    if (!searchQuery.trim()) {
+      personaActions.forEach(role => list.push({ type: 'persona', role }));
+    }
+
+    return list;
+  }, [searchQuery, relevantRecentSearches, filteredTools, quickActions, personaActions]);
 
   // Keyboard navigation within list
   useEffect(() => {
@@ -175,44 +221,58 @@ export function CommandPalette() {
 
       if (e.key === 'ArrowDown') {
         e.preventDefault();
-        setSelectedIndex((prev) => (prev + 1) % Math.max(1, totalItems));
+        setSelectedIndex((prev) => (prev + 1) % Math.max(1, items.length));
       } else if (e.key === 'ArrowUp') {
         e.preventDefault();
-        setSelectedIndex((prev) => (prev - 1 + totalItems) % Math.max(1, totalItems));
+        setSelectedIndex((prev) => (prev - 1 + items.length) % Math.max(1, items.length));
       } else if (e.key === 'Enter') {
         e.preventDefault();
-        if (selectedIndex < filteredTools.length) {
-          const tool = filteredTools[selectedIndex];
-          if (tool) {
-            addToHistory(tool);
+        const selected = items[selectedIndex];
+        if (!selected) {
+          if (searchQuery.trim()) {
+            addSearch(searchQuery.trim());
             setCommandPaletteOpen(false);
-            navigate(`/tools/${tool.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`);
+            navigate(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
           }
-        } else if (selectedIndex < filteredTools.length + quickActions.length) {
-          const actionIdx = selectedIndex - filteredTools.length;
-          quickActions[actionIdx]?.action();
-        } else {
-          const personaIdx = selectedIndex - filteredTools.length - quickActions.length;
-          const role = personaActions[personaIdx];
-          if (role) {
-            setUserRole(role.id);
-            setCommandPaletteOpen(false);
+          return;
+        }
+
+        if (selected.type === 'direct-search') {
+          addSearch(selected.query);
+          setCommandPaletteOpen(false);
+          navigate(`/search?q=${encodeURIComponent(selected.query)}`);
+        } else if (selected.type === 'recent') {
+          setSearchQuery(selected.query);
+          addSearch(selected.query);
+          inputRef.current?.focus();
+        } else if (selected.type === 'tool') {
+          if (searchQuery.trim()) {
+            addSearch(searchQuery.trim());
           }
+          addToHistory(selected.tool);
+          setCommandPaletteOpen(false);
+          navigate(`/tools/${selected.tool.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`);
+        } else if (selected.type === 'action') {
+          selected.action.action();
+        } else if (selected.type === 'persona') {
+          setUserRole(selected.role.id);
+          setCommandPaletteOpen(false);
         }
       }
     };
 
     window.addEventListener('keydown', handleListKeys);
     return () => window.removeEventListener('keydown', handleListKeys);
-  }, [commandPaletteOpen, selectedIndex, totalItems, filteredTools, quickActions, personaActions, navigate, addToHistory, setCommandPaletteOpen, setUserRole]);
+  }, [commandPaletteOpen, selectedIndex, items, searchQuery, addSearch, addToHistory, navigate, setCommandPaletteOpen, setUserRole]);
 
   return (
     <Dialog open={commandPaletteOpen} onOpenChange={setCommandPaletteOpen}>
-      <DialogContent className="max-w-2xl p-0 bg-[#141417]/95 backdrop-blur-2xl border border-white/10 shadow-[0_24px_80px_rgba(0,0,0,0.8)] rounded-2xl overflow-hidden text-white gap-0">
+      <DialogContent className="max-w-2xl p-0 bg-[#141417]/98 backdrop-blur-sm transform-gpu [transform:translateZ(0)] border border-white/10 shadow-[0_24px_80px_rgba(0,0,0,0.8)] rounded-2xl overflow-hidden text-white gap-0 z-50">
         {/* Search Input Header */}
         <div className="relative flex items-center px-4 py-3.5 border-b border-white/[0.08] bg-[#18181C]/90">
           <Search className="w-5 h-5 text-white/50 shrink-0 mr-3 pointer-events-none" />
           <input
+            ref={inputRef}
             type="text"
             value={searchQuery}
             onChange={(e) => {
@@ -225,8 +285,13 @@ export function CommandPalette() {
           />
           {searchQuery && (
             <button
-              onClick={() => setSearchQuery('')}
-              className="text-white/40 hover:text-white p-1 rounded-md transition-colors"
+              onClick={() => {
+                setSearchQuery('');
+                setSelectedIndex(0);
+                inputRef.current?.focus();
+              }}
+              className="text-white/40 hover:text-white p-1 rounded-md transition-colors mr-1"
+              title="Clear input"
             >
               <X className="w-4 h-4" />
             </button>
@@ -237,7 +302,115 @@ export function CommandPalette() {
         </div>
 
         {/* Scrollable Results */}
-        <div className="max-h-[60vh] overflow-y-auto p-2 space-y-4 scrollbar-thin">
+        <div className="max-h-[60vh] overflow-y-auto p-2 space-y-3.5 scrollbar-thin">
+          {/* Direct Search Action */}
+          {searchQuery.trim() && (
+            <div>
+              {(() => {
+                const directIdx = items.findIndex(it => it.type === 'direct-search');
+                const isSelected = selectedIndex === directIdx;
+                return (
+                  <div
+                    onClick={() => {
+                      addSearch(searchQuery.trim());
+                      setCommandPaletteOpen(false);
+                      navigate(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
+                    }}
+                    onMouseEnter={() => directIdx !== -1 && setSelectedIndex(directIdx)}
+                    className={cn(
+                      'group flex items-center justify-between gap-3 px-3 py-2.5 rounded-xl cursor-pointer transition-all border border-amber-500/20',
+                      isSelected ? 'bg-amber-500/15 text-amber-300' : 'bg-amber-500/5 text-white hover:bg-amber-500/10'
+                    )}
+                  >
+                    <div className="flex items-center gap-3 min-w-0">
+                      <div className="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0">
+                        <Search className="w-4 h-4" />
+                      </div>
+                      <div className="min-w-0">
+                        <span className="font-semibold text-sm truncate block">
+                          Search all tools for "{searchQuery}"
+                        </span>
+                        <span className="text-xs text-white/50 block">
+                          Full directory match & filter breakdown
+                        </span>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-1 text-xs text-amber-400 font-medium shrink-0">
+                      <span>Search</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </div>
+                  </div>
+                );
+              })()}
+            </div>
+          )}
+
+          {/* Recent Searches Section */}
+          {relevantRecentSearches.length > 0 && (
+            <div>
+              <div className="text-[11px] font-semibold uppercase tracking-wider text-white/40 px-3 py-1.5 flex items-center justify-between">
+                <span className="flex items-center gap-1.5">
+                  <Clock className="w-3 h-3 text-amber-400" />
+                  Recent Searches
+                </span>
+                <button
+                  type="button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    clearSearches();
+                  }}
+                  className="text-[10px] text-white/40 hover:text-amber-400 transition-colors flex items-center gap-1 lowercase tracking-normal"
+                >
+                  <Trash2 className="w-3 h-3" />
+                  clear all
+                </button>
+              </div>
+              <div className="space-y-1">
+                {relevantRecentSearches.map((query) => {
+                  const globalIdx = items.findIndex(it => it.type === 'recent' && it.query === query);
+                  const isSelected = selectedIndex === globalIdx;
+
+                  return (
+                    <div
+                      key={query}
+                      onClick={() => {
+                        setSearchQuery(query);
+                        addSearch(query);
+                        inputRef.current?.focus();
+                      }}
+                      onMouseEnter={() => globalIdx !== -1 && setSelectedIndex(globalIdx)}
+                      className={cn(
+                        'group flex items-center justify-between gap-3 px-3 py-2 rounded-xl cursor-pointer transition-all',
+                        isSelected ? 'bg-white/[0.08] text-white' : 'text-white/80 hover:bg-white/[0.04]'
+                      )}
+                    >
+                      <div className="flex items-center gap-3 min-w-0">
+                        <div className="w-7 h-7 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-amber-400 shrink-0">
+                          <Clock className="w-3.5 h-3.5" />
+                        </div>
+                        <span className="text-sm font-medium truncate">{query}</span>
+                      </div>
+
+                      <div className="flex items-center gap-1.5 shrink-0">
+                        <button
+                          type="button"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            removeSearch(query);
+                          }}
+                          className="p-1.5 rounded-lg text-white/40 hover:text-white hover:bg-white/10 transition-colors"
+                          title="Remove from history"
+                        >
+                          <X className="w-3.5 h-3.5" />
+                        </button>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+
           {/* Tools Section */}
           {filteredTools.length > 0 && (
             <div>
@@ -246,8 +419,9 @@ export function CommandPalette() {
                 <span className="text-[10px] lowercase text-white/30 font-normal">press enter to explore</span>
               </div>
               <div className="space-y-1">
-                {filteredTools.map((tool, idx) => {
-                  const isSelected = selectedIndex === idx;
+                {filteredTools.map((tool) => {
+                  const globalIdx = items.findIndex(it => it.type === 'tool' && it.tool.id === tool.id);
+                  const isSelected = selectedIndex === globalIdx;
                   const inCompare = isInCompare(tool.id);
                   const bookmarked = isBookmarked(tool.id);
 
@@ -255,11 +429,14 @@ export function CommandPalette() {
                     <div
                       key={tool.id}
                       onClick={() => {
+                        if (searchQuery.trim()) {
+                          addSearch(searchQuery.trim());
+                        }
                         addToHistory(tool);
                         setCommandPaletteOpen(false);
                         navigate(`/tools/${tool.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`);
                       }}
-                      onMouseEnter={() => setSelectedIndex(idx)}
+                      onMouseEnter={() => globalIdx !== -1 && setSelectedIndex(globalIdx)}
                       className={cn(
                         'group flex items-center justify-between gap-3 px-3 py-2.5 rounded-xl cursor-pointer transition-all',
                         isSelected ? 'bg-white/[0.08] text-white' : 'text-white/80 hover:bg-white/[0.04]'
@@ -349,8 +526,8 @@ export function CommandPalette() {
                 Quick Actions
               </div>
               <div className="space-y-1">
-                {quickActions.map((action, i) => {
-                  const globalIdx = filteredTools.length + i;
+                {quickActions.map((action) => {
+                  const globalIdx = items.findIndex(it => it.type === 'action' && it.action.id === action.id);
                   const isSelected = selectedIndex === globalIdx;
                   const Icon = action.icon;
 
@@ -358,7 +535,7 @@ export function CommandPalette() {
                     <div
                       key={action.id}
                       onClick={() => action.action()}
-                      onMouseEnter={() => setSelectedIndex(globalIdx)}
+                      onMouseEnter={() => globalIdx !== -1 && setSelectedIndex(globalIdx)}
                       className={cn(
                         'flex items-center justify-between gap-3 px-3 py-2.5 rounded-xl cursor-pointer transition-all',
                         isSelected ? 'bg-white/[0.08] text-white' : 'text-white/80 hover:bg-white/[0.04]'
@@ -381,14 +558,14 @@ export function CommandPalette() {
           )}
 
           {/* Persona Switchers (when no search or matching) */}
-          {personaActions.length > 0 && (
+          {personaActions.length > 0 && !searchQuery.trim() && (
             <div>
               <div className="text-[11px] font-semibold uppercase tracking-wider text-white/40 px-3 py-1.5">
                 Switch Role / Persona Preset
               </div>
               <div className="space-y-1">
-                {personaActions.map((role, i) => {
-                  const globalIdx = filteredTools.length + quickActions.length + i;
+                {personaActions.map((role) => {
+                  const globalIdx = items.findIndex(it => it.type === 'persona' && it.role.id === role.id);
                   const isSelected = selectedIndex === globalIdx;
                   const isActive = userRole === role.id;
                   const Icon = role.icon;
@@ -400,7 +577,7 @@ export function CommandPalette() {
                         setUserRole(role.id);
                         setCommandPaletteOpen(false);
                       }}
-                      onMouseEnter={() => setSelectedIndex(globalIdx)}
+                      onMouseEnter={() => globalIdx !== -1 && setSelectedIndex(globalIdx)}
                       className={cn(
                         'flex items-center justify-between gap-3 px-3 py-2.5 rounded-xl cursor-pointer transition-all',
                         isSelected ? 'bg-white/[0.08] text-white' : 'text-white/80 hover:bg-white/[0.04]'
@@ -427,7 +604,7 @@ export function CommandPalette() {
             </div>
           )}
 
-          {filteredTools.length === 0 && quickActions.length === 0 && (
+          {items.length === 0 && (
             <div className="text-center py-10 text-white/40">
               <Search className="w-8 h-8 mx-auto mb-2 opacity-40" />
               <p className="text-sm">No tools or actions found for "{searchQuery}"</p>

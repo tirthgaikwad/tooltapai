@@ -24,9 +24,9 @@ export default function ComparisonDock() {
           animate={{ y: 0, opacity: 1, x: '-50%' }}
           exit={{ y: 80, opacity: 0, x: '-50%' }}
           transition={{ type: 'spring', stiffness: 350, damping: 30 }}
-          className="fixed bottom-[calc(1rem+env(safe-area-inset-bottom,0px))] sm:bottom-6 left-1/2 z-50 pointer-events-auto"
+          className="fixed bottom-[calc(1rem+env(safe-area-inset-bottom,0px))] sm:bottom-6 left-1/2 z-40 pointer-events-auto"
         >
-          <div className="bg-[#121212]/90 backdrop-blur-md sm:backdrop-blur-xl border border-white/10 rounded-full px-3.5 sm:px-5 py-2.5 sm:py-3 shadow-2xl flex items-center gap-2.5 sm:gap-4 max-w-[94vw] overflow-x-auto scrollbar-none">
+          <div className="bg-[#121212]/98 backdrop-blur-sm transform-gpu [transform:translateZ(0)] border border-white/10 rounded-full px-3.5 sm:px-5 py-2.5 sm:py-3 shadow-2xl flex items-center gap-2.5 sm:gap-4 max-w-[94vw] overflow-x-auto scrollbar-none">
             {/* Selected Tool Pills / Micro-Thumbnails */}
             <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
               {selectedTools.map((tool) => (

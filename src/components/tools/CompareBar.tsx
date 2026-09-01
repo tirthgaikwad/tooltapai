@@ -10,7 +10,7 @@ export default function CompareBar() {
   if (compareList.length === 0) return null;
 
   return (
-    <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 w-full max-w-2xl px-4 pointer-events-none">
+    <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-40 w-full max-w-2xl px-4 pointer-events-none">
       <div
         className="flex items-center gap-3 px-4 py-3 rounded-2xl bg-[#242424] border border-white/[0.08] pointer-events-auto"
         style={{

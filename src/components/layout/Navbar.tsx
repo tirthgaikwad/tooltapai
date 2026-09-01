@@ -42,9 +42,9 @@ export default function Navbar() {
 
   return (
     <TooltipProvider delayDuration={200}>
-      <header className="sticky top-0 left-0 right-0 z-[1000] py-3 bg-[#121212]/95 backdrop-blur-md border-b border-white/[0.06]">
+      <header className="sticky top-0 left-0 right-0 z-40 py-3 bg-[#121212]/98 backdrop-blur-sm transform-gpu [transform:translateZ(0)] border-b border-white/[0.06]">
         <div className="page-container flex justify-center">
-          <nav className="w-full flex items-center justify-between gap-3 px-3 sm:px-4 py-2 rounded-2xl bg-[#1E1E24]/90 border border-white/[0.08] shadow-lg">
+          <nav className="w-full flex items-center justify-between gap-3 px-3 sm:px-4 py-2 rounded-2xl bg-[#1E1E24]/95 border border-white/[0.08] shadow-lg transform-gpu [transform:translateZ(0)]">
           {/* Logo */}
           <Link to="/" aria-label="ToolTap home" className="flex items-center shrink-0 min-h-[44px] focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg">
             <ToolTapLogo variant="navbar" />
@@ -100,7 +100,7 @@ export default function Navbar() {
                   <Menu className="w-5 h-5" />
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" hideCloseButton className="w-full sm:w-80 h-[100dvh] max-h-[100dvh] bg-[#1E1E24] border-white/[0.08] p-0 z-[1001] flex flex-col">
+              <SheetContent side="right" hideCloseButton className="w-full sm:w-80 h-[100dvh] max-h-[100dvh] bg-[#1E1E24] border-white/[0.08] p-0 z-50 flex flex-col">
                 <div className="flex flex-col h-full w-full">
                   <div className="flex items-center justify-between px-5 py-4 border-b border-white/[0.08] shrink-0">
                     <Link to="/" aria-label="ToolTap home" onClick={() => setMobileOpen(false)} className="flex items-center">

@@ -18,7 +18,7 @@ export default function FinalVerdictBanner({ verdict, tools, scoresMap }: FinalV
   const { winner, winnerScore, summaryText } = verdict;
 
   return (
-    <div className="relative overflow-hidden rounded-3xl border-2 border-[#F2994A]/60 bg-gradient-to-r from-amber-500/20 via-orange-500/15 to-[#1E1E24] backdrop-blur-xl p-5 sm:p-7 shadow-2xl space-y-5">
+    <div className="relative overflow-hidden rounded-3xl border-2 border-[#F2994A]/60 bg-gradient-to-r from-amber-500/20 via-orange-500/15 to-[#1E1E24]/95 backdrop-blur-sm transform-gpu [transform:translateZ(0)] p-5 sm:p-7 shadow-2xl space-y-5">
       {/* Subtle ambient light glow */}
       <div className="absolute -top-24 -right-24 w-60 h-60 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
 

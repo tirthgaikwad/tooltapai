@@ -56,7 +56,7 @@ export function StudentModeInfo({
                 side="top"
                 align="start"
                 sideOffset={12}
-                className="z-[100] w-72 max-w-[calc(100vw-32px)] bg-[#18191E] border border-white/20 text-high-emphasis shadow-2xl shadow-black/90 rounded-2xl p-3.5 relative isolate space-y-2.5"
+                className="z-50 w-72 max-w-[calc(100vw-32px)] bg-[#18191E] border border-white/20 text-high-emphasis shadow-2xl shadow-black/90 rounded-2xl p-3.5 relative isolate space-y-2.5"
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-1.5 text-success font-semibold text-xs">
@@ -137,7 +137,7 @@ export function StudentModeInfo({
             align="end"
             sideOffset={14}
             onMouseLeave={() => setOpen(false)}
-            className="z-[100] w-80 max-w-[calc(100vw-32px)] bg-[#18191E] border border-white/20 text-high-emphasis shadow-2xl shadow-black/90 rounded-2xl p-4 relative isolate space-y-2.5 animate-in fade-in-0 zoom-in-95"
+            className="z-50 w-80 max-w-[calc(100vw-32px)] bg-[#18191E] border border-white/20 text-high-emphasis shadow-2xl shadow-black/90 rounded-2xl p-4 relative isolate space-y-2.5 animate-in fade-in-0 zoom-in-95"
           >
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-1.5 text-success font-semibold text-xs">

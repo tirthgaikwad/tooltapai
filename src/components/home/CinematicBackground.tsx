@@ -37,11 +37,20 @@ export default function CinematicBackground() {
 
     let mouseX = width / 2;
     let mouseY = height / 2;
+    let isMouseTicking = false;
 
     const handleMouseMove = (e: MouseEvent) => {
-      const rect = canvas.getBoundingClientRect();
-      mouseX = e.clientX - rect.left;
-      mouseY = e.clientY - rect.top;
+      if (!isMouseTicking) {
+        isMouseTicking = true;
+        requestAnimationFrame(() => {
+          if (canvas) {
+            const rect = canvas.getBoundingClientRect();
+            mouseX = e.clientX - rect.left;
+            mouseY = e.clientY - rect.top;
+          }
+          isMouseTicking = false;
+        });
+      }
     };
 
     window.addEventListener('mousemove', handleMouseMove, { passive: true });
@@ -141,8 +150,8 @@ export default function CinematicBackground() {
   }, []);
 
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
-      <canvas ref={canvasRef} className="w-full h-full opacity-80" />
+    <div className="absolute inset-0 overflow-hidden pointer-events-none z-0 transform-gpu [transform:translateZ(0)]">
+      <canvas ref={canvasRef} className="w-full h-full opacity-80 pointer-events-none" />
       {/* Subtle grid pattern overlay */}
       <div
         className="absolute inset-0 opacity-[0.15]"

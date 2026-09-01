@@ -18,7 +18,7 @@ export default function AutoHidingFilterBar({
   return (
     <div
       className={cn(
-        'sticky z-40 w-full transition-all duration-300 ease-out bg-[#121212]/80 backdrop-blur-lg border border-white/10 rounded-2xl p-3 shadow-2xl',
+        'sticky z-40 w-full transition-all duration-300 ease-out bg-[#121212]/98 backdrop-blur-sm transform-gpu [transform:translateZ(0)] border border-white/10 rounded-2xl p-3 shadow-2xl',
         topOffset,
         isVisible
           ? 'translate-y-0 opacity-100 pointer-events-auto'

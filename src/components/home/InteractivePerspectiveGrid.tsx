@@ -29,18 +29,30 @@ export function InteractivePerspectiveGrid({
   const translateY = useTransform(smoothY, [-0.5, 0.5], [-20, 20]);
 
   useEffect(() => {
+    let isTicking = false;
+    let pendingX = 0;
+    let pendingY = 0;
+
     const handleMouseMove = (e: MouseEvent) => {
       if (
         !containerRef.current ||
         window.innerWidth < 768 ||
         !window.matchMedia('(hover: hover) and (pointer: fine)').matches
       ) return;
+
       const rect = containerRef.current.getBoundingClientRect();
       if (rect.width === 0 || rect.height === 0) return;
-      const x = (e.clientX - rect.left) / rect.width - 0.5;
-      const y = (e.clientY - rect.top) / rect.height - 0.5;
-      mouseX.set(x);
-      mouseY.set(y);
+      pendingX = (e.clientX - rect.left) / rect.width - 0.5;
+      pendingY = (e.clientY - rect.top) / rect.height - 0.5;
+
+      if (!isTicking) {
+        isTicking = true;
+        requestAnimationFrame(() => {
+          mouseX.set(pendingX);
+          mouseY.set(pendingY);
+          isTicking = false;
+        });
+      }
     };
 
     window.addEventListener('mousemove', handleMouseMove, { passive: true });
@@ -52,7 +64,7 @@ export function InteractivePerspectiveGrid({
   return (
     <div
       ref={containerRef}
-      className="absolute inset-0 z-0 overflow-hidden pointer-events-none"
+      className="absolute inset-0 z-0 overflow-hidden pointer-events-none transform-gpu [transform:translateZ(0)]"
       style={{ perspective: '1200px' }}
     >
       <motion.div

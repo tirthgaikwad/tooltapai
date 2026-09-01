@@ -81,7 +81,7 @@ export default function PromptWorkshopSheet({ tool, isOpen, onClose }: PromptWor
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ type: 'spring', damping: 28, stiffness: 280 }}
-            className="fixed inset-y-0 right-0 w-full sm:w-[450px] z-50 bg-[#1E1E24]/95 backdrop-blur-xl border-l border-white/10 p-6 shadow-2xl flex flex-col justify-between overflow-y-auto"
+            className="fixed inset-y-0 right-0 w-full sm:w-[450px] z-50 bg-[#1E1E24]/98 backdrop-blur-sm transform-gpu [transform:translateZ(0)] border-l border-white/10 p-6 shadow-2xl flex flex-col justify-between overflow-y-auto"
           >
             {/* Upper Content */}
             <div className="space-y-6">
@@ -173,7 +173,7 @@ export default function PromptWorkshopSheet({ tool, isOpen, onClose }: PromptWor
             </div>
 
             {/* Bottom Action Bar */}
-            <div className="pt-6 border-t border-white/10 mt-6 sticky bottom-0 bg-[#1E1E24]/90 backdrop-blur-md">
+            <div className="pt-6 border-t border-white/10 mt-6 sticky bottom-0 bg-[#1E1E24]/98 backdrop-blur-sm transform-gpu [transform:translateZ(0)]">
               <Button
                 onClick={handleCopy}
                 disabled={!currentTemplate}

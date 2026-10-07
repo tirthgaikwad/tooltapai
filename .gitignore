@@ -11,6 +11,7 @@ node_modules
 dist
 dist-ssr
 output
+public/sitemap.xml
 *.local
 package-lock.json
 playwright-report

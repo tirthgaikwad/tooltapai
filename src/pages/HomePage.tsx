@@ -118,8 +118,8 @@ export default function HomePage() {
   return (
     <PageLayout>
       <PageMeta
-        title="ToolTap – Discover and Compare AI Tools"
-        description="ToolTap helps students, creators, developers, and professionals discover, compare, and save the best AI tools for any task."
+        title="ToolTap | Discover, Compare, and Choose AI Tools"
+        description="The ultimate directory for students, developers, and creators to find verified AI tools with transparent pricing and workflow benchmarks."
       />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         {/* SECTION 1: HERO SEARCH + TASK CHIPS + ROLE SELECTOR */}
@@ -202,11 +202,11 @@ export default function HomePage() {
                 <div>
                   <div className="flex items-center gap-2">
                     <span className="font-semibold text-xs sm:text-sm text-white">🎓 Student Mode</span>
-                    <Badge className={cn('text-[10px] px-2 py-0', studentMode ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30' : 'bg-white/10 text-white/60')}>
+                    <Badge className={cn('text-xs px-2 py-0.5', studentMode ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30' : 'bg-white/10 text-white/70')}>
                       {studentMode ? 'Active' : 'Off'}
                     </Badge>
                   </div>
-                  <p className="text-[11px] text-white/60 mt-0.5">
+                  <p className="text-xs text-white/70 mt-0.5">
                     Prioritizes 100% Free and generous Freemium plans
                   </p>
                 </div>

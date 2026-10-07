@@ -119,7 +119,7 @@ export default function DocumentationPage() {
   return (
     <PageLayout>
       <PageMeta
-        title="ToolTap Documentation | User & Developer Guide"
+        title="ToolTap Documentation"
         description="Complete user guide, search documentation, comparison specs, and local privacy details for ToolTap."
       />
       <div className="py-6 sm:py-8 max-w-6xl mx-auto px-4 sm:px-6">

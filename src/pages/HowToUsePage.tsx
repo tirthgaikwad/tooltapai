@@ -139,7 +139,7 @@ export default function HowToUsePage() {
   return (
     <PageLayout>
       <PageMeta
-        title="How to Use ToolTap | AI Tools Directory"
+        title="How to Use ToolTap"
         description="Learn how to discover, search, compare, bookmark, and filter AI tools on ToolTap."
       />
       <div className="py-6 sm:py-8 max-w-5xl mx-auto px-4 sm:px-6 space-y-12">

@@ -16,7 +16,7 @@ export default function BookmarksPage() {
   return (
     <PageLayout>
       <PageMeta
-        title="Saved AI Tools | ToolTap"
+        title="Saved AI Tools"
         description="View and manage your bookmarked AI tools and recently viewed history."
       />
       <div className="py-6 sm:py-8 max-w-7xl mx-auto px-4 sm:px-6">

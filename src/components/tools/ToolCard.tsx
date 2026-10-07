@@ -184,18 +184,18 @@ function ToolCard({ tool, showBestFree, rank, animated = true, animationDelay = 
                       {tool.name}
                     </Link>
                   </h3>
-                  <p className="text-xs text-white/50 truncate mt-0.5">{tool.category}</p>
+                  <p className="text-xs text-white/60 mt-0.5 leading-snug">{tool.category}</p>
                 </div>
               </div>
 
               <div className="shrink-0 flex items-center gap-1.5">
                 {(showBestFree || (studentMode && tool.access !== 'Paid')) && tool.access !== 'Paid' ? (
-                  <span className="inline-flex items-center gap-1 text-[11px] font-medium text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 rounded-full">
+                  <span className="inline-flex items-center gap-1 text-xs font-medium text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 rounded-full">
                     <GraduationCap className="w-3 h-3" />
                     Free
                   </span>
                 ) : rank ? (
-                  <span className="inline-flex items-center text-[11px] font-medium text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2 py-0.5 rounded-full">
+                  <span className="inline-flex items-center text-xs font-medium text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2 py-0.5 rounded-full">
                     {rank}
                   </span>
                 ) : null}
@@ -205,7 +205,7 @@ function ToolCard({ tool, showBestFree, rank, animated = true, animationDelay = 
 
             {/* Middle: Description constrained to 2 clean lines */}
             <p
-              className="relative z-10 text-white/65 text-sm line-clamp-2 my-3 flex-1 leading-relaxed min-h-[2.5rem]"
+              className="relative z-10 text-white/70 text-sm line-clamp-2 my-3 flex-1 leading-relaxed min-h-[2.5rem]"
               style={{ transform: 'translateZ(10px)' }}
             >
               {tool.why}
@@ -218,10 +218,10 @@ function ToolCard({ tool, showBestFree, rank, animated = true, animationDelay = 
             >
               <span className={cn('w-1.5 h-1.5 rounded-full shrink-0', dotColorClass)} />
               <div className="flex items-center justify-between w-full gap-1.5 min-w-0">
-                <span className={cn('font-semibold shrink-0 text-[11px]', statusTextClass)}>
+                <span className={cn('font-semibold shrink-0 text-xs', statusTextClass)}>
                   {planDetails.status}:
                 </span>
-                <span className="text-white/60 truncate text-[11px] font-normal" title={planDetails.summary}>
+                <span className="text-white/70 text-xs font-normal" title={planDetails.summary}>
                   {planDetails.summary}
                 </span>
               </div>
@@ -232,7 +232,7 @@ function ToolCard({ tool, showBestFree, rank, animated = true, animationDelay = 
               <div className="flex items-center justify-between gap-2">
                 <Link
                   to={`/categories/${tool.category.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`}
-                  className="text-[11px] font-medium text-white/50 hover:text-white/80 bg-white/[0.03] border border-white/[0.06] px-2.5 py-1 rounded-full truncate max-w-[130px] transition-colors"
+                  className="text-xs font-medium text-white/60 hover:text-white bg-white/[0.04] border border-white/[0.08] px-2.5 py-1 rounded-full transition-colors shrink-0"
                 >
                   {tool.category.split(',')[0]}
                 </Link>
@@ -301,7 +301,7 @@ function ToolCard({ tool, showBestFree, rank, animated = true, animationDelay = 
                   asChild
                   variant="ghost"
                   size="sm"
-                  className="h-7 px-2 text-[11px] font-medium text-white/60 hover:text-white hover:bg-white/[0.04] rounded-lg gap-1"
+                  className="h-7 px-2.5 text-xs font-medium text-white/70 hover:text-white hover:bg-white/[0.06] rounded-lg gap-1"
                 >
                   <Link to={`/tools/${toolSlug}`} onClick={() => addToHistory(tool)}>
                     Details <ArrowRight className="w-3 h-3" />
@@ -310,12 +310,14 @@ function ToolCard({ tool, showBestFree, rank, animated = true, animationDelay = 
 
                 <div className="flex items-center gap-1">
                   {workshop && (
-                    <button
+                    <Button
+                      variant="outline"
+                      size="sm"
                       onClick={() => setWorkshopOpen(true)}
-                      className="bg-white/[0.03] border border-white/[0.06] text-white/70 hover:text-white hover:border-[#F2994A]/40 transition-all text-[11px] px-2 py-0.5 rounded-md font-medium flex items-center gap-1"
+                      className="h-7 px-2.5 text-xs font-medium text-white/70 hover:text-white border-white/[0.08] bg-white/[0.04] rounded-lg gap-1"
                     >
                       <span>🛠️ Workshop</span>
-                    </button>
+                    </Button>
                   )}
 
                   <Tooltip>
@@ -323,7 +325,7 @@ function ToolCard({ tool, showBestFree, rank, animated = true, animationDelay = 
                       <Button
                         variant="ghost"
                         size="icon"
-                        className="h-7 w-7 rounded-lg text-white/50 hover:text-white hover:bg-white/[0.06] transition-all"
+                        className="h-7 w-7 rounded-lg text-white/60 hover:text-white hover:bg-white/[0.06] transition-all"
                         onClick={() => setQuickViewOpen(true)}
                         aria-label="Quick View"
                       >
@@ -338,7 +340,7 @@ function ToolCard({ tool, showBestFree, rank, animated = true, animationDelay = 
                       <Button
                         variant="ghost"
                         size="icon"
-                        className="h-7 w-7 rounded-lg text-white/50 hover:text-white hover:bg-white/[0.06] transition-all"
+                        className="h-7 w-7 rounded-lg text-white/60 hover:text-white hover:bg-white/[0.06] transition-all"
                         onClick={handleShare}
                         aria-label="Share tool"
                       >

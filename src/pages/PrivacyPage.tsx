@@ -6,7 +6,7 @@ import PageMeta from '@/components/common/PageMeta';
 export default function PrivacyPage() {
   return (
     <PageLayout>
-      <PageMeta title="Privacy Policy | ToolTap" description="Privacy policy and local storage details for ToolTap." />
+      <PageMeta title="Privacy Policy" description="Learn how ToolTap protects your data and privacy." />
       <div className="py-6 sm:py-8 max-w-4xl mx-auto px-4 sm:px-6">
         {/* Back Link */}
         <Link

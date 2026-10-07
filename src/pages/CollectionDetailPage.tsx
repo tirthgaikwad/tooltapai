@@ -105,7 +105,7 @@ export default function CollectionDetailPage() {
   return (
     <PageLayout>
       <PageMeta
-        title={`${collection.title.replace(/^[^\s]+\s+/, '')} | ToolTap`}
+        title={`${collection.title.replace(/^[^\s]+\s+/, '')} AI Stack`}
         description={collection.subtitle}
       />
       <div className="py-6 sm:py-8 max-w-7xl mx-auto px-4 sm:px-6">

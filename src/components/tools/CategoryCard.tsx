@@ -128,7 +128,7 @@ function CategoryCard({ category, count, index = 0 }: Props) {
             <div className={cn('w-10 h-10 rounded-lg bg-gradient-to-br flex items-center justify-center shrink-0 border border-white/10 shadow-sm', bgGradient)}>
               <Icon className={cn('w-5 h-5', color)} />
             </div>
-            <span className="text-[11px] font-medium text-white/50 bg-white/[0.03] border border-white/[0.06] px-2 py-0.5 rounded-full">
+            <span className="text-xs font-medium text-white/60 bg-white/[0.04] border border-white/[0.08] px-2.5 py-0.5 rounded-full">
               {count} {count === 1 ? 'tool' : 'tools'}
             </span>
           </div>

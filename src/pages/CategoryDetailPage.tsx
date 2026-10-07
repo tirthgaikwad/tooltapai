@@ -128,8 +128,8 @@ export default function CategoryDetailPage() {
   return (
     <PageLayout>
       <PageMeta
-        title={`${category} AI Tools | ToolTap`}
-        description={`Discover and compare top ${category} AI tools with free plan details and direct links.`}
+        title={`${category} AI Tools`}
+        description={`Compare the best free and premium artificial intelligence tools for ${category}.`}
       />
       <div className="py-6 sm:py-8 max-w-7xl mx-auto px-4 sm:px-6">
         {/* Breadcrumb */}

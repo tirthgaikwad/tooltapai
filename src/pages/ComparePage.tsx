@@ -227,7 +227,7 @@ export default function ComparePage() {
   return (
     <PageLayout>
       <PageMeta
-        title="Compare AI Tools | ToolTap"
+        title="Compare AI Tools"
         description="Compare features, pricing tiers, free plan limits, and ratings side-by-side for up to 3 AI tools."
       />
       <div className="py-6 sm:py-8 max-w-7xl mx-auto px-4 sm:px-6">

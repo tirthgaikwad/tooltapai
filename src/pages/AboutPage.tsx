@@ -1,6 +1,7 @@
 import { Sparkles, Shield, Zap, GraduationCap, Search, Globe, Target, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import PageLayout from '@/components/layout/PageLayout';
+import PageMeta from '@/components/common/PageMeta';
 import { Button } from '@/components/ui/button';
 
 const features = [
@@ -46,6 +47,10 @@ const stats = [
 export default function AboutPage() {
   return (
     <PageLayout>
+      <PageMeta
+        title="About ToolTap"
+        description="Learn about ToolTap, an independent directory designed to make AI discovery transparent, objective, and clutter-free."
+      />
       <div className="py-6 sm:py-8 max-w-4xl mx-auto px-4 sm:px-6">
         {/* Hero */}
         <div className="mb-12 text-center md:text-left">

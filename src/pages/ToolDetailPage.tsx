@@ -6,6 +6,7 @@ import {
   CheckCircle2, X, Sparkles, ShieldCheck, Zap
 } from 'lucide-react';
 import PageLayout from '@/components/layout/PageLayout';
+import PageMeta from '@/components/common/PageMeta';
 import ToolCard from '@/components/tools/ToolCard';
 import ToolLogo from '@/components/tools/ToolLogo';
 import AccessBadge from '@/components/tools/AccessBadge';
@@ -90,6 +91,10 @@ export default function ToolDetailPage() {
   if (!tool) {
     return (
       <PageLayout>
+        <PageMeta
+          title="Tool Not Found"
+          description="The requested tool could not be found in the ToolTap directory."
+        />
         <div className="py-20 text-center max-w-md mx-auto px-4">
           <div className="w-16 h-16 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center mx-auto mb-4 text-2xl">
             🔍
@@ -108,6 +113,10 @@ export default function ToolDetailPage() {
 
   return (
     <PageLayout>
+      <PageMeta
+        title={`${tool.name} – Free Plan, Pricing & Features`}
+        description={tool.description || `Explore ${tool.name} features, free tier limitations, transparent pricing, and alternatives on ToolTap.`}
+      />
       <TooltipProvider delayDuration={200}>
         <div className="py-6 sm:py-8 max-w-5xl mx-auto px-4 sm:px-6">
           {/* Breadcrumb */}

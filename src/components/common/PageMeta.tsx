@@ -11,15 +11,36 @@ export default function PageMeta({ title, description }: PageMetaProps) {
     const fullTitle = title.includes('ToolTap') ? title : `${title} | ToolTap`;
     document.title = fullTitle;
 
-    if (description) {
-      let meta = document.querySelector('meta[name="description"]');
-      if (!meta) {
-        meta = document.createElement('meta');
-        meta.setAttribute('name', 'description');
-        document.head.appendChild(meta);
+    // Strict deduplication: guarantee exactly one <title> element in the DOM
+    const titleNodes = document.querySelectorAll('title');
+    if (titleNodes.length > 1) {
+      for (let i = 1; i < titleNodes.length; i++) {
+        titleNodes[i].remove();
       }
-      meta.setAttribute('content', description);
     }
+
+    if (description) {
+      let metaDesc = document.querySelector('meta[name="description"]');
+      if (!metaDesc) {
+        metaDesc = document.createElement('meta');
+        metaDesc.setAttribute('name', 'description');
+        document.head.appendChild(metaDesc);
+      }
+      metaDesc.setAttribute('content', description);
+
+      // Keep OpenGraph and Twitter tags in sync
+      let ogDesc = document.querySelector('meta[property="og:description"]');
+      if (ogDesc) ogDesc.setAttribute('content', description);
+
+      let twitterDesc = document.querySelector('meta[name="twitter:description"]');
+      if (twitterDesc) twitterDesc.setAttribute('content', description);
+    }
+
+    let ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute('content', fullTitle);
+
+    let twitterTitle = document.querySelector('meta[name="twitter:title"]');
+    if (twitterTitle) twitterTitle.setAttribute('content', fullTitle);
   }, [title, description]);
 
   return null;
@@ -44,4 +65,3 @@ export function AppWrapper({ children }: { children: ReactNode }) {
     </>
   );
 }
-

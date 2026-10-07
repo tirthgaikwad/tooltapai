@@ -54,8 +54,8 @@ export default function CollectionsPage() {
   return (
     <PageLayout>
       <PageMeta
-        title="Curated AI Tool Collections | ToolTap"
-        description="Explore handpicked AI tool bundles for students, developers, creators, and productivity workflows."
+        title="Community AI Stacks"
+        description="Discover the top AI tool combinations and workflows curated by developers, students, and indie hackers."
       />
       <div className="py-6 sm:py-8 max-w-7xl mx-auto px-4 sm:px-6">
         {/* Header */}

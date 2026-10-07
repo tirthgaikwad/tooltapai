@@ -20,8 +20,8 @@ export default function CategoriesPage() {
   return (
     <PageLayout>
       <PageMeta
-        title="AI Tool Categories | ToolTap"
-        description="Browse 25 domain categories of AI tools ranging from coding and writing to image generation and productivity."
+        title="Browse AI Categories"
+        description="Explore over 25 categories of artificial intelligence tools including Video Editing, Code Generation, and Resume Builders."
       />
       <div className="py-6 sm:py-8 max-w-7xl mx-auto px-4 sm:px-6">
         {/* Header */}

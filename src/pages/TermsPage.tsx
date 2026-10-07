@@ -6,7 +6,7 @@ import PageMeta from '@/components/common/PageMeta';
 export default function TermsPage() {
   return (
     <PageLayout>
-      <PageMeta title="Terms of Service | ToolTap" description="Terms of service and usage conditions for ToolTap." />
+      <PageMeta title="Terms of Service" description="Terms and conditions for using the ToolTap AI directory." />
       <div className="py-6 sm:py-8 max-w-4xl mx-auto px-4 sm:px-6">
         {/* Back Link */}
         <Link

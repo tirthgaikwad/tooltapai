@@ -1,0 +1,58 @@
+[
+  {
+    "id": "upd-1791915399981",
+    "toolName": "AI Ecosystem",
+    "type": "feature",
+    "summary": "Cursor’s new composer agent now features automated unit testing and full git diff verification capabilities.",
+    "date": "Just now",
+    "read": false
+  },
+  {
+    "id": "upd-1",
+    "toolName": "Claude 3.5 Sonnet",
+    "type": "pricing",
+    "summary": "Claude 3.5 Sonnet is now available on the free tier with daily message allowances.",
+    "date": "2 hours ago",
+    "read": false
+  },
+  {
+    "id": "upd-2",
+    "toolName": "Cursor IDE",
+    "type": "feature",
+    "summary": "Cursor Composer adds multi-file background agents with full codebase semantic indexing.",
+    "date": "4 hours ago",
+    "read": false
+  },
+  {
+    "id": "upd-3",
+    "toolName": "Perplexity",
+    "type": "launch",
+    "summary": "Perplexity Pages launched to automatically compile formatted research briefs with web citations.",
+    "date": "1 day ago",
+    "read": false
+  },
+  {
+    "id": "upd-4",
+    "toolName": "ChatGPT",
+    "type": "feature",
+    "summary": "Canvas workspace mode rolled out for interactive coding and side-by-side text rewriting.",
+    "date": "2 days ago",
+    "read": true
+  },
+  {
+    "id": "upd-5",
+    "toolName": "Midjourney v6.1",
+    "type": "launch",
+    "summary": "Web editor launched globally featuring precision inpainting and 2x faster photorealistic rendering.",
+    "date": "3 days ago",
+    "read": true
+  },
+  {
+    "id": "upd-6",
+    "toolName": "Runway Gen-3",
+    "type": "pricing",
+    "summary": "Gen-3 Alpha Turbo cuts generation cost by 50% with near-instant 10-second video creation.",
+    "date": "4 days ago",
+    "read": true
+  }
+]

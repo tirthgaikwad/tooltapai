@@ -3,18 +3,16 @@ import { Link, useLocation } from 'react-router-dom';
 import {
   Compass, Grid3X3, GitCompare,
   Bookmark, Menu, X, Layers,
-  HelpCircle, Bell
+  HelpCircle
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
-import { Popover, PopoverTrigger, PopoverContent } from '@/components/ui/popover';
 import { Badge } from '@/components/ui/badge';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import { useApp } from '@/contexts/AppContext';
 import { useBodyScrollLock } from '@/hooks/useBodyScrollLock';
 import { ToolTapLogo } from '@/components/common/ToolTapLogo';
 import { StudentModeInfo } from '@/components/common/StudentModeInfo';
-import { NotificationFeed } from '@/components/NotificationFeed';
 import { cn } from '@/lib/utils';
 
 const navLinks = [
@@ -30,20 +28,6 @@ export default function Navbar() {
   const location = useLocation();
   const { compareList, bookmarks } = useApp();
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [unreadUpdates, setUnreadUpdates] = useState(3);
-
-  // Initial fetch of unread updates
-  useEffect(() => {
-    fetch('/api/updates')
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.updates) {
-          const unread = data.updates.filter((u: any) => !u.read).length;
-          setUnreadUpdates(unread);
-        }
-      })
-      .catch(() => {});
-  }, []);
 
   // Body scroll locking when mobile menu is active
   useBodyScrollLock(mobileOpen);
@@ -97,38 +81,10 @@ export default function Navbar() {
             })}
           </div>
 
-          {/* Right side: Notification Bell + Student Mode Toggle + Mobile Menu */}
-          <div className="flex items-center gap-1.5 sm:gap-2.5 shrink-0">
-            {/* Notification Bell Trigger with Radix UI Popover */}
-            <Popover>
-              <PopoverTrigger asChild>
-                <button
-                  type="button"
-                  className="relative p-2 sm:p-2.5 rounded-xl text-white/70 hover:text-white hover:bg-white/[0.08] transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-primary min-w-[40px] min-h-[40px] flex items-center justify-center cursor-pointer"
-                  aria-label={`AI Tool Updates (${unreadUpdates} unread)`}
-                  title="AI Tool Updates Changelog"
-                >
-                  <Bell className="w-4 h-4 text-white/80" />
-                  {/* Ping indicator: A small, pulsing amber dot (bg-[#F2994A]) on top-right of bell */}
-                  {unreadUpdates > 0 && (
-                    <span className="absolute top-1.5 right-1.5 flex h-2.5 w-2.5" title={`${unreadUpdates} unread updates`}>
-                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#F2994A] opacity-75" />
-                      <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#F2994A]" />
-                    </span>
-                  )}
-                </button>
-              </PopoverTrigger>
-              <PopoverContent
-                align="end"
-                sideOffset={8}
-                className="p-0 border-0 bg-transparent shadow-none w-auto z-50"
-              >
-                <NotificationFeed onUnreadChange={setUnreadUpdates} />
-              </PopoverContent>
-            </Popover>
-
+          {/* Right side: Student Mode Toggle + Mobile Menu */}
+          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
             {/* Student mode toggle on desktop */}
-            <div className="hidden sm:flex items-center pl-2 border-l border-white/[0.08] shrink-0">
+            <div className="hidden sm:flex items-center shrink-0">
               <StudentModeInfo variant="navbar" />
             </div>
 

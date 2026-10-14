@@ -102,7 +102,9 @@ export function NotificationFeed({ onUnreadChange }: NotificationFeedProps) {
           toast.success('New AI update summarized and added!');
         }
       } else {
-        toast.error('Failed to summarize changelog');
+        const errorData = await res.json().catch(() => ({}));
+        const detailsMessage = errorData.details || errorData.error || 'Failed to summarize changelog';
+        toast.error(`Summarizer Error: ${detailsMessage}`);
       }
     } catch (err: any) {
       toast.error('Error generating updates: ' + err.message);

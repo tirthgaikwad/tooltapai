@@ -92,6 +92,10 @@ async function startServer() {
 
   // API Route: Generate updates using Gemini Summarizer
   app.post('/api/generate-updates', async (req, res) => {
+    if (!process.env.GEMINI_API_KEY) {
+      return res.status(500).json({ error: 'API key not configured' });
+    }
+
     try {
       const { rawChangelog, toolName, type } = req.body;
       const changelogText =
@@ -103,19 +107,19 @@ async function startServer() {
 
       let summary = '';
       try {
-        const response = await ai.models.generateContent({
-          model: 'gemini-3.8-flash',
-          contents: changelogText,
-          config: {
-            systemInstruction: systemPrompt,
-            temperature: 0.3,
-          },
-        });
-        summary = response.text ? response.text.trim() : '';
-      } catch (err: any) {
-        console.warn('Gemini 3.8 Flash high demand, trying 3.1 Flash-Lite fallback...', err.message);
+        let response;
         try {
-          const fallbackRes = await ai.models.generateContent({
+          response = await ai.models.generateContent({
+            model: 'gemini-3.8-flash',
+            contents: changelogText,
+            config: {
+              systemInstruction: systemPrompt,
+              temperature: 0.3,
+            },
+          });
+        } catch (primaryErr: any) {
+          console.warn('Primary model failed, attempting fallback...', primaryErr.message);
+          response = await ai.models.generateContent({
             model: 'gemini-3.1-flash-lite',
             contents: changelogText,
             config: {
@@ -123,23 +127,18 @@ async function startServer() {
               temperature: 0.3,
             },
           });
-          summary = fallbackRes.text ? fallbackRes.text.trim() : '';
-        } catch (innerErr: any) {
-          console.warn('Fallback model also encountered error:', innerErr.message);
         }
-      }
-
-      if (!summary) {
-        // Clean first sentence or 15-word excerpt as fallback
-        const words = changelogText.split(/\s+/).slice(0, 15).join(' ');
-        summary = words ? `${words}...` : 'New feature updates and enhancements rolled out.';
+        summary = response.text ? response.text.trim() : '';
+      } catch (err: any) {
+        console.error('Gemini API Error:', err);
+        return res.status(500).json({ error: 'Failed to generate content', details: err.message });
       }
 
       const newUpdate = {
         id: `upd-${Date.now()}`,
         toolName: toolName || 'AI Ecosystem',
         type: type || 'feature',
-        summary,
+        summary: summary || 'New feature updates and enhancements rolled out.',
         date: 'Just now',
         read: false,
       };
@@ -154,13 +153,17 @@ async function startServer() {
         updates: updatedList,
       });
     } catch (err: any) {
-      console.error('Gemini Summarizer Error:', err);
-      res.status(500).json({ success: false, error: err.message || 'Summarization failed' });
+      console.error('Gemini API Error:', err);
+      res.status(500).json({ error: 'Failed to generate content', details: err.message });
     }
   });
 
   // API Route: Multi-turn Chatbot using Gemini
   app.post('/api/chat', async (req, res) => {
+    if (!process.env.GEMINI_API_KEY) {
+      return res.status(500).json({ error: 'API key not configured' });
+    }
+
     try {
       const { messages, model = 'gemini-3.8-flash', role = 'advisor' } = req.body;
 
@@ -181,40 +184,39 @@ async function startServer() {
         parts: [{ text: m.content }],
       }));
 
-      let reply = '';
       try {
-        const response = await ai.models.generateContent({
-          model: model === 'gemini-3.1-flash-lite' ? 'gemini-3.1-flash-lite' : 'gemini-3.8-flash',
-          contents,
-          config: {
-            systemInstruction,
-          },
-        });
-        reply = response.text || '';
-      } catch (err: any) {
-        console.warn('Chat primary model failed, attempting 3.1-flash-lite fallback...', err.message);
+        let response;
         try {
-          const fallbackRes = await ai.models.generateContent({
-            model: 'gemini-3.1-flash-lite',
+          response = await ai.models.generateContent({
+            model: model === 'gemini-3.1-flash-lite' ? 'gemini-3.1-flash-lite' : 'gemini-3.8-flash',
             contents,
             config: {
               systemInstruction,
             },
           });
-          reply = fallbackRes.text || '';
-        } catch (innerErr: any) {
-          console.warn('Chat fallback failed:', innerErr.message);
+        } catch (primaryErr: any) {
+          if (model !== 'gemini-3.1-flash-lite') {
+            console.warn('Primary model failed, attempting fallback...', primaryErr.message);
+            response = await ai.models.generateContent({
+              model: 'gemini-3.1-flash-lite',
+              contents,
+              config: {
+                systemInstruction,
+              },
+            });
+          } else {
+            throw primaryErr;
+          }
         }
+        const reply = response.text || "I'm here to help you navigate ToolTap AI tools!";
+        res.json({ success: true, reply });
+      } catch (err: any) {
+        console.error('Gemini API Error:', err);
+        return res.status(500).json({ error: 'Failed to generate content', details: err.message });
       }
-
-      if (!reply) {
-        reply = "I'm here to help you navigate ToolTap AI tools! You can browse 600+ tools by category, compare pricing tiers, and find free plans.";
-      }
-
-      res.json({ success: true, reply });
     } catch (err: any) {
-      console.error('Chat error:', err);
-      res.status(500).json({ success: false, error: err.message || 'Chat generation failed' });
+      console.error('Gemini API Error:', err);
+      res.status(500).json({ error: 'Failed to generate content', details: err.message });
     }
   });
 

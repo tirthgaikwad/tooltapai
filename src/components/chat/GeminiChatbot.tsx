@@ -65,7 +65,18 @@ export function GeminiChatbot() {
       });
 
       if (!response.ok) {
-        throw new Error('Failed to generate response');
+        const errorData = await response.json().catch(() => ({}));
+        const detailsMessage = errorData.details || errorData.error || 'Failed to generate response';
+        toast.error(`Chat error: ${detailsMessage}`);
+        setMessages((prev) => [
+          ...prev,
+          {
+            role: 'assistant',
+            content: `Sorry, unable to generate response: ${detailsMessage}`,
+            timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+          },
+        ]);
+        return;
       }
 
       const data = await response.json();

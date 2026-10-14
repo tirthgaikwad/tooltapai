@@ -1,5 +1,13 @@
 [
   {
+    "id": "upd-1791942949910",
+    "toolName": "Cursor",
+    "type": "feature",
+    "summary": "Cursor launches Composer, rolling out its new multi-file agentic AI code editor to all users.",
+    "date": "Just now",
+    "read": false
+  },
+  {
     "id": "upd-1791915399981",
     "toolName": "AI Ecosystem",
     "type": "feature",

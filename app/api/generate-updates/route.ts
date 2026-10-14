@@ -1,106 +1,98 @@
+export const runtime = 'edge';
+
 import { NextRequest, NextResponse } from 'next/server';
 import { GoogleGenAI } from '@google/genai';
-import fs from 'node:fs';
-import path from 'node:path';
+import initialUpdates from '@/data/updates.json';
 
-// Server-side Gemini initialization
-const ai = new GoogleGenAI({
-  apiKey: process.env.GEMINI_API_KEY,
-  httpOptions: {
-    headers: {
-      'User-Agent': 'aistudio-build',
-    },
-  },
-});
-
-const UPDATES_FILE_PATH = path.join(process.cwd(), 'src', 'data', 'updates.json');
-
-function loadUpdates() {
-  try {
-    if (fs.existsSync(UPDATES_FILE_PATH)) {
-      const data = fs.readFileSync(UPDATES_FILE_PATH, 'utf-8');
-      return JSON.parse(data);
-    }
-  } catch (e) {
-    console.error('Error loading updates:', e);
-  }
-  return [];
-}
-
-function saveUpdates(updates: any[]) {
-  try {
-    fs.writeFileSync(UPDATES_FILE_PATH, JSON.stringify(updates, null, 2), 'utf-8');
-  } catch (e) {
-    console.error('Error saving updates:', e);
-  }
-}
+// In-memory updates store for edge execution
+let updatesList = [...(initialUpdates as any[])];
 
 export async function POST(req: NextRequest) {
+  // 3. API Key Validation
+  if (!process.env.GEMINI_API_KEY) {
+    return NextResponse.json({ error: 'API key not configured' }, { status: 500 });
+  }
+
+  // Initialize the Google Gen AI client
+  const ai = new GoogleGenAI({
+    apiKey: process.env.GEMINI_API_KEY,
+    httpOptions: {
+      headers: {
+        'User-Agent': 'aistudio-build',
+      },
+    },
+  });
+
   try {
     const body = await req.json().catch(() => ({}));
     const rawChangelog =
       body.rawChangelog ||
-      'OpenAI announces GPT-4o mini audio output and price cut by 60%. Midjourney announces v6.2 release with instant video export.';
+      'Anthropic announced Claude 3.5 Sonnet upgraded with enhanced computer use and 20% lower token pricing. OpenAI launched ChatGPT Search feature for all free tier users.';
 
     const systemPrompt =
       'You are a tech news summarizer. I will provide raw changelogs or news snippets about AI tools. Condense them into a single, punchy 15-word sentence focusing only on new features, pricing changes, or launches.';
 
     let summary = '';
+    // 2. Robust Try/Catch & Error Logging
     try {
-      // Generate summary using official @google/genai SDK
-      const response = await ai.models.generateContent({
-        model: 'gemini-3.8-flash',
-        contents: rawChangelog,
-        config: {
-          systemInstruction: systemPrompt,
-          temperature: 0.2,
-        },
-      });
+      let response;
+      try {
+        response = await ai.models.generateContent({
+          model: 'gemini-3.8-flash',
+          contents: rawChangelog,
+          config: {
+            systemInstruction: systemPrompt,
+            temperature: 0.2,
+          },
+        });
+      } catch (primaryErr: any) {
+        console.warn('Primary model failed, attempting gemini-3.1-flash-lite fallback...', primaryErr.message);
+        response = await ai.models.generateContent({
+          model: 'gemini-3.1-flash-lite',
+          contents: rawChangelog,
+          config: {
+            systemInstruction: systemPrompt,
+            temperature: 0.2,
+          },
+        });
+      }
       summary = response.text ? response.text.trim() : '';
-    } catch (err: any) {
-      console.warn('Gemini 3.8 Flash high demand, trying 3.1 Flash-Lite fallback...', err.message);
-      const fallbackRes = await ai.models.generateContent({
-        model: 'gemini-3.1-flash-lite',
-        contents: rawChangelog,
-        config: {
-          systemInstruction: systemPrompt,
-          temperature: 0.2,
-        },
-      });
-      summary = fallbackRes.text ? fallbackRes.text.trim() : 'New AI feature updates rolled out.';
+    } catch (error: any) {
+      console.error('Gemini API Error:', error);
+      return NextResponse.json(
+        { error: 'Failed to generate content', details: error.message },
+        { status: 500 }
+      );
     }
 
     const newUpdate = {
       id: `upd-${Date.now()}`,
       toolName: body.toolName || 'AI Ecosystem',
       type: (body.type as 'feature' | 'pricing' | 'launch') || 'feature',
-      summary,
+      summary: summary || 'New AI capabilities and product updates announced.',
       date: 'Just now',
       read: false,
     };
 
-    const existingUpdates = loadUpdates();
-    const updatedList = [newUpdate, ...existingUpdates].slice(0, 30);
-    saveUpdates(updatedList);
+    updatesList = [newUpdate, ...updatesList].slice(0, 30);
 
     return NextResponse.json({
       success: true,
       update: newUpdate,
-      updates: updatedList,
+      updates: updatesList,
     });
   } catch (error: any) {
-    console.error('Error generating update summary:', error);
+    console.error('Gemini API Error:', error);
     return NextResponse.json(
-      { success: false, error: error.message || 'Failed to summarize updates' },
+      { error: 'Failed to generate content', details: error.message },
       { status: 500 }
     );
   }
 }
 
 export async function GET() {
-  const updates = loadUpdates();
   return NextResponse.json({
     success: true,
-    updates,
+    updates: updatesList,
   });
 }

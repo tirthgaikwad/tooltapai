@@ -1,16 +1,24 @@
+export const runtime = 'edge';
+
 import { NextRequest, NextResponse } from 'next/server';
 import { GoogleGenAI } from '@google/genai';
 
-const ai = new GoogleGenAI({
-  apiKey: process.env.GEMINI_API_KEY,
-  httpOptions: {
-    headers: {
-      'User-Agent': 'aistudio-build',
-    },
-  },
-});
-
 export async function POST(req: NextRequest) {
+  // 3. API Key Validation
+  if (!process.env.GEMINI_API_KEY) {
+    return NextResponse.json({ error: 'API key not configured' }, { status: 500 });
+  }
+
+  // Initialize the Google Gen AI client
+  const ai = new GoogleGenAI({
+    apiKey: process.env.GEMINI_API_KEY,
+    httpOptions: {
+      headers: {
+        'User-Agent': 'aistudio-build',
+      },
+    },
+  });
+
   try {
     const { messages, model = 'gemini-3.8-flash', role = 'advisor' } = await req.json();
 
@@ -30,20 +38,45 @@ export async function POST(req: NextRequest) {
       parts: [{ text: m.content }],
     }));
 
-    const response = await ai.models.generateContent({
-      model: model === 'gemini-3.1-flash-lite' ? 'gemini-3.1-flash-lite' : 'gemini-3.8-flash',
-      contents,
-      config: {
-        systemInstruction,
-      },
-    });
+    // 2. Robust Try/Catch & Error Logging
+    try {
+      let response;
+      try {
+        response = await ai.models.generateContent({
+          model: model === 'gemini-3.1-flash-lite' ? 'gemini-3.1-flash-lite' : 'gemini-3.8-flash',
+          contents,
+          config: {
+            systemInstruction,
+          },
+        });
+      } catch (primaryErr: any) {
+        if (model !== 'gemini-3.1-flash-lite') {
+          console.warn('Primary model failed, attempting gemini-3.1-flash-lite fallback...', primaryErr.message);
+          response = await ai.models.generateContent({
+            model: 'gemini-3.1-flash-lite',
+            contents,
+            config: {
+              systemInstruction,
+            },
+          });
+        } else {
+          throw primaryErr;
+        }
+      }
 
-    const reply = response.text || "I'm here to help you navigate ToolTap AI tools!";
-    return NextResponse.json({ success: true, reply });
-  } catch (err: any) {
-    console.error('Chat error:', err);
+      const reply = response.text || "I'm here to help you navigate ToolTap AI tools!";
+      return NextResponse.json({ success: true, reply });
+    } catch (error: any) {
+      console.error('Gemini API Error:', error);
+      return NextResponse.json(
+        { error: 'Failed to generate content', details: error.message },
+        { status: 500 }
+      );
+    }
+  } catch (error: any) {
+    console.error('Gemini API Error:', error);
     return NextResponse.json(
-      { success: false, error: err.message || 'Chat generation failed' },
+      { error: 'Failed to generate content', details: error.message },
       { status: 500 }
     );
   }

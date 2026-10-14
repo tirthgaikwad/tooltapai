@@ -26,7 +26,29 @@ export interface Tool {
   access: AccessType;
   freePlan: string;
   why: string;
+  description?: string;
+  tags?: string[];
+  pricingTier?: string;
+  generousQuota?: boolean;
+  categorySlug?: string;
+  relevanceScore?: number;
   freePlanDetails?: FreePlanDetails;
+  startingPrice?: number;
+  freeTier?: boolean;
+  hasFreeTier?: boolean;
+  freeQuotaLevel?: 'completely-free' | 'generous' | 'moderate' | 'limited' | 'strict' | 'none' | string;
+  freeTierQuota?: string;
+  speedTokensPerSec?: number;
+  qualityBenchmarkScore?: number;
+  easeOfUseRating?: number;
+  integrationsCount?: number;
+  hasPublicApi?: boolean;
+  contextWindowTokens?: number;
+  integrations?: string[];
+  hasApi?: boolean;
+  platforms?: string[];
+  isOpenSource?: boolean;
+  contextWindow?: string;
 }
 
 export type SortOption = 'default' | 'alphabetical' | 'popularity' | 'recently-added';

@@ -5,9 +5,6 @@ import PageLayout from '@/components/layout/PageLayout';
 import PageMeta from '@/components/common/PageMeta';
 import SearchBar from '@/components/search/SearchBar';
 import SuggestionChips from '@/components/search/SuggestionChips';
-import ToolCard from '@/components/tools/ToolCard';
-import ToolSection from '@/components/tools/ToolSection';
-import DeferredToolGrid from '@/components/tools/DeferredToolGrid';
 import SuspenseToolGrid from '@/components/tools/SuspenseToolGrid';
 import { ToolGridSkeleton } from '@/components/tools/ToolCardSkeleton';
 import AutoHidingFilterBar from '@/components/common/AutoHidingFilterBar';
@@ -17,7 +14,7 @@ import {
   DropdownMenuRadioItem, DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu';
 import { useApp } from '@/contexts/AppContext';
-import { searchTools, rankResults } from '@/lib/search';
+import { searchTools } from '@/lib/search';
 import { CATEGORIES } from '@/types/tool';
 import type { FilterAccess, SortOption, FreePlanFilter } from '@/types/tool';
 import { cn } from '@/lib/utils';
@@ -44,15 +41,6 @@ const SORT_OPTIONS: { value: SortOption; label: string }[] = [
   { value: 'popularity', label: 'Popularity' },
   { value: 'recently-added', label: 'Recently Added' },
 ];
-
-const RANK_LABELS: Record<string, string> = {
-  bestOverall: '🏆 Best Overall',
-  bestFree: '🎁 Best Free Options',
-  bestForStudents: '🎓 Best for Students',
-  bestPremium: '💎 High Performance',
-  mostPopular: '⭐ Most Popular',
-  fastestToLearn: '⚡ Easiest to Learn',
-};
 
 export default function SearchPage() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -90,15 +78,11 @@ export default function SearchPage() {
     });
   }, [addSearch, setSearchParams]);
 
-  const results = useMemo(() =>
+  const filteredTools = useMemo(() =>
     searchTools(tools, fuseIndex, query, { access, category, sort, studentMode, freePlanFilter }),
     [tools, fuseIndex, query, access, category, sort, studentMode, freePlanFilter]
   );
-
-  const ranked = useMemo(() =>
-    query.trim() ? rankResults(results, query) : null,
-    [results, query]
-  );
+  const results = filteredTools;
 
   const hasFilters = access !== 'all' || category !== 'all' || sort !== 'default' || freePlanFilter !== 'all' || studentMode;
 
@@ -128,7 +112,7 @@ export default function SearchPage() {
           </h1>
           {query && (
             <p className="text-muted-foreground text-xs sm:text-sm flex items-center gap-2">
-              <span>{results.length} tool{results.length !== 1 ? 's' : ''} found</span>
+              <span>{filteredTools.length} tools found</span>
               {studentMode && (
                 <span className="inline-flex items-center gap-1 text-emerald-400 font-semibold bg-emerald-500/10 px-2 py-0.5 rounded-md border border-emerald-500/20 text-xs">
                   <GraduationCap className="w-3.5 h-3.5" /> Student Mode
@@ -304,7 +288,7 @@ export default function SearchPage() {
           )}
 
           <div className="ml-auto text-xs text-muted-foreground font-medium hidden md:block">
-            {results.length} result{results.length !== 1 ? 's' : ''}
+            {filteredTools.length} tools found
           </div>
         </div>
       </AutoHidingFilterBar>
@@ -334,14 +318,16 @@ export default function SearchPage() {
         <Suspense fallback={<ToolGridSkeleton count={8} />}>
           {isSearching ? (
             <ToolGridSkeleton count={8} />
-          ) : results.length === 0 ? (
+          ) : filteredTools.length === 0 ? (
             <div className="text-center py-16 bg-[#1E1E24] border border-white/10 rounded-2xl p-8 space-y-4">
               <div className="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center mx-auto text-xl">
                 🔍
               </div>
-              <h2 className="font-heading font-bold text-lg text-foreground">No matching AI tools found</h2>
+              <h2 className="font-heading font-bold text-lg text-foreground">
+                {query ? `No AI tools found matching "${query}". Try searching for "Video", "Code", or "Design".` : 'No matching AI tools found'}
+              </h2>
               <p className="text-muted-foreground text-xs sm:text-sm max-w-sm mx-auto leading-relaxed">
-                Try a different search query or clear your active filters to see all available tools.
+                {query ? 'Try searching for "Video", "Code", or "Design".' : 'Try adjusting your search criteria or clearing active filters.'}
               </p>
               <div className="pt-2">
                 <Button onClick={clearFilters} size="sm" className="bg-primary text-primary-foreground font-semibold rounded-xl h-10 px-5">
@@ -349,29 +335,12 @@ export default function SearchPage() {
                 </Button>
               </div>
             </div>
-          ) : query.trim() && ranked ? (
-            <div className="space-y-12">
-              {(Object.entries(ranked) as [string, typeof ranked.bestOverall][]).map(([key, sectionTools]) => {
-                if (!sectionTools.length) return null;
-                const label = RANK_LABELS[key] ?? key;
-                return (
-                  <div key={key} className="bg-[#1E1E24] border border-white/[0.08] rounded-2xl p-5 sm:p-7 shadow-xl">
-                    <ToolSection
-                      title={label}
-                      tools={sectionTools}
-                      showBestFree={key === 'bestFree' || key === 'bestForStudents'}
-                      cols={3}
-                    />
-                  </div>
-                );
-              })}
-            </div>
           ) : (
             <SuspenseToolGrid
-              tools={results}
+              tools={filteredTools}
               fallback={<ToolGridSkeleton count={8} />}
-              emptyTitle="No matching AI tools found"
-              emptyMessage="Try a different search query or clear your active filters."
+              emptyTitle={query ? `No AI tools found matching "${query}". Try searching for "Video", "Code", or "Design".` : "No matching AI tools found"}
+              emptyMessage={query ? 'Try searching for "Video", "Code", or "Design".' : "Try adjusting your search criteria or clearing active filters."}
               onResetFilters={clearFilters}
             />
           )}

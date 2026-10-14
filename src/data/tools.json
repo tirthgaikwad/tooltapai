@@ -6,7 +6,16 @@
     "category": "General AI Assistants",
     "access": "Freemium",
     "freePlan": "Limited credits/messages/exports or feature access; exact quota varies by plan and region",
-    "why": "General assistant for learning, writing, coding, analysis, and files"
+    "why": "General assistant for learning, writing, coding, analysis, and files",
+    "startingPrice": 20,
+    "hasFreeTier": true,
+    "freeQuotaLevel": "moderate",
+    "speedTokensPerSec": 65,
+    "qualityBenchmarkScore": 88,
+    "easeOfUseRating": 9.5,
+    "integrationsCount": 1200,
+    "hasPublicApi": true,
+    "contextWindowTokens": 128000
   },
   {
     "id": 2,
@@ -15,7 +24,16 @@
     "category": "General AI Assistants",
     "access": "Freemium",
     "freePlan": "Free tier with message limits resetting every 5 hours; includes Claude 3.5 Sonnet access, document uploads, and live UI Artifacts rendering.",
-    "why": "Next-generation AI assistant by Anthropic known for superior reasoning, 200k+ token context window, advanced coding, writing, and live interactive Artifacts."
+    "why": "Next-generation AI assistant by Anthropic known for superior reasoning, 200k+ token context window, advanced coding, writing, and live interactive Artifacts.",
+    "startingPrice": 20,
+    "hasFreeTier": true,
+    "freeQuotaLevel": "limited",
+    "speedTokensPerSec": 55,
+    "qualityBenchmarkScore": 94,
+    "easeOfUseRating": 8.8,
+    "integrationsCount": 350,
+    "hasPublicApi": true,
+    "contextWindowTokens": 200000
   },
   {
     "id": 3,

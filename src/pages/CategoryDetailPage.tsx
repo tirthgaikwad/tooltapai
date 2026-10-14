@@ -20,6 +20,7 @@ import { CATEGORIES } from '@/types/tool';
 import type { FilterAccess, SortOption } from '@/types/tool';
 import { categoryConfig } from '@/components/tools/CategoryCard';
 import { normalizeSlug } from '@/lib/slugs';
+import { calculateRelevance } from '@/lib/search';
 import { cn } from '@/lib/utils';
 
 export default function CategoryDetailPage() {
@@ -67,11 +68,11 @@ export default function CategoryDetailPage() {
       result = result.filter(t => t.access === access);
     }
     if (searchQ.trim()) {
-      const q = searchQ.toLowerCase();
-      result = result.filter(t =>
-        (t.name || '').toLowerCase().includes(q) ||
-        (t.why || '').toLowerCase().includes(q)
-      );
+      result = result
+        .map(t => ({ tool: t, score: calculateRelevance(t, searchQ) }))
+        .filter(item => item.score > 0)
+        .sort((a, b) => b.score - a.score)
+        .map(item => item.tool);
     }
 
     if (sort === 'alphabetical') {

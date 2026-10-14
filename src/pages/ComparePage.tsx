@@ -29,13 +29,14 @@ import ToolLogo from '@/components/tools/ToolLogo';
 import ScoreMeterBar from '@/components/tools/ScoreMeterBar';
 import ShareComparisonButton from '@/components/tools/ShareComparisonButton';
 import FinalVerdictBanner from '@/components/tools/FinalVerdictBanner';
-import RadarMatrixChart from '@/components/tools/RadarMatrixChart';
+import CompareMatrix from '@/components/tools/CompareMatrix';
 import BasisOfComparisonGrid from '@/components/tools/BasisOfComparisonGrid';
 import { Button } from '@/components/ui/button';
 import { useApp } from '@/contexts/AppContext';
 import { normalizeSlug } from '@/lib/slugs';
 import { cn } from '@/lib/utils';
 import { calculateVectorScores, calculateComparisonVerdict, type VectorScoreResult } from '@/lib/vectorScores';
+import { calculateToolScores as calculateObjectiveToolScores } from '@/lib/compareUtils';
 import type { Tool } from '@/types/tool';
 
 export interface CriteriaScore {
@@ -47,43 +48,25 @@ export interface CriteriaScore {
   overallScore: number;
 }
 
-// Calculate deterministic, realistic rating scores based on tool properties
+// Calculate objective rating scores based on hard data and category weights
 export function calculateToolScores(tool: Tool): CriteriaScore {
-  let hash = 0;
-  for (let i = 0; i < tool.name.length; i++) {
-    hash = (hash << 5) - hash + tool.name.charCodeAt(i);
-    hash |= 0;
-  }
-  const idHash = Math.abs(hash + tool.id * 17);
+  const objective = calculateObjectiveToolScores(tool);
 
-  // Cost rating based on access type
-  let costBase = 3.6;
-  if (tool.access === 'Free' || tool.access === 'Open Source') {
-    costBase = 4.8;
-  } else if (tool.access === 'Freemium') {
-    costBase = 4.2;
-  } else if (tool.access === 'Paid') {
-    costBase = 3.4;
-  }
-  const cost = Number((costBase + (idHash % 3) * 0.1).toFixed(1));
-
-  const quality = Number((4.3 + ((idHash * 7) % 7) * 0.1).toFixed(1));
-  const useCaseFit = Number((4.2 + ((idHash * 11) % 8) * 0.1).toFixed(1));
-  const speed = Number((4.1 + ((idHash * 13) % 9) * 0.1).toFixed(1));
-  const easeOfUse = Number((4.2 + ((idHash * 17) % 8) * 0.1).toFixed(1));
-
-  // Weighted score: 25% UseCaseFit, 25% Quality, 20% Cost, 15% Speed, 15% EaseOfUse
-  const overall = Number(
-    (useCaseFit * 0.25 + quality * 0.25 + cost * 0.2 + speed * 0.15 + easeOfUse * 0.15).toFixed(1)
-  );
+  // Map 1-10 objective scores to the 1-5 CriteriaScore display scale
+  const cost = Number((objective.affordability / 2).toFixed(1));
+  const quality = Number((objective.quality / 2).toFixed(1));
+  const speed = Number((objective.speed / 2).toFixed(1));
+  const easeOfUse = Number((objective.easeOfUse / 2).toFixed(1));
+  const useCaseFit = Number((objective.ecosystem / 2).toFixed(1));
+  const overall = Number((objective.overallScore / 2).toFixed(1));
 
   return {
-    useCaseFit: Math.min(5, useCaseFit),
-    speed: Math.min(5, speed),
-    cost: Math.min(5, cost),
-    quality: Math.min(5, quality),
-    easeOfUse: Math.min(5, easeOfUse),
-    overallScore: Math.min(5, overall),
+    useCaseFit: Math.min(5, Math.max(1, useCaseFit)),
+    speed: Math.min(5, Math.max(1, speed)),
+    cost: Math.min(5, Math.max(1, cost)),
+    quality: Math.min(5, Math.max(1, quality)),
+    easeOfUse: Math.min(5, Math.max(1, easeOfUse)),
+    overallScore: Math.min(5, Math.max(1, overall)),
   };
 }
 
@@ -167,11 +150,11 @@ export default function ComparePage() {
     }
   }, [compareList]);
 
-  // Pre-calculate 5-vector scores for all tools in compare list
+  // Pre-calculate 5-vector scores for all tools in compare list ensuring distinct instances
   const vectorScoresMap = useMemo(() => {
     const map = new Map<number, VectorScoreResult>();
     compareList.forEach((t) => {
-      map.set(t.id, calculateVectorScores(t));
+      map.set(t.id, calculateVectorScores({ ...t }));
     });
     return map;
   }, [compareList]);
@@ -181,11 +164,11 @@ export default function ComparePage() {
     return calculateComparisonVerdict(compareList, vectorScoresMap);
   }, [compareList, vectorScoresMap]);
 
-  // Pre-calculate criteria scores for traditional table view
+  // Pre-calculate criteria scores for traditional table view ensuring distinct instances
   const toolScoresMap = useMemo(() => {
     const map = new Map<number, CriteriaScore>();
     compareList.forEach((t) => {
-      map.set(t.id, calculateToolScores(t));
+      map.set(t.id, calculateToolScores({ ...t }));
     });
     return map;
   }, [compareList]);
@@ -273,9 +256,25 @@ export default function ComparePage() {
               </span>{' '}
               button to view multi-vector radar charts and quantitative breakdowns.
             </p>
-            <Button asChild size="sm" className="bg-primary hover:bg-primary/90 text-white rounded-xl h-10 px-6 font-semibold">
-              <Link to="/search">Browse AI Tools</Link>
-            </Button>
+            <div className="flex flex-wrap items-center justify-center gap-3">
+              <Button asChild size="sm" className="bg-primary hover:bg-primary/90 text-white rounded-xl h-10 px-6 font-semibold">
+                <Link to="/search">Browse AI Tools</Link>
+              </Button>
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => {
+                  const chatgpt = tools.find((t) => t.name.toLowerCase() === 'chatgpt');
+                  const claude = tools.find((t) => t.name.toLowerCase() === 'claude');
+                  if (chatgpt && claude) {
+                    setCompareTools([chatgpt, claude]);
+                  }
+                }}
+                className="rounded-xl border-amber-500/30 text-amber-400 hover:bg-amber-500/10 h-10 px-4 font-semibold gap-1.5"
+              >
+                <Sparkles className="w-4 h-4" /> Compare ChatGPT vs Claude
+              </Button>
+            </div>
           </div>
         ) : (
           <div ref={captureRef} id="comparison-capture-area" className="space-y-8 bg-[#18181C] p-4 sm:p-6 rounded-3xl border border-white/5">
@@ -288,8 +287,8 @@ export default function ComparePage() {
               />
             )}
 
-            {/* 2. Multi-Vector Radar Matrix Chart */}
-            <RadarMatrixChart
+            {/* 2. CompareMatrix: Multi-Vector Radar Chart & Hard Data Verification Grid */}
+            <CompareMatrix
               tools={compareList}
               scoresMap={vectorScoresMap}
             />

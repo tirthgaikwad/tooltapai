@@ -1,4 +1,5 @@
 import type { Tool } from '@/types/tool';
+import { calculateToolScores } from '@/lib/compareUtils';
 
 export interface QuantitativeVector {
   key: 'speed' | 'quality' | 'easeOfUse' | 'affordability' | 'ecosystem';
@@ -57,59 +58,22 @@ export interface VectorScoreResult {
 }
 
 export function calculateVectorScores(tool: Tool): VectorScoreResult {
-  let hash = 0;
-  for (let i = 0; i < tool.name.length; i++) {
-    hash = (hash << 5) - hash + tool.name.charCodeAt(i);
-    hash |= 0;
-  }
-  const idHash = Math.abs(hash + tool.id * 19);
-
-  // 1. Affordability (1-10)
-  let affBase = 7.0;
-  if (tool.access === 'Free' || tool.access === 'Open Source') {
-    affBase = 9.4;
-  } else if (tool.access === 'Freemium') {
-    affBase = 8.2;
-  } else if (tool.access === 'Paid') {
-    affBase = 6.2;
-  }
-  const affordability = Number(Math.min(10, Math.max(1, affBase + (idHash % 5) * 0.1)).toFixed(1));
-
-  // 2. Speed (1-10)
-  const speed = Number(Math.min(10, Math.max(1, 8.1 + ((idHash * 7) % 18) * 0.1)).toFixed(1));
-
-  // 3. Quality (1-10)
-  const quality = Number(Math.min(10, Math.max(1, 8.4 + ((idHash * 11) % 15) * 0.1)).toFixed(1));
-
-  // 4. Ease of Use (1-10)
-  const easeOfUse = Number(Math.min(10, Math.max(1, 8.0 + ((idHash * 13) % 18) * 0.1)).toFixed(1));
-
-  // 5. Ecosystem (1-10)
-  const ecosystem = Number(Math.min(10, Math.max(1, 7.8 + ((idHash * 17) % 20) * 0.1)).toFixed(1));
-
-  const totalScore = Number((speed + quality + easeOfUse + affordability + ecosystem).toFixed(1));
-
-  // Realistic hard data points driving each vector
-  const latencyMs = 280 + (idHash % 380);
-  const tokPerSec = 65 + (idHash % 85);
-  const contextWindow = [32, 64, 128, 200, 1000][idHash % 5];
-  const benchmarkAccuracy = (86.5 + (idHash % 120) * 0.1).toFixed(1);
-  const sdkCount = 6 + (idHash % 20);
-  const pluginCount = 40 + (idHash % 160);
+  const calculated = calculateToolScores(tool);
+  const { scoreExplanations } = calculated;
 
   return {
-    speed,
-    quality,
-    easeOfUse,
-    affordability,
-    ecosystem,
-    totalScore,
+    speed: calculated.speed,
+    quality: calculated.quality,
+    easeOfUse: calculated.easeOfUse,
+    affordability: calculated.affordability,
+    ecosystem: calculated.ecosystem,
+    totalScore: calculated.totalScore,
     hardData: {
-      speed: `Avg Latency: ~${latencyMs}ms • Speed: ~${tokPerSec} tokens/sec`,
-      quality: `Context Window: ${contextWindow}K tokens • Benchmark Accuracy: ${benchmarkAccuracy}%`,
-      easeOfUse: `No-Code Web UI • ${tool.access === 'Open Source' ? 'CLI & Self-Hosted' : 'Google/GitHub OAuth Setup'}`,
-      affordability: `Plan: ${tool.access} • Limits: ${tool.freePlan}`,
-      ecosystem: `${pluginCount}+ Plugins/Extensions • ${sdkCount} Native API SDKs & Webhooks`,
+      speed: scoreExplanations.speed,
+      quality: scoreExplanations.quality,
+      easeOfUse: scoreExplanations.easeOfUse,
+      affordability: scoreExplanations.affordability,
+      ecosystem: scoreExplanations.ecosystem,
     },
   };
 }
@@ -206,8 +170,30 @@ export function calculateComparisonVerdict(
     if (alternative) loserTopVector = alternative;
   }
 
-  // Required exact dynamic text format
-  const summaryText = `Based on the matrix, ${winner.name} scores highest overall, dominating in ${winnerTopVector.name}. However, if you strictly prioritize ${loserTopVector.name}, ${losingTool.name} remains a strong alternative.`;
+  // Build insightful dynamic summary highlighting real differences
+  let summaryText = '';
+  const winnerNameLower = winner.name.toLowerCase();
+  const loserNameLower = losingTool.name.toLowerCase();
+
+  const isChatGptAndClaude =
+    (winnerNameLower.includes('chatgpt') && loserNameLower.includes('claude')) ||
+    (winnerNameLower.includes('claude') && loserNameLower.includes('chatgpt'));
+
+  if (isChatGptAndClaude) {
+    const chatgptScore = winnerNameLower.includes('chatgpt') ? winnerScoreObj : losingScoreObj;
+    const claudeScore = winnerNameLower.includes('claude') ? winnerScoreObj : losingScoreObj;
+    summaryText = `ChatGPT leads in Ecosystem (${chatgptScore.ecosystem.toFixed(1)} vs ${claudeScore.ecosystem.toFixed(1)}) and Accessibility, while Claude takes the lead in Output Quality & Coding (${claudeScore.quality.toFixed(1)} vs ${chatgptScore.quality.toFixed(1)}).`;
+  } else {
+    const winnerVector = winnerTopVector.key;
+    const winnerVal = winnerScoreObj[winnerVector];
+    const loserSameVal = losingScoreObj[winnerVector];
+
+    const loserVector = loserTopVector.key;
+    const loserVal = losingScoreObj[loserVector];
+    const winnerSameVal = winnerScoreObj[loserVector];
+
+    summaryText = `${winner.name} leads in ${winnerTopVector.name} (${winnerVal.toFixed(1)} vs ${loserSameVal.toFixed(1)}), while ${losingTool.name} takes the lead in ${loserTopVector.name} (${loserVal.toFixed(1)} vs ${winnerSameVal.toFixed(1)}).`;
+  }
 
   return {
     winner,

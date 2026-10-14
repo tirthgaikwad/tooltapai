@@ -12,6 +12,7 @@ import { useApp } from '@/contexts/AppContext';
 import ToolLogo from '@/components/tools/ToolLogo';
 import AccessBadge from '@/components/tools/AccessBadge';
 import type { Tool, UserRole } from '@/types/tool';
+import { searchTools } from '@/lib/search';
 import { cn } from '@/lib/utils';
 
 export function CommandPalette() {
@@ -96,8 +97,7 @@ export function CommandPalette() {
       return tools.slice(0, 8);
     }
 
-    const results = fuseIndex.search(searchQuery);
-    return results.map((r) => r.item).slice(0, 10);
+    return searchTools(tools, fuseIndex, searchQuery, { studentMode }).slice(0, 10);
   }, [searchQuery, fuseIndex, tools, studentMode, userRole]);
 
   // Quick Action items

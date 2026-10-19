@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo, useCallback, useTransition, Suspense } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { SlidersHorizontal, ChevronDown, X, GraduationCap } from 'lucide-react';
+import { SlidersHorizontal, ChevronDown, X, GraduationCap, Sparkles } from 'lucide-react';
 import PageLayout from '@/components/layout/PageLayout';
 import PageMeta from '@/components/common/PageMeta';
 import SearchBar from '@/components/search/SearchBar';
@@ -8,6 +8,9 @@ import SuggestionChips from '@/components/search/SuggestionChips';
 import SuspenseToolGrid from '@/components/tools/SuspenseToolGrid';
 import { ToolGridSkeleton } from '@/components/tools/ToolCardSkeleton';
 import AutoHidingFilterBar from '@/components/common/AutoHidingFilterBar';
+import RecommendationVerdictCard from '@/components/tools/RecommendationVerdictCard';
+import { fetchToolRecommendation } from '@/services/recommendationService';
+import type { RecommendationResponse } from '@/types/recommendation';
 import { Button } from '@/components/ui/button';
 import {
   DropdownMenu, DropdownMenuContent, DropdownMenuRadioGroup,
@@ -57,11 +60,45 @@ export default function SearchPage() {
   const [showFilters, setShowFilters] = useState(false);
   const [isSearching, setIsSearching] = useState(false);
 
+  // Natural Language Recommendation State
+  const [recommendation, setRecommendation] = useState<RecommendationResponse | null>(null);
+  const [isRecommendationLoading, setIsRecommendationLoading] = useState(false);
+
   useEffect(() => {
     setIsSearching(true);
     const timer = setTimeout(() => setIsSearching(false), 120);
     return () => clearTimeout(timer);
   }, [query, access, category, sort, freePlanFilter, studentMode]);
+
+  // Fetch intelligent recommendation whenever query changes
+  useEffect(() => {
+    if (!query || !query.trim()) {
+      setRecommendation(null);
+      setIsRecommendationLoading(false);
+      return;
+    }
+
+    let isMounted = true;
+    setIsRecommendationLoading(true);
+
+    fetchToolRecommendation(query.trim())
+      .then((data) => {
+        if (isMounted) {
+          setRecommendation(data);
+          setIsRecommendationLoading(false);
+        }
+      })
+      .catch((err) => {
+        if (isMounted) {
+          console.error('[SearchPage Recommendation Error]:', err);
+          setIsRecommendationLoading(false);
+        }
+      });
+
+    return () => {
+      isMounted = false;
+    };
+  }, [query]);
 
   useEffect(() => {
     const q = searchParams.get('q') ?? '';
@@ -313,6 +350,16 @@ export default function SearchPage() {
             </button>
           ))}
         </div>
+
+        {/* Natural Language Task Recommendation & Multi-Tool Comparison */}
+        {query && (recommendation || isRecommendationLoading) && (
+          <div className="mb-8">
+            <RecommendationVerdictCard
+              recommendation={recommendation}
+              isLoading={isRecommendationLoading}
+            />
+          </div>
+        )}
 
         {/* Results */}
         <Suspense fallback={<ToolGridSkeleton count={8} />}>

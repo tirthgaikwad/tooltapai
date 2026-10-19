@@ -1,4 +1,5 @@
 import type { Tool } from '@/types/tool';
+import { generateToolProfile } from '@/lib/compareData';
 
 export interface ToolHardData {
   startingPrice: number;
@@ -417,29 +418,31 @@ export function getToolHardData(tool: Tool): ToolHardData {
     }
   }
 
+  const generated = generateToolProfile(tool);
+
   // Speed Tokens Per Sec
   let speedTokensPerSec =
     tool.speedTokensPerSec ||
     known?.speedTokensPerSec ||
-    (isOpenSource ? 80 : tool.category.toLowerCase().includes('coding') ? 75 : 60);
+    generated.hardData.speedTokensPerSec;
 
   // Quality Benchmark Score (out of 100)
   let qualityBenchmarkScore =
     tool.qualityBenchmarkScore ||
     known?.qualityBenchmarkScore ||
-    (tool.name.toLowerCase().includes('claude') ? 94 : tool.name.toLowerCase().includes('chatgpt') ? 88 : 82);
+    generated.hardData.qualityBenchmarkScore;
 
   // Ease of Use Rating (1 - 10)
   let easeOfUseRating =
     tool.easeOfUseRating ||
     known?.easeOfUseRating ||
-    (tool.name.toLowerCase().includes('chatgpt') ? 9.5 : isOpenSource ? 7.2 : 8.5);
+    generated.hardData.easeOfUseRating;
 
   // Integrations count
   let integrationsCount =
     tool.integrationsCount ||
     known?.integrationsCount ||
-    (tool.name.toLowerCase().includes('chatgpt') ? 1200 : tool.name.toLowerCase().includes('claude') ? 350 : 80);
+    generated.hardData.integrationsCount;
 
   // API Availability
   const hasPublicApi =
@@ -447,17 +450,13 @@ export function getToolHardData(tool: Tool): ToolHardData {
     tool.hasApi ??
     known?.hasPublicApi ??
     known?.hasApi ??
-    true;
+    generated.hardData.hasPublicApi;
 
   // Context window tokens
   const contextWindowTokens =
     tool.contextWindowTokens ||
     known?.contextWindowTokens ||
-    (tool.name.toLowerCase().includes('claude')
-      ? 200000
-      : tool.name.toLowerCase().includes('chatgpt')
-      ? 128000
-      : 64000);
+    generated.hardData.contextWindowTokens;
 
   // Integrations array
   let integrations = tool.integrations || known?.integrations || ['Web', 'REST API'];

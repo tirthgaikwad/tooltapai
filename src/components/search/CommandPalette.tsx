@@ -103,6 +103,21 @@ export function CommandPalette() {
   // Quick Action items
   const quickActions = useMemo(() => {
     const actions = [
+      ...(searchQuery.trim()
+        ? [
+            {
+              id: 'ai-compare-task',
+              title: `AI Compare & Recommend: "${searchQuery}"`,
+              icon: Sparkles,
+              badge: 'AI Match',
+              badgeColor: 'bg-emerald-500/20 text-emerald-400 font-bold',
+              action: () => {
+                setCommandPaletteOpen(false);
+                navigate(`/compare?q=${encodeURIComponent(searchQuery)}`);
+              },
+            },
+          ]
+        : []),
       {
         id: 'toggle-student',
         title: studentMode ? 'Disable Student Mode' : 'Enable Student Mode (100% Free / Freemium Only)',

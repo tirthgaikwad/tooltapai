@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import {
   Sparkles,
   DollarSign,
@@ -24,6 +24,7 @@ import {
   type ToolCalculatedScores,
 } from '@/lib/compareUtils';
 import { DATA_VECTORS, type VectorScoreResult } from '@/lib/vectorScores';
+import { getDistinctComparisonProfiles, generateToolProfile } from '@/lib/compareData';
 import { cn } from '@/lib/utils';
 
 interface CompareMatrixProps {
@@ -37,15 +38,52 @@ const TOOL_COLORS = [
   { stroke: '#3B82F6', fill: 'rgba(59, 130, 246, 0.30)', dot: '#3B82F6', badge: 'bg-blue-500/20 text-blue-400 border-blue-500/30' },
 ];
 
-export default function CompareMatrix({ tools }: CompareMatrixProps) {
+export default function CompareMatrix({ tools, scoresMap }: CompareMatrixProps) {
   const [hoveredVectorIndex, setHoveredVectorIndex] = useState<number | null>(null);
 
-  // Derive calculated scores and hard data for each tool
-  const toolEvaluations = tools.map((tool) => ({
-    tool,
-    scores: calculateToolScores(tool),
-    hardData: getToolHardData(tool),
-  }));
+  // Derive guaranteed distinct profiles and hard data for each compared tool
+  const distinctProfilesMap = useMemo(() => {
+    return getDistinctComparisonProfiles(tools);
+  }, [tools]);
+
+  const toolEvaluations = tools.map((tool) => {
+    const profile = distinctProfilesMap.get(tool.id) || generateToolProfile(tool);
+    return {
+      tool,
+      scores: {
+        ...profile.scores,
+        totalScore: profile.scores.totalScore,
+        rawScores: {
+          speed: profile.scores.speed,
+          quality: profile.scores.quality,
+          easeOfUse: profile.scores.easeOfUse,
+          affordability: profile.scores.affordability,
+          ecosystem: profile.scores.ecosystem,
+        },
+        multipliers: {
+          speedMultiplier: tool.category?.toLowerCase().includes('coding') ? 1.5 : 1.0,
+          ecosystemMultiplier: tool.category?.toLowerCase().includes('coding') ? 1.5 : 1.0,
+          qualityMultiplier: tool.category?.toLowerCase().includes('video') ? 1.5 : 1.0,
+        },
+        scoreExplanations: profile.scoreExplanations,
+      },
+      hardData: {
+        startingPrice: profile.hardData.startingPrice,
+        startingPriceText: profile.hardData.price,
+        freeTier: profile.hardData.freeTier,
+        freeTierQuota: profile.hardData.quota,
+        speedTokensPerSec: profile.hardData.speedTokensPerSec,
+        contextWindowTokens: profile.hardData.contextWindowTokens,
+        qualityBenchmarkScore: profile.hardData.qualityBenchmarkScore,
+        integrationsCount: profile.hardData.integrationsCount,
+        integrations: profile.hardData.integrations.includes(',')
+          ? profile.hardData.integrations.split(',').map((s) => s.trim())
+          : [profile.hardData.integrations, 'REST API', 'Web'],
+        platforms: profile.hardData.platforms.split(',').map((s) => s.trim()),
+        isOpenSource: profile.hardData.isOpenSource,
+      },
+    };
+  });
 
   // SVG Geometry Constants for Radar Chart
   const size = 360;

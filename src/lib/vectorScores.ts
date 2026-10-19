@@ -1,5 +1,6 @@
 import type { Tool } from '@/types/tool';
 import { calculateToolScores } from '@/lib/compareUtils';
+import { getDistinctComparisonProfiles, generateToolProfile } from '@/lib/compareData';
 
 export interface QuantitativeVector {
   key: 'speed' | 'quality' | 'easeOfUse' | 'affordability' | 'ecosystem';
@@ -58,24 +59,52 @@ export interface VectorScoreResult {
 }
 
 export function calculateVectorScores(tool: Tool): VectorScoreResult {
-  const calculated = calculateToolScores(tool);
-  const { scoreExplanations } = calculated;
+  const profile = generateToolProfile(tool);
 
   return {
-    speed: calculated.speed,
-    quality: calculated.quality,
-    easeOfUse: calculated.easeOfUse,
-    affordability: calculated.affordability,
-    ecosystem: calculated.ecosystem,
-    totalScore: calculated.totalScore,
+    speed: profile.scores.speed,
+    quality: profile.scores.quality,
+    easeOfUse: profile.scores.easeOfUse,
+    affordability: profile.scores.affordability,
+    ecosystem: profile.scores.ecosystem,
+    totalScore: profile.scores.totalScore,
     hardData: {
-      speed: scoreExplanations.speed,
-      quality: scoreExplanations.quality,
-      easeOfUse: scoreExplanations.easeOfUse,
-      affordability: scoreExplanations.affordability,
-      ecosystem: scoreExplanations.ecosystem,
+      speed: profile.scoreExplanations.speed,
+      quality: profile.scoreExplanations.quality,
+      easeOfUse: profile.scoreExplanations.easeOfUse,
+      affordability: profile.scoreExplanations.affordability,
+      ecosystem: profile.scoreExplanations.ecosystem,
     },
   };
+}
+
+/**
+ * Returns guaranteed distinct vector scores for compared tools,
+ * ensuring no two tools have matching points on any vector or total score.
+ */
+export function getDistinctVectorScores(tools: Tool[]): Map<number, VectorScoreResult> {
+  const distinctProfiles = getDistinctComparisonProfiles(tools);
+  const result = new Map<number, VectorScoreResult>();
+
+  distinctProfiles.forEach((profile, toolId) => {
+    result.set(toolId, {
+      speed: profile.scores.speed,
+      quality: profile.scores.quality,
+      easeOfUse: profile.scores.easeOfUse,
+      affordability: profile.scores.affordability,
+      ecosystem: profile.scores.ecosystem,
+      totalScore: profile.scores.totalScore,
+      hardData: {
+        speed: profile.scoreExplanations.speed,
+        quality: profile.scoreExplanations.quality,
+        easeOfUse: profile.scoreExplanations.easeOfUse,
+        affordability: profile.scoreExplanations.affordability,
+        ecosystem: profile.scoreExplanations.ecosystem,
+      },
+    });
+  });
+
+  return result;
 }
 
 export interface VerdictResult {

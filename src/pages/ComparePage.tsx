@@ -1,4 +1,4 @@
-import { useMemo, useState, useEffect, useRef } from 'react';
+import { useMemo, useState, useEffect, useRef, useCallback } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import {
   GitCompare,
@@ -35,9 +35,12 @@ import { Button } from '@/components/ui/button';
 import { useApp } from '@/contexts/AppContext';
 import { normalizeSlug } from '@/lib/slugs';
 import { cn } from '@/lib/utils';
-import { calculateVectorScores, calculateComparisonVerdict, type VectorScoreResult } from '@/lib/vectorScores';
+import { calculateVectorScores, getDistinctVectorScores, calculateComparisonVerdict, type VectorScoreResult } from '@/lib/vectorScores';
 import { calculateToolScores as calculateObjectiveToolScores } from '@/lib/compareUtils';
 import type { Tool } from '@/types/tool';
+import RecommendationVerdictCard from '@/components/tools/RecommendationVerdictCard';
+import { fetchToolRecommendation } from '@/services/recommendationService';
+import type { RecommendationResponse } from '@/types/recommendation';
 
 export interface CriteriaScore {
   useCaseFit: number;
@@ -93,6 +96,50 @@ export default function ComparePage() {
   const captureRef = useRef<HTMLDivElement>(null);
 
   const isEmpty = compareList.length === 0;
+
+  // Natural Language Task Comparison State
+  const [naturalQuery, setNaturalQuery] = useState(
+    searchParams.get('q') || searchParams.get('query') || ''
+  );
+  const [taskRecommendation, setTaskRecommendation] = useState<RecommendationResponse | null>(null);
+  const [isTaskLoading, setIsTaskLoading] = useState(false);
+
+  const runNaturalComparison = useCallback((q: string) => {
+    const trimmed = q.trim();
+    if (!trimmed) return;
+    setNaturalQuery(trimmed);
+    setIsTaskLoading(true);
+
+    fetchToolRecommendation(trimmed)
+      .then((data) => {
+        setTaskRecommendation(data);
+        setIsTaskLoading(false);
+
+        // Automatically populate comparison with top 3 evaluated candidates
+        if (data.results && data.results.length > 0) {
+          const matchedTools: Tool[] = [];
+          for (const res of data.results.slice(0, 3)) {
+            const found = tools.find((t) => t.id === res.tool_id);
+            if (found) matchedTools.push(found);
+          }
+          if (matchedTools.length > 0) {
+            setCompareTools(matchedTools);
+          }
+        }
+      })
+      .catch((err) => {
+        console.error('[ComparePage Recommendation Error]:', err);
+        setIsTaskLoading(false);
+      });
+  }, [tools, setCompareTools]);
+
+  // Handle initial URL query on load
+  useEffect(() => {
+    const q = searchParams.get('q') || searchParams.get('query');
+    if (q && q.trim() && !taskRecommendation && !isTaskLoading) {
+      runNaturalComparison(q);
+    }
+  }, [searchParams]);
 
   // Sync tools from URL query param `?compare=chatgpt,claude,gemini`
   useEffect(() => {
@@ -152,11 +199,7 @@ export default function ComparePage() {
 
   // Pre-calculate 5-vector scores for all tools in compare list ensuring distinct instances
   const vectorScoresMap = useMemo(() => {
-    const map = new Map<number, VectorScoreResult>();
-    compareList.forEach((t) => {
-      map.set(t.id, calculateVectorScores({ ...t }));
-    });
-    return map;
+    return getDistinctVectorScores(compareList);
   }, [compareList]);
 
   // Calculate comparison verdict
@@ -168,10 +211,57 @@ export default function ComparePage() {
   const toolScoresMap = useMemo(() => {
     const map = new Map<number, CriteriaScore>();
     compareList.forEach((t) => {
-      map.set(t.id, calculateToolScores({ ...t }));
+      const v = vectorScoresMap.get(t.id);
+      if (!v) {
+        map.set(t.id, calculateToolScores(t));
+        return;
+      }
+      const cost = Number((v.affordability / 2).toFixed(1));
+      const quality = Number((v.quality / 2).toFixed(1));
+      const speed = Number((v.speed / 2).toFixed(1));
+      const easeOfUse = Number((v.easeOfUse / 2).toFixed(1));
+      const useCaseFit = Number((v.ecosystem / 2).toFixed(1));
+      const overall = Number(((v.totalScore / 5) / 2).toFixed(1));
+
+      map.set(t.id, {
+        useCaseFit: Math.min(5, Math.max(1, useCaseFit)),
+        speed: Math.min(5, Math.max(1, speed)),
+        cost: Math.min(5, Math.max(1, cost)),
+        quality: Math.min(5, Math.max(1, quality)),
+        easeOfUse: Math.min(5, Math.max(1, easeOfUse)),
+        overallScore: Math.min(5, Math.max(1, overall)),
+      });
     });
+
+    // Ensure criteria scores on 1-5 scale also do not collide among compared tools
+    const criteriaKeys: Array<keyof CriteriaScore> = [
+      'useCaseFit',
+      'speed',
+      'cost',
+      'quality',
+      'easeOfUse',
+      'overallScore',
+    ];
+    for (let i = 0; i < compareList.length; i++) {
+      for (let j = i + 1; j < compareList.length; j++) {
+        const sA = map.get(compareList[i].id);
+        const sB = map.get(compareList[j].id);
+        if (sA && sB) {
+          criteriaKeys.forEach((key) => {
+            if (Math.abs(sA[key] - sB[key]) < 0.05) {
+              const delta = compareList[j].id > compareList[i].id ? 0.2 : -0.2;
+              let next = Number((sB[key] + delta).toFixed(1));
+              if (next > 5.0) next = 4.8;
+              if (next < 1.0) next = 1.2;
+              sB[key] = next;
+            }
+          });
+        }
+      }
+    }
+
     return map;
-  }, [compareList]);
+  }, [compareList, vectorScoresMap]);
 
   // Find the winner tool
   const winningTool = verdict?.winner || null;
@@ -242,6 +332,94 @@ export default function ComparePage() {
             </div>
           )}
         </div>
+
+        {/* Natural Language Task Recommendation & Multi-Tool Comparison Search Bar */}
+        <div className="mb-8 bg-[#18181C] border border-white/10 rounded-3xl p-4 sm:p-6 shadow-xl space-y-4">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2">
+            <div>
+              <span className="text-xs font-bold uppercase tracking-wider text-amber-400 flex items-center gap-1.5">
+                <Sparkles className="w-3.5 h-3.5" />
+                Intelligent Task Comparison & Recommendation
+              </span>
+              <p className="text-xs text-muted-foreground mt-0.5">
+                Describe your requirements in plain English to discover and compare top matching AI tools side-by-side.
+              </p>
+            </div>
+          </div>
+
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              if (naturalQuery.trim()) {
+                runNaturalComparison(naturalQuery);
+              }
+            }}
+            className="flex flex-col sm:flex-row gap-2"
+          >
+            <div className="relative flex-1">
+              <input
+                type="text"
+                value={naturalQuery}
+                onChange={(e) => setNaturalQuery(e.target.value)}
+                placeholder="e.g. Find the best free AI coding assistant for Python, or Compare AI website builders for a beginner..."
+                className="w-full h-12 px-4 rounded-xl bg-black/40 border border-white/10 text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:border-amber-500/50"
+              />
+              {naturalQuery && (
+                <button
+                  type="button"
+                  onClick={() => setNaturalQuery('')}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground p-1"
+                >
+                  <X className="w-4 h-4" />
+                </button>
+              )}
+            </div>
+            <Button
+              type="submit"
+              disabled={isTaskLoading || !naturalQuery.trim()}
+              className="h-12 px-6 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-black font-bold text-xs shrink-0"
+            >
+              {isTaskLoading ? 'Evaluating...' : 'Compare Tools'}
+            </Button>
+          </form>
+
+          {/* Quick task prompt chips */}
+          <div className="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none text-xs">
+            <span className="text-[11px] font-semibold text-muted-foreground shrink-0 mr-1">
+              Popular Comparisons:
+            </span>
+            {[
+              { label: '📊 Presentations', query: 'I need an AI tool to create professional presentations.' },
+              { label: '🐍 Python Coding', query: 'Find the best free AI coding assistant for Python.' },
+              { label: '🌐 Website Builders', query: 'Compare AI website builders for a beginner.' },
+              { label: '🎥 Video & Subtitles', query: 'I need an AI video editor with automatic subtitles and a free plan.' },
+              { label: '🔍 Research vs ChatGPT', query: 'Find an alternative to ChatGPT for research.' },
+              { label: '🎨 Image from Text', query: 'Compare tools for generating images from text.' },
+            ].map((chip) => (
+              <button
+                key={chip.label}
+                type="button"
+                onClick={() => {
+                  setNaturalQuery(chip.query);
+                  runNaturalComparison(chip.query);
+                }}
+                className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[11px] text-muted-foreground hover:text-foreground hover:border-amber-500/30 whitespace-nowrap transition-colors shrink-0"
+              >
+                {chip.label}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Render RecommendationVerdictCard if available */}
+        {(taskRecommendation || isTaskLoading) && (
+          <div className="mb-8">
+            <RecommendationVerdictCard
+              recommendation={taskRecommendation}
+              isLoading={isTaskLoading}
+            />
+          </div>
+        )}
 
         {isEmpty ? (
           <div className="text-center py-16 sm:py-20 bg-[#1E1E24] border border-white/[0.08] rounded-3xl p-6 shadow-xl">

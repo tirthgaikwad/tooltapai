@@ -7,7 +7,8 @@ import { GitCompare, Sparkles, Scale, ArrowLeft } from 'lucide-react';
 import rawTools from '@/data/tools.json';
 import type { Tool } from '@/types/tool';
 import { calculateToolScores, type ToolCalculatedScores } from '@/lib/compareUtils';
-import { calculateVectorScores, calculateComparisonVerdict, type VectorScoreResult } from '@/lib/vectorScores';
+import { calculateVectorScores, getDistinctVectorScores, calculateComparisonVerdict, type VectorScoreResult } from '@/lib/vectorScores';
+import { COMPARE_PROFILES, getDistinctComparisonProfiles } from '@/lib/compareData';
 import CompareMatrix from '@/components/tools/CompareMatrix';
 import BasisOfComparisonGrid from '@/components/tools/BasisOfComparisonGrid';
 import FinalVerdictBanner from '@/components/tools/FinalVerdictBanner';
@@ -61,13 +62,9 @@ export default function CompareClient() {
     });
   }, [tools]);
 
-  // Scores map for vector charts and verdicts
+  // Scores map for vector charts and verdicts using COMPARE_PROFILES and collision avoidance
   const vectorScoresMap = useMemo(() => {
-    const map = new Map<number, VectorScoreResult>();
-    tools.forEach((tool) => {
-      map.set(Number(tool.id), calculateVectorScores({ ...tool }));
-    });
-    return map;
+    return getDistinctVectorScores(tools);
   }, [tools]);
 
   const verdict = useMemo(() => {

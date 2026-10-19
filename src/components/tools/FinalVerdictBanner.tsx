@@ -83,7 +83,8 @@ export default function FinalVerdictBanner({ verdict, tools, scoresMap }: FinalV
         <span className="text-xs font-semibold text-muted-foreground mr-1">Matrix Scores:</span>
         {tools.map((t) => {
           const scoreObj = scoresMap.get(t.id);
-          const total = scoreObj ? scoreObj.totalScore : 0;
+          const totalVal = scoreObj ? scoreObj.totalScore : 0;
+          const totalFormatted = totalVal.toFixed(1);
           const isWinner = t.id === winner.id;
 
           return (
@@ -97,7 +98,7 @@ export default function FinalVerdictBanner({ verdict, tools, scoresMap }: FinalV
             >
               <ToolLogo name={t.name} category={t.category} url={t.url} className="w-4 h-4 rounded text-[9px]" />
               <span>{t.name}</span>
-              <span className="font-mono font-bold text-foreground">{total} / 50</span>
+              <span className="font-mono font-bold text-foreground">{totalFormatted} / 50.0</span>
             </div>
           );
         })}

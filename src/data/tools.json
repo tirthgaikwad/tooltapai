@@ -5416,5 +5416,1859 @@
     "access": "Freemium",
     "freePlan": "Free productivity features with plan limits",
     "why": "Calendar, tasks and personal planning workspace"
+  },
+  {
+    "id": 601,
+    "name": "OpenAlex",
+    "url": "https://openalex.org",
+    "category": "Research, Search, and Knowledge",
+    "access": "Open Source",
+    "freePlan": "Completely open dataset and API with generous rate limits; optional premium support available",
+    "why": "Open, comprehensive bibliographic index of scholarly papers, authors, institutions, and citations across all scientific disciplines."
+  },
+  {
+    "id": 602,
+    "name": "Genei",
+    "url": "https://www.genei.io",
+    "category": "Research, Search, and Knowledge",
+    "access": "Freemium",
+    "freePlan": "14-day free trial with basic document analysis and summarization features",
+    "why": "AI-driven research workspace that summarizes articles, extracts key points, and organizes citations for faster academic writing."
+  },
+  {
+    "id": 603,
+    "name": "Mapify",
+    "url": "https://mapify.so",
+    "category": "Research, Search, and Knowledge",
+    "access": "Freemium",
+    "freePlan": "Free tier with 10 mind map generations per day and interactive tree exploration",
+    "why": "Generates clear, interactive mind maps and knowledge trees from documents, web pages, and YouTube videos using AI."
+  },
+  {
+    "id": 604,
+    "name": "Glasp",
+    "url": "https://glasp.co",
+    "category": "Research, Search, and Knowledge",
+    "access": "Freemium",
+    "freePlan": "Free web highlighter, social note-taking, and AI summaries with basic export options",
+    "why": "Social web highlighter that captures key passages from articles and YouTube videos, generating AI summaries to share with a community."
+  },
+  {
+    "id": 605,
+    "name": "Recall",
+    "url": "https://www.getrecall.ai",
+    "category": "Research, Search, and Knowledge",
+    "access": "Freemium",
+    "freePlan": "Free tier with monthly credit quota for summarizing articles, videos, and podcasts",
+    "why": "Personal knowledge base that summarizes online content and links related concepts into an interconnected knowledge graph."
+  },
+  {
+    "id": 606,
+    "name": "Fabric",
+    "url": "https://fabric.so",
+    "category": "Research, Search, and Knowledge",
+    "access": "Freemium",
+    "freePlan": "Free personal plan with up to 5GB storage and intelligent semantic search",
+    "why": "Self-organizing digital workspace and cloud drive that automatically tags, indexes, and retrieves documents, notes, and links."
+  },
+  {
+    "id": 607,
+    "name": "Feedly AI",
+    "url": "https://feedly.com",
+    "category": "Research, Search, and Knowledge",
+    "access": "Freemium",
+    "freePlan": "Free RSS reader up to 100 sources; AI assistant Leo available on premium trial",
+    "why": "Market intelligence and news feed aggregator with AI assistant Leo that filters noise, tracks competitor moves, and summarizes key insights."
+  },
+  {
+    "id": 608,
+    "name": "Inoreader AI",
+    "url": "https://www.inoreader.com",
+    "category": "Research, Search, and Knowledge",
+    "access": "Freemium",
+    "freePlan": "Free news feed reader up to 150 feeds with limited AI summaries per month",
+    "why": "Content discovery and RSS reader platform with AI summarization, automatic translation, and smart duplicate filtering."
+  },
+  {
+    "id": 609,
+    "name": "Felo",
+    "url": "https://felo.ai",
+    "category": "Research, Search, and Knowledge",
+    "access": "Freemium",
+    "freePlan": "Free daily search queries with cross-language research and document generation",
+    "why": "Cross-language AI search engine that translates and summarizes global sources into your native tongue with source verification."
+  },
+  {
+    "id": 610,
+    "name": "Arc Search",
+    "url": "https://arc.net",
+    "category": "Research, Search, and Knowledge",
+    "access": "Free",
+    "freePlan": "Completely free mobile web browser with 'Browse for Me' AI page synthesis",
+    "why": "Mobile AI browser that synthesizes answers across top web pages into a clean, ad-free summary card with source links."
+  },
+  {
+    "id": 611,
+    "name": "Opera Aria",
+    "url": "https://www.opera.com/features/aria",
+    "category": "Research, Search, and Knowledge",
+    "access": "Free",
+    "freePlan": "Free browser AI assistant built into Opera desktop and mobile with no subscription",
+    "why": "Native browser AI assistant by Opera delivering real-time web search, text generation, image generation, and webpage explanations."
+  },
+  {
+    "id": 612,
+    "name": "Brave Search Summarizer",
+    "url": "https://search.brave.com",
+    "category": "Research, Search, and Knowledge",
+    "access": "Free",
+    "freePlan": "Completely free private search with integrated AI answer summaries and citations",
+    "why": "Privacy-focused search engine feature that summarizes search queries using an independent web index without tracking users."
+  },
+  {
+    "id": 613,
+    "name": "NovelAI",
+    "url": "https://novelai.net",
+    "category": "Writing and Copywriting",
+    "access": "Paid",
+    "freePlan": "Free trial with 50 text generation credits; subscription tiers for unlimited storytelling",
+    "why": "Subscription cloud storytelling platform and novel generator powered by custom GPT models tailored for creative fiction."
+  },
+  {
+    "id": 614,
+    "name": "Type.ai",
+    "url": "https://type.ai",
+    "category": "Writing and Copywriting",
+    "access": "Freemium",
+    "freePlan": "Free tier with monthly word allowance and AI drafting tools",
+    "why": "AI-first document editor designed to help authors and marketers brainstorm, outline, draft, and rewrite content at lightning speed."
+  },
+  {
+    "id": 615,
+    "name": "LanguageTool",
+    "url": "https://languagetool.org",
+    "category": "Writing and Copywriting",
+    "access": "Freemium",
+    "freePlan": "Free grammar, spelling, and style check up to 10,000 characters per evaluation",
+    "why": "Multilingual grammar, style, and spell checker supporting over 30 languages with AI-powered paraphrasing suggestions."
+  },
+  {
+    "id": 616,
+    "name": "DeepL Write",
+    "url": "https://www.deepl.com/write",
+    "category": "Writing and Copywriting",
+    "access": "Freemium",
+    "freePlan": "Free text improvement and tone adjustment for up to 2,000 characters per entry",
+    "why": "AI writing companion by DeepL that fixes syntax, eliminates ambiguity, and refines nuance for professional English and German text."
+  },
+  {
+    "id": 617,
+    "name": "Smodin",
+    "url": "https://smodin.io",
+    "category": "Writing and Copywriting",
+    "access": "Freemium",
+    "freePlan": "3 free daily writing and rewriting credits with basic citation tools",
+    "why": "Multi-tool writing assistant featuring an AI rewriter, essay grader, citation generator, and multilingual text translator."
+  },
+  {
+    "id": 618,
+    "name": "INK",
+    "url": "https://inkforall.com",
+    "category": "Writing and Copywriting",
+    "access": "Paid",
+    "freePlan": "5-day free trial with full AI content generation and SEO protection suite",
+    "why": "All-in-one SEO content optimization suite combining AI writing, keyword clustering, and AI content shield defense."
+  },
+  {
+    "id": 619,
+    "name": "Outwrite",
+    "url": "https://www.outwrite.com",
+    "category": "Writing and Copywriting",
+    "access": "Freemium",
+    "freePlan": "Free spelling, grammar, and dictionary suggestions with browser extension",
+    "why": "Writing assistant that enhances readability, rephrases sentences for clarity, and checks plagiarism across web editors."
+  },
+  {
+    "id": 620,
+    "name": "Hemingway Editor",
+    "url": "https://hemingwayapp.com",
+    "category": "Writing and Copywriting",
+    "access": "Freemium",
+    "freePlan": "Free web-based readability analyzer; paid desktop app and AI rewrite credits available",
+    "why": "Distraction-free readability editor highlighting complex sentences, passive voice, and weak adverbs, now enhanced with AI rewrites."
+  },
+  {
+    "id": 621,
+    "name": "Scribbr",
+    "url": "https://www.scribbr.com",
+    "category": "Writing and Copywriting",
+    "access": "Freemium",
+    "freePlan": "Free APA, MLA, and Chicago citation generator and basic grammar proofing tools",
+    "why": "Academic student suite providing citation generators, plagiarism detection powered by Turnitin, and AI proofreading."
+  },
+  {
+    "id": 622,
+    "name": "EssayDone",
+    "url": "https://essaydone.ai",
+    "category": "Writing and Copywriting",
+    "access": "Freemium",
+    "freePlan": "Free trial credits for generating outlines, citations, and introductory paragraphs",
+    "why": "Specialized academic writing assistant that helps students brainstorm thesis statements, structure arguments, and format citations."
+  },
+  {
+    "id": 623,
+    "name": "Aithor",
+    "url": "https://aithor.com",
+    "category": "Writing and Copywriting",
+    "access": "Freemium",
+    "freePlan": "Free basic essay generation with limited word count and standard citation format",
+    "why": "AI research and essay assistant that generates structured academic papers with verifiable citations and invisible AI detection rephrasing."
+  },
+  {
+    "id": 624,
+    "name": "EssayWriter",
+    "url": "https://essaywriter.org",
+    "category": "Writing and Copywriting",
+    "access": "Freemium",
+    "freePlan": "Free outline generator and topic brainstormer with sample essay drafts",
+    "why": "AI-driven writing tool for students and academics that drafts essay structures, bibliographies, and literature reviews."
+  },
+  {
+    "id": 625,
+    "name": "HIX.AI",
+    "url": "https://hix.ai",
+    "category": "Writing and Copywriting",
+    "access": "Freemium",
+    "freePlan": "Free tier with 1,000 words per week across AI writer and search tools",
+    "why": "All-in-one AI writing copilot offering over 120 writing tools, AI search engine, grammar checker, and browser extension."
+  },
+  {
+    "id": 626,
+    "name": "Monica",
+    "url": "https://monica.im",
+    "category": "General AI Assistants",
+    "access": "Freemium",
+    "freePlan": "Free daily AI queries powered by leading models with sidebar chrome extension",
+    "why": "Versatile browser copilot extension integrating ChatGPT, Claude, and Gemini for instant drafting, translation, and page summaries."
+  },
+  {
+    "id": 627,
+    "name": "Merlin",
+    "url": "https://www.getmerlin.in",
+    "category": "General AI Assistants",
+    "access": "Freemium",
+    "freePlan": "Free daily query quota to chat with websites, YouTube videos, and PDFs",
+    "why": "AI browser extension that brings multi-model AI assistants to any webpage with a single keyboard shortcut."
+  },
+  {
+    "id": 628,
+    "name": "Sider",
+    "url": "https://sider.ai",
+    "category": "General AI Assistants",
+    "access": "Freemium",
+    "freePlan": "30 free AI queries per day supporting web chat, writing, and reading",
+    "why": "All-in-one sidebar AI extension giving instant access to top LLM models, translation, and image generation anywhere online."
+  },
+  {
+    "id": 629,
+    "name": "MaxAI",
+    "url": "https://www.maxai.me",
+    "category": "General AI Assistants",
+    "access": "Freemium",
+    "freePlan": "Free daily credits for inline AI writing, rewriting, and summarization in browser",
+    "why": "Browser extension that enables 1-click writing and reading assistance directly inside Gmail, Notion, Docs, and social media."
+  },
+  {
+    "id": 630,
+    "name": "Compose AI",
+    "url": "https://www.compose.ai",
+    "category": "Writing and Copywriting",
+    "access": "Freemium",
+    "freePlan": "Free extension with autocompletion and 1,000 AI generated words per month",
+    "why": "Chrome extension that accelerates typing through real-time autocompletion and phrasing suggestions across email and web forms."
+  },
+  {
+    "id": 631,
+    "name": "Flowrite",
+    "url": "https://www.flowrite.com",
+    "category": "Writing and Copywriting",
+    "access": "Freemium",
+    "freePlan": "14-day free trial with customizable email templates and message expansion",
+    "why": "Communication assistant that transforms short bullet points into ready-to-send professional emails and messages."
+  },
+  {
+    "id": 632,
+    "name": "Ellie",
+    "url": "https://tryellie.com",
+    "category": "Writing and Copywriting",
+    "access": "Freemium",
+    "freePlan": "Free tier with 2 free email replies per day supporting standard tones",
+    "why": "AI email assistant that learns your personal writing voice and crafts contextual replies directly inside Gmail and Fastmail."
+  },
+  {
+    "id": 633,
+    "name": "OpenHands",
+    "url": "https://github.com/All-Hands-AI/OpenHands",
+    "category": "Coding and Software Development",
+    "access": "Open Source",
+    "freePlan": "Completely open source software; free to self-host with your own LLM API keys",
+    "why": "Open-source autonomous AI software development agent platform (formerly OpenDevin) that can plan, code, run bash commands, and debug."
+  },
+  {
+    "id": 634,
+    "name": "Zed AI",
+    "url": "https://zed.dev",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Completely free open-source editor; bring your own API keys or use Zed AI subscription",
+    "why": "High-performance multiplayer code editor written in Rust with deeply integrated AI chat, inline transformation, and custom model routing."
+  },
+  {
+    "id": 635,
+    "name": "IBM watsonx Code Assistant",
+    "url": "https://www.ibm.com/products/watsonx-code-assistant",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Free tier on IBM Cloud with 30-day evaluation period and starter tokens",
+    "why": "Enterprise code generation and modernization tool specialized for Java, Ansible automation, and COBOL application refactoring."
+  },
+  {
+    "id": 636,
+    "name": "Graphite",
+    "url": "https://graphite.dev",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Free tier for individual developers with stacked PR workflows and AI review summary",
+    "why": "Developer workflow platform for stacked Git pull requests featuring an autonomous AI review agent that catches bugs before merge."
+  },
+  {
+    "id": 637,
+    "name": "Greptile",
+    "url": "https://www.greptile.com",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Free trial for open-source repositories with full repository indexing",
+    "why": "Codebase-aware AI agent that reviews pull requests, answers complex architectural questions, and indexes private repos."
+  },
+  {
+    "id": 638,
+    "name": "Bito",
+    "url": "https://bito.ai",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Free tier with unlimited code completions and basic AI code review agents",
+    "why": "AI developer platform providing automated pull request reviews, unit test generation, and intelligent code completions inside IDEs."
+  },
+  {
+    "id": 639,
+    "name": "Codeium",
+    "url": "https://codeium.com",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Free forever for individual developers with unlimited fast autocomplete and in-IDE chat",
+    "why": "Lightning-fast, free-for-individuals AI code completion and chat extension supporting over 70 programming languages across 40+ IDEs."
+  },
+  {
+    "id": 640,
+    "name": "Pythagora",
+    "url": "https://www.pythagora.ai",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Free trial with starter tokens to build and run initial web applications",
+    "why": "Autonomous developer agent that talks with you to clarify specs, plans architecture, and builds full-stack Node/React apps from scratch."
+  },
+  {
+    "id": 641,
+    "name": "Sweep",
+    "url": "https://sweep.dev",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Free tier for open-source repositories and limited monthly automated PRs",
+    "why": "AI junior developer that turns GitHub bug reports and feature requests directly into tested pull requests."
+  },
+  {
+    "id": 642,
+    "name": "Factory AI",
+    "url": "https://www.factory.ai",
+    "category": "Coding and Software Development",
+    "access": "Paid",
+    "freePlan": "Enterprise pilot and trial available upon request for engineering teams",
+    "why": "Autonomous software engineering Droids that automate code migrations, code reviews, and test generation in enterprise repositories."
+  },
+  {
+    "id": 643,
+    "name": "Refact.ai",
+    "url": "https://refact.ai",
+    "category": "Coding and Software Development",
+    "access": "Open Source",
+    "freePlan": "Open-source self-hostable edition free forever; cloud plans offer free starter tier",
+    "why": "Open-source AI coding assistant, agent, and self-hostable fine-tuned code completion server that keeps proprietary code private."
+  },
+  {
+    "id": 644,
+    "name": "AskCodi",
+    "url": "https://www.askcodi.com",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Free plan with 50 credits per month for code generation and syntax fixes",
+    "why": "AI development assistant offering quick syntax help, code translation between languages, and automated test suite creation."
+  },
+  {
+    "id": 645,
+    "name": "MarsCode",
+    "url": "https://www.marscode.com",
+    "category": "Coding and Software Development",
+    "access": "Free",
+    "freePlan": "Free cloud-based IDE and code extension with unlimited AI code completion and debugging",
+    "why": "Cloud-based AI IDE and code completion assistant by ByteDance that simplifies project setup and accelerates everyday coding."
+  },
+  {
+    "id": 646,
+    "name": "CodeGeeX",
+    "url": "https://codegeex.cn",
+    "category": "Coding and Software Development",
+    "access": "Free",
+    "freePlan": "Free for individual developers with open model weights and IDE plugins",
+    "why": "Multilingual open code generation model and IDE extension supporting cross-language code translation and automated comments."
+  },
+  {
+    "id": 647,
+    "name": "Twinny",
+    "url": "https://github.com/rjmacarthy/twinny",
+    "category": "Coding and Software Development",
+    "access": "Open Source",
+    "freePlan": "100% free and open-source VS Code extension; runs with local Ollama or LM Studio models",
+    "why": "Local, private AI pair programmer for VS Code designed to work seamlessly with local LLMs without sending code to cloud servers."
+  },
+  {
+    "id": 648,
+    "name": "FauxPilot",
+    "url": "https://github.com/fauxpilot/fauxpilot",
+    "category": "Coding and Software Development",
+    "access": "Open Source",
+    "freePlan": "Free open-source self-hosted server running on your own NVIDIA GPUs",
+    "why": "Open-source, self-hosted GitHub Copilot alternative that serves open code completion models locally via Triton Inference Server."
+  },
+  {
+    "id": 649,
+    "name": "GPT Pilot",
+    "url": "https://github.com/Pythagora-io/gpt-pilot",
+    "category": "Coding and Software Development",
+    "access": "Open Source",
+    "freePlan": "Completely open-source core development agent on GitHub; bring your own LLM API keys",
+    "why": "Open-source developer agent that writes full-stack applications step by step while testing each layer and asking for feedback."
+  },
+  {
+    "id": 650,
+    "name": "Testim",
+    "url": "https://www.testim.io",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Free community tier with up to 1,000 test runs per month and self-healing tests",
+    "why": "AI-driven automated end-to-end testing platform with self-healing locators that prevent test flakiness in agile release cycles."
+  },
+  {
+    "id": 651,
+    "name": "Mabl",
+    "url": "https://www.mabl.com",
+    "category": "Coding and Software Development",
+    "access": "Paid",
+    "freePlan": "14-day comprehensive trial with automated regression suites and visual assertions",
+    "why": "Enterprise intelligent test automation platform providing low-code API, browser, and mobile testing with self-healing capabilities."
+  },
+  {
+    "id": 652,
+    "name": "Functionize",
+    "url": "https://www.functionize.com",
+    "category": "Coding and Software Development",
+    "access": "Paid",
+    "freePlan": "Custom demo and free trial for enterprise QA engineering teams",
+    "why": "Cloud test automation platform leveraging computer vision and neural networks to run autonomous regression testing at scale."
+  },
+  {
+    "id": 653,
+    "name": "Applitools",
+    "url": "https://applitools.com",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Free starter tier with 100 visual checkpoint comparisons per month",
+    "why": "Visual AI testing and monitoring platform that automatically detects visual bugs, layout regressions, and cross-browser rendering flaws."
+  },
+  {
+    "id": 654,
+    "name": "Diffblue",
+    "url": "https://www.diffblue.com",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Free community edition for Java developers to generate unit tests locally in IntelliJ",
+    "why": "Autonomous AI-driven test writing tool that writes and updates complete Java unit test suites without human intervention."
+  },
+  {
+    "id": 655,
+    "name": "Codacy",
+    "url": "https://www.codacy.com",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Free forever for open-source projects; 14-day free trial for private team repositories",
+    "why": "Automated code review and code quality platform that monitors technical debt, security issues, and code coverage with AI fixes."
+  },
+  {
+    "id": 656,
+    "name": "SonarQube AI",
+    "url": "https://www.sonarsource.com/products/sonarqube/",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Free open-source Community Edition with static analysis for 17+ languages",
+    "why": "Industry-standard clean code platform that detects security vulnerabilities, code smells, and bugs, providing AI code fix suggestions."
+  },
+  {
+    "id": 657,
+    "name": "Snyk DeepCode",
+    "url": "https://snyk.io/platform/deepcode-ai/",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Free tier with up to 100 code security tests per month for individual developers",
+    "why": "AI-powered static application security testing engine trained on millions of open-source commits to find and fix security flaws."
+  },
+  {
+    "id": 658,
+    "name": "Mintlify",
+    "url": "https://mintlify.com",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Free tier for personal projects and open source with beautiful responsive docs",
+    "why": "Modern developer documentation platform that auto-generates API references, interactive playgrounds, and doc pages using AI."
+  },
+  {
+    "id": 659,
+    "name": "Swimm",
+    "url": "https://swimm.io",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Free for small engineering teams up to 5 users with code-coupled documentation",
+    "why": "Knowledge-sharing platform that couples documentation directly to code snippets, auto-updating docs as codebases evolve."
+  },
+  {
+    "id": 660,
+    "name": "Documatic",
+    "url": "https://www.documatic.com",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Free tier for individual developers indexing up to 2 code repositories",
+    "why": "Developer tool that auto-documents codebases, generates changelogs, and enables plain-English code search across repos."
+  },
+  {
+    "id": 661,
+    "name": "WhatTheDiff",
+    "url": "https://whatthediff.ai",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Free plan with 25,000 monthly tokens for summarizing small pull requests",
+    "why": "AI-powered GitHub assistant that writes clear pull request summaries, notifies teams, and drafts release notes automatically."
+  },
+  {
+    "id": 662,
+    "name": "GitBook AI",
+    "url": "https://www.gitbook.com",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Free plan for public documentation and community projects with AI search features",
+    "why": "Collaborative knowledge platform for technical teams featuring AI search, automatic drafting, and seamless Git sync."
+  },
+  {
+    "id": 663,
+    "name": "ReadMe AI",
+    "url": "https://readme.com",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "14-day free trial to build interactive developer hubs and API references",
+    "why": "Interactive API documentation platform featuring Owl, an AI assistant that answers developer questions and writes code samples."
+  },
+  {
+    "id": 664,
+    "name": "Fern",
+    "url": "https://buildwithfern.com",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Free tier for generating TypeScript and Python SDKs and OpenAPI documentation",
+    "why": "Toolkit that generates idiomatic client SDKs in multiple languages and beautiful documentation directly from OpenAPI specs."
+  },
+  {
+    "id": 665,
+    "name": "Stainless",
+    "url": "https://www.stainlessapi.com",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Free evaluation to generate production-quality SDKs from API specifications",
+    "why": "SDK generation platform used by OpenAI and Anthropic to generate bulletproof, type-safe SDKs for TypeScript, Python, Go, and Java."
+  },
+  {
+    "id": 666,
+    "name": "Speakeasy",
+    "url": "https://www.speakeasy.com",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Free tier for creating up to 2 SDK targets with automated GitHub action workflows",
+    "why": "Developer platform that validates OpenAPI specs, generates production-grade SDKs, and manages Terraform providers."
+  },
+  {
+    "id": 667,
+    "name": "Bump.sh",
+    "url": "https://bump.sh",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Free plan for up to 1 API documentation hub with automatic diffs and changelogs",
+    "why": "Continuous API documentation platform that tracks breaking changes and generates human-readable changelogs on every commit."
+  },
+  {
+    "id": 668,
+    "name": "Scalar",
+    "url": "https://scalar.com",
+    "category": "Coding and Software Development",
+    "access": "Open Source",
+    "freePlan": "100% free open-source API documentation tool and hosted developer community",
+    "why": "Open-source, highly customizable modern API documentation tool and interactive API client supporting OpenAPI and Swagger."
+  },
+  {
+    "id": 669,
+    "name": "Bruno AI",
+    "url": "https://www.usebruno.com",
+    "category": "Coding and Software Development",
+    "access": "Open Source",
+    "freePlan": "100% free and open-source desktop app storing collections directly in Git repos",
+    "why": "Fast, Git-friendly open-source API client alternative to Postman that stores API collections directly as plain text files."
+  },
+  {
+    "id": 670,
+    "name": "Postman AI",
+    "url": "https://www.postman.com",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Free tier for up to 3 collaborators with basic Postbot AI test generation queries",
+    "why": "API collaboration and development platform with Postbot AI for generating test scripts, mock responses, and API documentation."
+  },
+  {
+    "id": 671,
+    "name": "Insomnia AI",
+    "url": "https://insomnia.rest",
+    "category": "Coding and Software Development",
+    "access": "Open Source",
+    "freePlan": "Free local desktop application for REST, GraphQL, and gRPC with Git sync",
+    "why": "Open-source desktop API client and design platform by Kong with automated test runners and AI response diagnostics."
+  },
+  {
+    "id": 672,
+    "name": "Keploy",
+    "url": "https://keploy.io",
+    "category": "Coding and Software Development",
+    "access": "Open Source",
+    "freePlan": "Open source community version free forever; self-hostable with no test cap",
+    "why": "Open-source test generation platform that records live API network calls and converts them into repeatable unit and integration tests."
+  },
+  {
+    "id": 673,
+    "name": "Qase AI",
+    "url": "https://qase.io",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Free tier for up to 3 users with 500 test cases and AI test generation prompts",
+    "why": "Modern test management software featuring AI-assisted test case authoring, defect reporting, and test run analysis."
+  },
+  {
+    "id": 674,
+    "name": "Jam.dev",
+    "url": "https://jam.dev",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Free for individual developers with unlimited instant bug captures and logs",
+    "why": "One-click bug reporting browser extension that records console errors, network requests, and repro steps for developers."
+  },
+  {
+    "id": 675,
+    "name": "Bugasura",
+    "url": "https://bugasura.io",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Free tier for small teams up to 5 members with unlimited bug tracking",
+    "why": "Lightweight AI-powered bug tracker designed for modern software teams to report, triage, and resolve issues collaboratively."
+  },
+  {
+    "id": 676,
+    "name": "Bird Eats Bug",
+    "url": "https://birdeatsbug.com",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Free plan with up to 10 bug recordings per month including technical data",
+    "why": "Visual bug reporting tool that captures screen recordings with automatically attached console logs, network activity, and system specs."
+  },
+  {
+    "id": 677,
+    "name": "Meticulous",
+    "url": "https://www.meticulous.ai",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Free tier for open source and small projects to catch UI regressions in CI",
+    "why": "Autonomous end-to-end regression testing platform that records user sessions and replays them on every PR without maintaining tests."
+  },
+  {
+    "id": 678,
+    "name": "Replay.io",
+    "url": "https://www.replay.io",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Free personal tier to record and time-travel debug browser application runs",
+    "why": "Time-travel recording and debugging tool for web apps that allows developers to pause, inspect state, and add print statements retroactively."
+  },
+  {
+    "id": 679,
+    "name": "Momentic",
+    "url": "https://momentic.ai",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Free starter tier with visual test authoring and 100 test runs per month",
+    "why": "AI-native testing platform that uses computer vision and LLMs to create resilient automated UI tests from natural language descriptions."
+  },
+  {
+    "id": 680,
+    "name": "Browserbase",
+    "url": "https://www.browserbase.com",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Free tier with 1 hour of headless browser run time per month and proxy management",
+    "why": "Serverless headless browser infrastructure built specifically to run, debug, and scale AI web automation agents safely."
+  },
+  {
+    "id": 681,
+    "name": "Stagehand",
+    "url": "https://www.stagehand.dev",
+    "category": "Coding and Software Development",
+    "access": "Open Source",
+    "freePlan": "Open-source TypeScript SDK on GitHub; run locally with your own LLM keys",
+    "why": "AI web browsing framework built on Playwright that executes natural language browser actions, extracts structured data, and observes pages."
+  },
+  {
+    "id": 682,
+    "name": "Browser Use",
+    "url": "https://browser-use.com",
+    "category": "Coding and Software Development",
+    "access": "Open Source",
+    "freePlan": "Open-source Python library on GitHub; free to self-host with standard LLMs",
+    "why": "Open-source web automation library that connects LLMs to browser instances to autonomously navigate, click, fill forms, and extract info."
+  },
+  {
+    "id": 683,
+    "name": "Skyvern",
+    "url": "https://www.skyvern.com",
+    "category": "Coding and Software Development",
+    "access": "Open Source",
+    "freePlan": "Open-source core on GitHub; cloud tier offers 100 free automation runs",
+    "why": "Computer-vision powered browser automation agent that navigates dynamic web interfaces without fragile XPath selectors."
+  },
+  {
+    "id": 684,
+    "name": "LaVague",
+    "url": "https://github.com/lavague-ai/LaVague",
+    "category": "Coding and Software Development",
+    "access": "Open Source",
+    "freePlan": "100% free open-source framework under Apache 2.0 license",
+    "why": "Large Action Model (LAM) framework designed to build autonomous AI web agents from natural language instructions."
+  },
+  {
+    "id": 685,
+    "name": "ScrapeGraphAI",
+    "url": "https://scrapegraphai.com",
+    "category": "Coding and Software Development",
+    "access": "Open Source",
+    "freePlan": "Open-source Python library on GitHub; free to run with local or cloud models",
+    "why": "Python web scraping library that uses LLMs and direct graph logic to automatically extract structured data from websites without manual parsers."
+  },
+  {
+    "id": 686,
+    "name": "Firecrawl",
+    "url": "https://www.firecrawl.dev",
+    "category": "Coding and Software Development",
+    "access": "Open Source",
+    "freePlan": "Free cloud plan with 500 scraped pages per month; open-source and self-hostable",
+    "why": "API service that turns any website into clean, LLM-ready Markdown while handling JavaScript rendering, proxies, and sitemaps."
+  },
+  {
+    "id": 687,
+    "name": "Crawl4AI",
+    "url": "https://crawl4ai.com",
+    "category": "Coding and Software Development",
+    "access": "Open Source",
+    "freePlan": "100% free open-source asynchronous web crawler on GitHub",
+    "why": "Blazing fast, open-source asynchronous web crawler and data extractor optimized for LLM pipelines and RAG architectures."
+  },
+  {
+    "id": 688,
+    "name": "ScrapingBee AI",
+    "url": "https://www.scrapingbee.com",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Free trial with 1,000 API credits including headless browser rendering",
+    "why": "Web scraping API that manages proxies, headless browsers, and CAPTCHAs, featuring AI-powered data extraction."
+  },
+  {
+    "id": 689,
+    "name": "Apify AI",
+    "url": "https://apify.com",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Free tier with $5 monthly compute credits and access to over 1,500 pre-built scrapers",
+    "why": "Cloud platform for web scraping and data extraction with pre-built AI actors and integrations for training and feeding LLMs."
+  },
+  {
+    "id": 690,
+    "name": "Octoparse AI",
+    "url": "https://www.octoparse.com",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Free tier with up to 10 local scraping tasks and automatic website structure detection",
+    "why": "No-code visual web data scraping software that uses AI to detect tables, pagination, and lists across complex websites."
+  },
+  {
+    "id": 691,
+    "name": "Browse AI",
+    "url": "https://www.browse.ai",
+    "category": "Coding and Software Development",
+    "access": "Freemium",
+    "freePlan": "Free tier with 50 credits per month to monitor and scrape web pages",
+    "why": "No-code web scraper and monitoring robot that can be trained in 2 minutes simply by clicking elements on any page."
+  },
+  {
+    "id": 692,
+    "name": "Windmill AI",
+    "url": "https://www.windmill.dev",
+    "category": "Coding and Software Development",
+    "access": "Open Source",
+    "freePlan": "Free community edition self-hosted; cloud tier offers free developer tier",
+    "why": "Open-source developer platform for workflows, internal UIs, and scheduled scripts with AI-assisted code generation."
+  },
+  {
+    "id": 693,
+    "name": "Jimdo Dolphin",
+    "url": "https://www.jimdo.com",
+    "category": "App and Website Builders",
+    "access": "Freemium",
+    "freePlan": "Free Play plan with sub-domain hosting and standard site creation",
+    "why": "Intuitive AI website builder that interviews business owners and generates a tailored, mobile-responsive website in minutes."
+  },
+  {
+    "id": 694,
+    "name": "Kleap",
+    "url": "https://kleap.co",
+    "category": "App and Website Builders",
+    "access": "Freemium",
+    "freePlan": "Free tier with basic AI page generations and mobile-friendly publishing",
+    "why": "Mobile-first AI website generator that crafts lightning-fast landing pages and online shops optimized for conversions."
+  },
+  {
+    "id": 695,
+    "name": "Mixo",
+    "url": "https://www.mixo.io",
+    "category": "App and Website Builders",
+    "access": "Freemium",
+    "freePlan": "Free tier with 1 generated site and built-in email waitlist collection",
+    "why": "Launches clean startup landing pages from a single prompt, collecting email sign-ups before you write a line of code."
+  },
+  {
+    "id": 696,
+    "name": "Butternut AI",
+    "url": "https://butternut.ai",
+    "category": "App and Website Builders",
+    "access": "Freemium",
+    "freePlan": "Free plan generating up to 2 multi-page websites with standard SEO",
+    "why": "Generates complete multi-page business websites with pre-written copy, stock imagery, and SEO metadata in under 20 seconds."
+  },
+  {
+    "id": 697,
+    "name": "Pineapple Builder",
+    "url": "https://www.pineapplebuilder.com",
+    "category": "App and Website Builders",
+    "access": "Freemium",
+    "freePlan": "Free tier with 1 published site, SSL, and custom blog generation",
+    "why": "Simple AI website and blog generator tailored for small businesses, agencies, and non-technical creators."
+  },
+  {
+    "id": 698,
+    "name": "Banani",
+    "url": "https://banani.ai",
+    "category": "Design, UI, and Branding",
+    "access": "Freemium",
+    "freePlan": "Free tier with daily generation credits for mobile and web screens",
+    "why": "AI interface generator that turns product ideas into interactive, visually polished mobile and web UI screens."
+  },
+  {
+    "id": 699,
+    "name": "UX Pilot",
+    "url": "https://uxpilot.ai",
+    "category": "Design, UI, and Branding",
+    "access": "Freemium",
+    "freePlan": "Free tier with up to 10 AI design reviews and wireframe explorations per month",
+    "why": "AI copilot for UX/UI designers that conducts usability reviews, audits design systems, and generates user flow diagrams."
+  },
+  {
+    "id": 700,
+    "name": "Builder.io Visual Copilot",
+    "url": "https://www.builder.io/m/visual-copilot",
+    "category": "App and Website Builders",
+    "access": "Freemium",
+    "freePlan": "Free plan with up to 50 design-to-code conversions per month",
+    "why": "One-click Figma plugin that transforms designs into clean, responsive React, Vue, Svelte, or HTML code using custom AI models."
+  },
+  {
+    "id": 701,
+    "name": "Locofy",
+    "url": "https://www.locofy.ai",
+    "category": "App and Website Builders",
+    "access": "Freemium",
+    "freePlan": "Free plan with 5 screen exports and standard responsive code generation",
+    "why": "Converts Figma and Adobe XD prototypes into production-ready frontend code for React, React Native, Next.js, and HTML."
+  },
+  {
+    "id": 702,
+    "name": "Anima",
+    "url": "https://www.animaapp.com",
+    "category": "App and Website Builders",
+    "access": "Freemium",
+    "freePlan": "Free plan for 1 project with automated code inspection and Figma export",
+    "why": "Design-to-code platform that translates Figma prototypes into component-driven React, Vue, and Tailwind code."
+  },
+  {
+    "id": 703,
+    "name": "Quest AI",
+    "url": "https://www.quest.ai",
+    "category": "App and Website Builders",
+    "access": "Freemium",
+    "freePlan": "Free tier for 1 developer with unlimited local preview and code export",
+    "why": "Generates clean, full-stack React components from Figma designs with built-in state management and responsive styling."
+  },
+  {
+    "id": 704,
+    "name": "Plasmic",
+    "url": "https://www.plasmic.app",
+    "category": "App and Website Builders",
+    "access": "Freemium",
+    "freePlan": "Free plan for unlimited visual editor users and up to 3 published projects",
+    "why": "Visual headless CMS and visual page builder that integrates seamlessly into existing React, Next.js, and Gatsby codebases."
+  },
+  {
+    "id": 705,
+    "name": "DhiWise",
+    "url": "https://www.dhiwise.com",
+    "category": "App and Website Builders",
+    "access": "Freemium",
+    "freePlan": "Free tier with unlimited code viewing and up to 5 monthly code generations",
+    "why": "Programming platform that turns Figma designs into enterprise-grade Flutter, React, and Kotlin mobile and web applications."
+  },
+  {
+    "id": 706,
+    "name": "Draftbit",
+    "url": "https://draftbit.com",
+    "category": "App and Website Builders",
+    "access": "Freemium",
+    "freePlan": "Free plan to build and test mobile apps with live browser preview",
+    "why": "Visual mobile app development tool that generates clean React Native source code, connects to any REST API, and deploys to app stores."
+  },
+  {
+    "id": 707,
+    "name": "Bravo Studio",
+    "url": "https://www.bravostudio.app",
+    "category": "App and Website Builders",
+    "access": "Freemium",
+    "freePlan": "Free tier to connect Figma designs to APIs with real-time mobile preview",
+    "why": "App builder that turns Figma prototypes into native iOS and Android apps connected directly to backend REST APIs."
+  },
+  {
+    "id": 708,
+    "name": "Appsmith AI",
+    "url": "https://www.appsmith.com",
+    "category": "App and Website Builders",
+    "access": "Open Source",
+    "freePlan": "Open-source community edition free forever with self-hosting and unlimited users",
+    "why": "Open-source low-code platform for building internal tools, admin portals, and CRUD dashboards with AI query assistance."
+  },
+  {
+    "id": 709,
+    "name": "Retool AI",
+    "url": "https://retool.com/products/ai",
+    "category": "App and Website Builders",
+    "access": "Freemium",
+    "freePlan": "Free plan for up to 5 users with 500 AI workflow runs per month",
+    "why": "Fastest way for engineering teams to build custom business software, connect databases, and embed AI models into everyday workflows."
+  },
+  {
+    "id": 710,
+    "name": "Budibase AI",
+    "url": "https://budibase.com",
+    "category": "App and Website Builders",
+    "access": "Open Source",
+    "freePlan": "Free self-hosted open-source version for up to 5 users with full UI builder",
+    "why": "Open-source low-code internal tool builder that connects to SQL, MongoDB, and REST APIs with AI query generation."
+  },
+  {
+    "id": 711,
+    "name": "ToolJet AI",
+    "url": "https://www.tooljet.com",
+    "category": "App and Website Builders",
+    "access": "Open Source",
+    "freePlan": "Free open-source community edition with self-hosting and unlimited apps",
+    "why": "Open-source low-code platform for building enterprise internal software with drag-and-drop components and AI code generation."
+  },
+  {
+    "id": 712,
+    "name": "DronaHQ",
+    "url": "https://www.dronahq.com",
+    "category": "App and Website Builders",
+    "access": "Freemium",
+    "freePlan": "14-day free trial with unlimited apps, visual UI builder, and API connectors",
+    "why": "Enterprise low-code internal tool platform that helps engineering teams build database GUIs, forms, and portals quickly."
+  },
+  {
+    "id": 713,
+    "name": "UI Bakery",
+    "url": "https://uibakery.io",
+    "category": "App and Website Builders",
+    "access": "Freemium",
+    "freePlan": "Free tier for personal projects and up to 5 users with full visual app builder",
+    "why": "Low-code web application platform for internal dashboards, workflows, and portals with AI-assisted SQL generation."
+  },
+  {
+    "id": 714,
+    "name": "WeWeb",
+    "url": "https://www.weweb.io",
+    "category": "App and Website Builders",
+    "access": "Freemium",
+    "freePlan": "Free plan to build and test frontend apps with WeWeb subdomain",
+    "why": "Visual frontend builder for scalable web applications that connects to any backend or database via REST or GraphQL."
+  },
+  {
+    "id": 715,
+    "name": "Thunkable AI",
+    "url": "https://thunkable.com",
+    "category": "App and Website Builders",
+    "access": "Freemium",
+    "freePlan": "Free plan allowing up to 10 public mobile projects with standard drag-and-drop blocks",
+    "why": "No-code mobile app development platform enabling creators to build native iOS and Android apps with AI logic blocks."
+  },
+  {
+    "id": 716,
+    "name": "Adalo AI",
+    "url": "https://www.adalo.com",
+    "category": "App and Website Builders",
+    "access": "Freemium",
+    "freePlan": "Free tier with unlimited test apps and built-in database under Adalo domain",
+    "why": "No-code platform that lets non-technical creators design and publish real native mobile and web applications with built-in database."
+  },
+  {
+    "id": 717,
+    "name": "Appy Pie AI",
+    "url": "https://www.appypie.com",
+    "category": "App and Website Builders",
+    "access": "Freemium",
+    "freePlan": "Free trial to build mobile apps and view live prototypes on smartphones",
+    "why": "Drag-and-drop no-code app development platform that converts text descriptions into working mobile and web applications."
+  },
+  {
+    "id": 718,
+    "name": "SAP Build Code",
+    "url": "https://www.sap.com/products/technology-platform/build-code.html",
+    "category": "Coding and Software Development",
+    "access": "Paid",
+    "freePlan": "Evaluation access available on SAP Business Technology Platform trial tier",
+    "why": "Turnkey development environment tailored for SAP applications, combining generative AI coding assistant Joule with enterprise tools."
+  },
+  {
+    "id": 719,
+    "name": "Mendix Assist",
+    "url": "https://www.mendix.com",
+    "category": "App and Website Builders",
+    "access": "Freemium",
+    "freePlan": "Free Community Edition with unlimited studio access and deployment to Mendix Cloud",
+    "why": "Enterprise low-code development platform featuring AI-assisted logic bots that guide developers through model validation and architecture."
+  },
+  {
+    "id": 720,
+    "name": "OutSystems Mentor",
+    "url": "https://www.outsystems.com",
+    "category": "App and Website Builders",
+    "access": "Freemium",
+    "freePlan": "Free personal environment for building and running cloud-native applications",
+    "why": "High-performance low-code platform combining AI generation with automated security and architecture governance."
+  },
+  {
+    "id": 721,
+    "name": "Oracle APEX AI Assistant",
+    "url": "https://apex.oracle.com",
+    "category": "App and Website Builders",
+    "access": "Free",
+    "freePlan": "Free hosted development workspaces on apex.oracle.com and Oracle Cloud Free Tier",
+    "why": "Enterprise low-code application development platform with native AI assistant that translates natural language into optimized SQL queries."
+  },
+  {
+    "id": 722,
+    "name": "Zoho Creator Zia",
+    "url": "https://www.zoho.com/creator/",
+    "category": "App and Website Builders",
+    "access": "Freemium",
+    "freePlan": "15-day free trial with full application building and workflow automation",
+    "why": "Custom business application platform featuring Zia AI assistant for natural language querying, predictive analytics, and process automation."
+  },
+  {
+    "id": 723,
+    "name": "FLUX.1",
+    "url": "https://blackforestlabs.ai",
+    "category": "Image Generation",
+    "access": "Open Source",
+    "freePlan": "FLUX.1 [schnell] open weights available under Apache 2.0; demo hosted on Hugging Face",
+    "why": "State-of-the-art open-weights image generation model family by Black Forest Labs delivering exceptional visual fidelity and text rendering."
+  },
+  {
+    "id": 724,
+    "name": "BlueWillow",
+    "url": "https://www.bluewillow.ai",
+    "category": "Image Generation",
+    "access": "Freemium",
+    "freePlan": "Free daily image generation prompts via Discord community and web app",
+    "why": "Community-centric AI image generator offering intuitive text-to-image prompts across fantasy, photorealistic, and anime art styles."
+  },
+  {
+    "id": 725,
+    "name": "Pollinations",
+    "url": "https://pollinations.ai",
+    "category": "Image Generation",
+    "access": "Free",
+    "freePlan": "Completely free open-source image generation API with no sign-up or paywalls",
+    "why": "Free and open-source generative media ecosystem providing simple REST APIs for on-demand image and text generation."
+  },
+  {
+    "id": 726,
+    "name": "Perchance AI Image Generator",
+    "url": "https://perchance.org/ai-text-to-image",
+    "category": "Image Generation",
+    "access": "Free",
+    "freePlan": "Completely free with unlimited image generations, no registration, and no daily credits",
+    "why": "Lightweight, zero-login online image generator that produces unlimited creative illustrations and portraits without watermarks."
+  },
+  {
+    "id": 727,
+    "name": "Neural.love",
+    "url": "https://neural.love",
+    "category": "Image Generation",
+    "access": "Freemium",
+    "freePlan": "Free basic tier with starter credits for image generation and audio enhancement",
+    "why": "AI media platform offering text-to-image creation, HD resolution upscaling, and vintage portrait restoration."
+  },
+  {
+    "id": 728,
+    "name": "Wombo Dream",
+    "url": "https://dream.ai",
+    "category": "Image Generation",
+    "access": "Freemium",
+    "freePlan": "Free mobile and web generation with standard resolution and basic style presets",
+    "why": "Popular casual AI art generator creating stylized fantasy, surreal, and painterly artwork in seconds from text prompts."
+  },
+  {
+    "id": 729,
+    "name": "Draw Things",
+    "url": "https://drawthings.ai",
+    "category": "Image Generation",
+    "access": "Free",
+    "freePlan": "Completely free on macOS, iOS, and iPadOS; runs 100% offline with zero cloud fees",
+    "why": "Free on-device AI image generation studio for Mac, iPad, and iPhone that runs Stable Diffusion locally without internet."
+  },
+  {
+    "id": 730,
+    "name": "DiffusionBee",
+    "url": "https://diffusionbee.com",
+    "category": "Image Generation",
+    "access": "Open Source",
+    "freePlan": "100% free open-source macOS app with one-click offline installation",
+    "why": "Easiest offline application to run Stable Diffusion on Apple Silicon Macs with full support for inpainting and upscaling."
+  },
+  {
+    "id": 731,
+    "name": "Dzine",
+    "url": "https://www.dzine.ai",
+    "category": "Image Editing and Enhancement",
+    "access": "Freemium",
+    "freePlan": "Free tier with 30 starter credits for inpainting, style transfer, and character posing",
+    "why": "AI design studio (formerly Stylar) providing fine-grained control over character consistency, composition, and element replacement."
+  },
+  {
+    "id": 732,
+    "name": "PromeAI",
+    "url": "https://www.promeai.pro",
+    "category": "Image Generation",
+    "access": "Freemium",
+    "freePlan": "Free tier with 10 monthly coins for sketch-to-render and background generation",
+    "why": "Design assistant that turns hand-drawn architectural and interior sketches into photorealistic commercial renderings."
+  },
+  {
+    "id": 733,
+    "name": "LookX AI",
+    "url": "https://www.lookx.ai",
+    "category": "Image Generation",
+    "access": "Freemium",
+    "freePlan": "Free trial credits for architectural rendering and 3D volume styling",
+    "why": "Spatial design AI platform customized for architects and interior designers to render massing models into architectural visualizations."
+  },
+  {
+    "id": 734,
+    "name": "Vizcom",
+    "url": "https://www.vizcom.ai",
+    "category": "Image Generation",
+    "access": "Freemium",
+    "freePlan": "Free plan with unlimited basic sketches, 3D volume rendering, and cloud storage",
+    "why": "Industrial design tool that renders rough conceptual 2D sketches into high-fidelity physical product designs in real time."
+  },
+  {
+    "id": 735,
+    "name": "Magnific AI",
+    "url": "https://magnific.ai",
+    "category": "Image Editing and Enhancement",
+    "access": "Paid",
+    "freePlan": "Subscription required for high-resolution AI hallucination and upscaling",
+    "why": "High-end generative upscaler that hallucinates realistic textures and micro-details to upscale low-res images into 8K assets."
+  },
+  {
+    "id": 736,
+    "name": "ON1 Photo RAW AI",
+    "url": "https://www.on1.com",
+    "category": "Image Editing and Enhancement",
+    "access": "Paid",
+    "freePlan": "14-day fully functional free trial without credit card requirement",
+    "why": "Professional RAW photography editing suite integrating AI noise reduction, smart masking, and generative portrait adjustments."
+  },
+  {
+    "id": 737,
+    "name": "Aftershoot",
+    "url": "https://aftershoot.com",
+    "category": "Image Editing and Enhancement",
+    "access": "Paid",
+    "freePlan": "30-day free trial with unlimited automated culling and sample AI editing credits",
+    "why": "Automated photo culling and color-grading software that speeds up wedding and event photography workflows by selecting top shots."
+  },
+  {
+    "id": 738,
+    "name": "Imagen AI",
+    "url": "https://imagen-ai.com",
+    "category": "Image Editing and Enhancement",
+    "access": "Paid",
+    "freePlan": "Free trial with 1,000 free photo edits in Adobe Lightroom Classic",
+    "why": "Personalized AI photo editing assistant that learns a professional photographer's editing style and batches thousands of photos in minutes."
+  },
+  {
+    "id": 739,
+    "name": "Narrative Select",
+    "url": "https://narrative.so",
+    "category": "Image Editing and Enhancement",
+    "access": "Freemium",
+    "freePlan": "Free plan with up to 6 projects per month with instant image culling and face detection",
+    "why": "Lightning-fast photo culling application that detects blink status, focus sharpness, and facial expressions in raw photo shoots."
+  },
+  {
+    "id": 740,
+    "name": "RetouchMe",
+    "url": "https://retouchme.com",
+    "category": "Image Editing and Enhancement",
+    "access": "Paid",
+    "freePlan": "Pay-per-photo editing service with free sample credits upon app installation",
+    "why": "Photo correction app combining AI assistance with real professional retouchers for natural body shaping and portrait touchups."
+  },
+  {
+    "id": 741,
+    "name": "Claid.ai",
+    "url": "https://claid.ai",
+    "category": "Image Editing and Enhancement",
+    "access": "Freemium",
+    "freePlan": "Free trial with 50 credits to enhance product photos and generate studio scenes",
+    "why": "Automated image processing platform that cleans up user-generated marketplace images and generates consistent studio backdrops."
+  },
+  {
+    "id": 742,
+    "name": "Pebblely",
+    "url": "https://pebblely.com",
+    "category": "Image Generation",
+    "access": "Freemium",
+    "freePlan": "Free plan with 40 photos per month and 17 default theme backgrounds",
+    "why": "AI product photography platform that turns regular product photos into styled marketing assets with customizable shadows and lighting."
+  },
+  {
+    "id": 743,
+    "name": "Flair.ai",
+    "url": "https://flair.ai",
+    "category": "Image Generation",
+    "access": "Freemium",
+    "freePlan": "Free tier with 30 image generations per month and drag-and-drop scene staging",
+    "why": "Visual staging and product photoshoot tool for e-commerce brands to generate photorealistic lifestyle backdrops."
+  },
+  {
+    "id": 744,
+    "name": "Booth.ai",
+    "url": "https://www.booth.ai",
+    "category": "Image Generation",
+    "access": "Paid",
+    "freePlan": "Commercial product generation trial with sample image generations",
+    "why": "Commercial generative AI platform enabling retail brands to produce high-resolution product photography using reference garments."
+  },
+  {
+    "id": 745,
+    "name": "Mokker AI",
+    "url": "https://mokker.ai",
+    "category": "Image Generation",
+    "access": "Freemium",
+    "freePlan": "Free tier with 20 free product image renders and basic templates",
+    "why": "Instant AI product photo background replacement tool that creates clean e-commerce catalogue and social ad images."
+  },
+  {
+    "id": 746,
+    "name": "Blend",
+    "url": "https://www.blendany.com",
+    "category": "Image Editing and Enhancement",
+    "access": "Freemium",
+    "freePlan": "Free mobile app with basic background removal and design templates",
+    "why": "E-commerce graphic design and photo editor app for online shop owners to create professional catalog listings and Instagram stories."
+  },
+  {
+    "id": 747,
+    "name": "Pincel",
+    "url": "https://pincel.app",
+    "category": "Image Editing and Enhancement",
+    "access": "Freemium",
+    "freePlan": "Free web trial for inpainting, object removal, and portrait adjustments",
+    "why": "Simple in-browser AI photo editing suite for instant background removal, inpainting, and creative text-to-photo overlays."
+  },
+  {
+    "id": 748,
+    "name": "Face26",
+    "url": "https://face26.com",
+    "category": "Image Editing and Enhancement",
+    "access": "Freemium",
+    "freePlan": "Free trial with 3 photo restorations, colorization, and face enhancement",
+    "why": "AI photo restoration tool specializing in sharpening blurred faces, repairing scratches, and colorizing vintage family portraits."
+  },
+  {
+    "id": 749,
+    "name": "VistaCreate AI",
+    "url": "https://create.vista.com",
+    "category": "Design, UI, and Branding",
+    "access": "Freemium",
+    "freePlan": "Free starter plan with 100K+ design templates, fonts, and basic AI editing",
+    "why": "Online graphic design platform equipped with AI background removal, social media resizing, and branded template generation."
+  },
+  {
+    "id": 750,
+    "name": "Kittl AI",
+    "url": "https://www.kittl.com",
+    "category": "Design, UI, and Branding",
+    "access": "Freemium",
+    "freePlan": "Free tier with 15 AI generation credits and access to vector template library",
+    "why": "Next-gen graphic design platform with AI vector generation, complex text distortion effects, and print-on-demand mockup tools."
+  },
+  {
+    "id": 751,
+    "name": "Vectorizer.AI",
+    "url": "https://vectorizer.ai",
+    "category": "Design, UI, and Branding",
+    "access": "Paid",
+    "freePlan": "Free interactive preview with side-by-side SVG comparison; paid token download",
+    "why": "Deep learning vectorizer that converts blurry bitmap PNG and JPG files into razor-sharp, geometric SVG vector graphics."
+  },
+  {
+    "id": 752,
+    "name": "SVG.io",
+    "url": "https://svg.io",
+    "category": "Design, UI, and Branding",
+    "access": "Freemium",
+    "freePlan": "Free plan with 5 text-to-SVG vector generations per month and instant downloads",
+    "why": "AI-driven text-to-SVG vector generator that creates scalable icon sets, illustrations, and logos ready for web development."
+  },
+  {
+    "id": 753,
+    "name": "Logo Diffusion",
+    "url": "https://logodiffusion.com",
+    "category": "Design, UI, and Branding",
+    "access": "Freemium",
+    "freePlan": "Free starter tier with 10 credits to test custom logo generation models",
+    "why": "Generative AI platform custom-trained to produce original vector logos, app icons, and brand marks without generic stock templates."
+  },
+  {
+    "id": 754,
+    "name": "Logomaster.ai",
+    "url": "https://logomaster.ai",
+    "category": "Design, UI, and Branding",
+    "access": "Paid",
+    "freePlan": "Free to generate, customize, and preview unlimited logo variations; pay to download high-res files",
+    "why": "Online logo maker that helps startups and small businesses create professional logo packages including vector SVG files."
+  },
+  {
+    "id": 755,
+    "name": "Namecheap Logo Maker",
+    "url": "https://www.namecheap.com/logo-maker/",
+    "category": "Design, UI, and Branding",
+    "access": "Free",
+    "freePlan": "100% free logo creation and high-resolution SVG/PNG downloads with no hidden fees",
+    "why": "Completely free online logo generator that asks for font and color preferences and outputs full vector brand packages."
+  },
+  {
+    "id": 756,
+    "name": "Logopony",
+    "url": "https://www.logopony.com",
+    "category": "Design, UI, and Branding",
+    "access": "Paid",
+    "freePlan": "Free generation and live mockup preview; one-time fee to download commercial brand kit",
+    "why": "AI logo generator that automatically crafts hundreds of distinctive logo concepts and previews them on stationery, t-shirts, and signage."
+  },
+  {
+    "id": 757,
+    "name": "Turbologo",
+    "url": "https://turbologo.com",
+    "category": "Design, UI, and Branding",
+    "access": "Paid",
+    "freePlan": "Free creation and design customization; one-time payment for commercial vector files",
+    "why": "AI logo design tool that generates versatile brand kits with matching business cards, favicons, and social media banners."
+  },
+  {
+    "id": 758,
+    "name": "Tailor Brands AI",
+    "url": "https://www.tailorbrands.com",
+    "category": "Design, UI, and Branding",
+    "access": "Paid",
+    "freePlan": "Free logo generator and preview; paid subscriptions for complete brand identity and business formation",
+    "why": "All-in-one business launch platform combining AI logo creation, domain registration, digital business cards, and LLC filing."
+  },
+  {
+    "id": 759,
+    "name": "Neural Frames",
+    "url": "https://www.neuralframes.com",
+    "category": "Video Generation",
+    "access": "Freemium",
+    "freePlan": "Free tier with 6 seconds of AI video generation and audio reactive modulation",
+    "why": "Audio-reactive AI video generator that pulses and transforms generative animations in sync with music frequencies and beats."
+  },
+  {
+    "id": 760,
+    "name": "Deforum",
+    "url": "https://deforum.github.io",
+    "category": "Video Generation",
+    "access": "Open Source",
+    "freePlan": "100% free open-source script for Stable Diffusion; runs locally on consumer GPUs",
+    "why": "Open-source animation framework creating trippy, morphing camera motion videos from Stable Diffusion checkpoints."
+  },
+  {
+    "id": 761,
+    "name": "AnimateDiff",
+    "url": "https://animatediff.github.io",
+    "category": "Video Generation",
+    "access": "Open Source",
+    "freePlan": "Open-source motion module on GitHub; free to run in ComfyUI or WebUI",
+    "why": "Pioneering open-source motion module that animates text-to-image Stable Diffusion checkpoints into smooth, coherent video clips."
+  },
+  {
+    "id": 762,
+    "name": "Mochi",
+    "url": "https://github.com/genmoai/models",
+    "category": "Video Generation",
+    "access": "Open Source",
+    "freePlan": "Open-weights model released under Apache 2.0 license by Genmo",
+    "why": "Open-weights video model delivering high motion fidelity and prompt adherence in 480p photorealistic animations."
+  },
+  {
+    "id": 763,
+    "name": "Open-Sora",
+    "url": "https://github.com/hpcaitech/Open-Sora",
+    "category": "Video Generation",
+    "access": "Open Source",
+    "freePlan": "100% free open-source reproduction of video generation pipeline by HPC-AI Tech",
+    "why": "Open-source initiative democratizing efficient text-to-video generation architectures with transparent training recipes."
+  },
+  {
+    "id": 764,
+    "name": "VideoCrafter",
+    "url": "https://github.com/AILab-CVC/VideoCrafter",
+    "category": "Video Generation",
+    "access": "Open Source",
+    "freePlan": "Open-source research toolkit free for non-commercial research and local execution",
+    "why": "Open-source video generation toolbox by Tencent AI Lab featuring text-to-video, image-to-video, and cinematic style transfer models."
+  },
+  {
+    "id": 765,
+    "name": "CogVideoX",
+    "url": "https://github.com/THUDM/CogVideo",
+    "category": "Video Generation",
+    "access": "Open Source",
+    "freePlan": "Open-source weights on Hugging Face under Apache 2.0 license by Zhipu AI",
+    "why": "Large open-source text-to-video model employing 3D variational autoencoders to generate high-resolution video clips."
+  },
+  {
+    "id": 766,
+    "name": "GoEnhance",
+    "url": "https://www.goenhance.ai",
+    "category": "Video Generation",
+    "access": "Freemium",
+    "freePlan": "Free trial credits for video-to-video style transformation and upscaling",
+    "why": "AI video style transfer platform that turns real human video footage into 3D animation, claymation, and anime styles."
+  },
+  {
+    "id": 767,
+    "name": "Hour One",
+    "url": "https://hourone.ai",
+    "category": "Video Generation",
+    "access": "Freemium",
+    "freePlan": "Free tier with up to 3 minutes of published video with virtual avatars",
+    "why": "Enterprise video platform that automatically transforms training scripts, PDFs, and presentations into professional presenter videos."
+  },
+  {
+    "id": 768,
+    "name": "Akool",
+    "url": "https://akool.com",
+    "category": "Video Generation",
+    "access": "Freemium",
+    "freePlan": "Free tier with 50 credits to test face swapping, avatar generation, and live streaming",
+    "why": "Generative AI marketing platform providing realistic avatar videos, live face swapping, and personalized advertising video campaigns."
+  },
+  {
+    "id": 769,
+    "name": "Rephrase.ai",
+    "url": "https://www.rephrase.ai",
+    "category": "Video Generation",
+    "access": "Paid",
+    "freePlan": "Custom corporate demo for personalized synthetic video campaigns",
+    "why": "Personalized synthetic video platform that turns customer data into custom video messages for sales and marketing."
+  },
+  {
+    "id": 770,
+    "name": "Pipio",
+    "url": "https://pipio.ai",
+    "category": "Video Generation",
+    "access": "Freemium",
+    "freePlan": "Free starter tier with 1 video credit and access to 80+ digital actors",
+    "why": "Digital video spokesperson platform that turns written scripts into realistic avatar videos in over 40 languages."
+  },
+  {
+    "id": 771,
+    "name": "Vidnoz",
+    "url": "https://www.vidnoz.com",
+    "category": "Video Generation",
+    "access": "Freemium",
+    "freePlan": "Free tier with 1 minute of daily video generation and 300+ free avatars",
+    "why": "Free online AI video generator offering over 1,000 realistic human avatars and automated voiceover synthesis."
+  },
+  {
+    "id": 772,
+    "name": "Kapwing AI",
+    "url": "https://www.kapwing.com/ai",
+    "category": "Video Editing and Repurposing",
+    "access": "Freemium",
+    "freePlan": "Free plan with unlimited 720p video exports with small Kapwing watermark",
+    "why": "Collaborative online video editor featuring AI script-to-video generation, smart silence trimming, and auto-subtitles."
+  },
+  {
+    "id": 773,
+    "name": "Choppity",
+    "url": "https://choppity.com",
+    "category": "Video Editing and Repurposing",
+    "access": "Freemium",
+    "freePlan": "Free tier with 30 minutes of video upload per month and auto-captioning",
+    "why": "AI video editor that converts long podcast footage into animated, captioned social media clips with smart speaker framing."
+  },
+  {
+    "id": 774,
+    "name": "FireCut",
+    "url": "https://firecut.ai",
+    "category": "Video Editing and Repurposing",
+    "access": "Freemium",
+    "freePlan": "Free trial to edit 3 complete video projects directly inside Premiere Pro",
+    "why": "Premiere Pro AI plugin that automatically cuts silences, removes bad takes, adds zoom cuts, and generates viral captions."
+  },
+  {
+    "id": 775,
+    "name": "Recut",
+    "url": "https://getrecut.com",
+    "category": "Video Editing and Repurposing",
+    "access": "Paid",
+    "freePlan": "Free trial with 5 exported video timelines to Final Cut, Premiere, or DaVinci",
+    "why": "Native macOS and Windows app that cuts silent pauses from recordings in seconds and exports clean XML timelines."
+  },
+  {
+    "id": 776,
+    "name": "Autocut",
+    "url": "https://www.autocut.fr",
+    "category": "Video Editing and Repurposing",
+    "access": "Freemium",
+    "freePlan": "14-day free trial for Premiere Pro and DaVinci Resolve plugins",
+    "why": "Video editing plugin that eliminates dead air, zooms on speaking faces, and generates animated subtitles directly on your timeline."
+  },
+  {
+    "id": 777,
+    "name": "Eddie AI",
+    "url": "https://eddieai.com",
+    "category": "Video Editing and Repurposing",
+    "access": "Freemium",
+    "freePlan": "Free beta access with automated footage transcription and story assembly",
+    "why": "AI assistant for video editors that transcribes footage, organizes B-roll, and builds initial rough-cut story assemblies."
+  },
+  {
+    "id": 778,
+    "name": "CyberLink PowerDirector AI",
+    "url": "https://www.cyberlink.com/products/powerdirector-video-editing-software/",
+    "category": "Video Editing and Repurposing",
+    "access": "Freemium",
+    "freePlan": "Free download with standard video editing and watermarked AI export previews",
+    "why": "Consumer video editing suite featuring AI body effects, background removal, motion tracking, and automated speech-to-text."
+  },
+  {
+    "id": 779,
+    "name": "Topaz Video AI",
+    "url": "https://www.topazlabs.com/topaz-video-ai",
+    "category": "Video Editing and Repurposing",
+    "access": "Paid",
+    "freePlan": "Free trial to preview deinterlacing, upscaling, and frame interpolation results",
+    "why": "Industry-standard desktop video enhancement tool that upscales footage up to 8K, stabilizes shake, and restores vintage film."
+  },
+  {
+    "id": 780,
+    "name": "AVCLabs Video Enhancer",
+    "url": "https://www.avclabs.com/video-enhancer-ai.html",
+    "category": "Video Editing and Repurposing",
+    "access": "Paid",
+    "freePlan": "Free trial with watermarked video outputs to evaluate quality improvements",
+    "why": "AI video upscaler that sharpens blurry footage, reduces compression noise, and restores facial details up to 4K resolution."
+  },
+  {
+    "id": 781,
+    "name": "HitPaw Video Enhancer",
+    "url": "https://www.hitpaw.com/hitpaw-video-enhancer.html",
+    "category": "Video Editing and Repurposing",
+    "access": "Paid",
+    "freePlan": "Free preview of upscaled footage with specialized animation and portrait models",
+    "why": "Desktop video upscaler offering specialized AI models for face enhancement, anime video sharpening, and black-and-white colorization."
+  },
+  {
+    "id": 782,
+    "name": "TensorPix",
+    "url": "https://tensorpix.ai",
+    "category": "Video Editing and Repurposing",
+    "access": "Freemium",
+    "freePlan": "Free tier with 25 credits to upscale and enhance video clips in your web browser",
+    "why": "Browser-based video enhancement platform that upscales videos up to 4K, increases frame rate to 60fps, and fixes compression artifacts."
+  },
+  {
+    "id": 783,
+    "name": "Video2X",
+    "url": "https://github.com/k4yt3x/video2x",
+    "category": "Video Editing and Repurposing",
+    "access": "Open Source",
+    "freePlan": "100% free open-source software under GPL-3.0; run on local GPU without limits",
+    "why": "Open-source video, GIF, and image upscaler using state-of-the-art super-resolution algorithms like Waifu2x and Real-ESRGAN."
+  },
+  {
+    "id": 784,
+    "name": "Flowframes",
+    "url": "https://flowframes.net",
+    "category": "Video Editing and Repurposing",
+    "access": "Freemium",
+    "freePlan": "Free public release on itch.io and GitHub for GPU frame interpolation",
+    "why": "Fast, user-friendly video frame interpolation application utilizing RIFE to convert 24fps and 30fps footage into butter-smooth 60fps+."
+  },
+  {
+    "id": 785,
+    "name": "RIFE",
+    "url": "https://github.com/megvii-research/ECCV2022-RIFE",
+    "category": "Video Editing and Repurposing",
+    "access": "Open Source",
+    "freePlan": "Open-source algorithm code and weights available on GitHub for research and development",
+    "why": "Real-time intermediate flow estimation algorithm for video frame interpolation, renowned for low latency and high visual fidelity."
+  },
+  {
+    "id": 786,
+    "name": "Wav2Lip",
+    "url": "https://github.com/Rudrabha/Wav2Lip",
+    "category": "Video Generation",
+    "access": "Open Source",
+    "freePlan": "Open-source deep learning repository on GitHub; free to run on Colab or local GPU",
+    "why": "Groundbreaking open-source model that accurately synchronizes lip movements in any target video to match arbitrary speech audio."
+  },
+  {
+    "id": 787,
+    "name": "SadTalker",
+    "url": "https://github.com/OpenTalker/SadTalker",
+    "category": "Video Generation",
+    "access": "Open Source",
+    "freePlan": "Free open-source code and model checkpoints on GitHub and Hugging Face",
+    "why": "Open-source framework that animates a single still portrait image into an expressive talking-head video driven by an audio speech track."
+  },
+  {
+    "id": 788,
+    "name": "LivePortrait",
+    "url": "https://github.com/KwaiVGI/LivePortrait",
+    "category": "Video Generation",
+    "access": "Open Source",
+    "freePlan": "Open-source code and weights released by Kuaishou under MIT license",
+    "why": "State-of-the-art portrait animation framework that transfers facial expressions, gaze, and head pose from a driving video onto a still photo."
+  },
+  {
+    "id": 789,
+    "name": "MuseTalk",
+    "url": "https://github.com/TMElyralab/MuseTalk",
+    "category": "Video Generation",
+    "access": "Open Source",
+    "freePlan": "Open-source real-time lip-sync model released by Tencent Music Entertainment",
+    "why": "Real-time, high-quality audio-driven lip-syncing avatar model that operates at over 30 fps on consumer GPUs."
+  },
+  {
+    "id": 790,
+    "name": "FaceFusion",
+    "url": "https://github.com/facefusion/facefusion",
+    "category": "Video Editing and Repurposing",
+    "access": "Open Source",
+    "freePlan": "Open-source deepfake and face-swapping software on GitHub; free to run locally",
+    "why": "Next-generation face swapper and face enhancer supporting real-time webcam streaming and batch video processing."
+  },
+  {
+    "id": 791,
+    "name": "DeepFaceLab",
+    "url": "https://github.com/iperov/DeepFaceLab",
+    "category": "Video Editing and Repurposing",
+    "access": "Open Source",
+    "freePlan": "100% free open-source software on GitHub; industry standard for visual effects artists",
+    "why": "Leading open-source deepfake software pipeline providing complete end-to-end extraction, training, and composition tools for VFX artists."
+  },
+  {
+    "id": 792,
+    "name": "Rask AI",
+    "url": "https://www.rask.ai",
+    "category": "Video Editing and Repurposing",
+    "access": "Freemium",
+    "freePlan": "Free trial to translate and dub 1 video up to 20 minutes across 130+ languages",
+    "why": "Video localization and AI dubbing platform that translates speech into 130+ languages with voice cloning and lip-syncing."
+  },
+  {
+    "id": 793,
+    "name": "Papercup",
+    "url": "https://www.papercup.com",
+    "category": "Video Editing and Repurposing",
+    "access": "Paid",
+    "freePlan": "Custom enterprise demo with sample dubbing and human quality verification",
+    "why": "Enterprise AI dubbing service that localizes video content using synthetic voices reviewed by human translators for broadcast accuracy."
+  },
+  {
+    "id": 794,
+    "name": "Dubverse",
+    "url": "https://dubverse.ai",
+    "category": "Video Editing and Repurposing",
+    "access": "Freemium",
+    "freePlan": "Free tier with 50 monthly credits to dub videos in 30+ languages",
+    "why": "Generative video dubbing platform that converts video speech into multilingual voiceovers and subtitles with built-in script editors."
+  },
+  {
+    "id": 795,
+    "name": "Maestra",
+    "url": "https://maestra.ai",
+    "category": "Video Editing and Repurposing",
+    "access": "Freemium",
+    "freePlan": "Free trial with 15 minutes of automatic transcription, captioning, and voiceover dubbing",
+    "why": "Cloud platform for automated video captioning, synthetic voiceover dubbing, and text transcription in over 125 languages."
+  },
+  {
+    "id": 796,
+    "name": "SyncLabs",
+    "url": "https://synclabs.so",
+    "category": "Video Generation",
+    "access": "Freemium",
+    "freePlan": "Free plan with 5 minutes of real-time lip-sync API processing per month",
+    "why": "Real-time lip-sync API that modifies video lip movement in any video to match translated audio in any language without retraining."
+  },
+  {
+    "id": 797,
+    "name": "Revid.ai",
+    "url": "https://www.revid.ai",
+    "category": "Video Generation",
+    "access": "Freemium",
+    "freePlan": "Free tier with 1 generated video per month and standard templates",
+    "why": "AI video creation studio that turns text prompts, news articles, and ideas into viral short-form videos for TikTok and Shorts."
+  },
+  {
+    "id": 798,
+    "name": "FlexClip AI",
+    "url": "https://www.flexclip.com",
+    "category": "Video Editing and Repurposing",
+    "access": "Freemium",
+    "freePlan": "Free plan with 720p downloads, 1 stock video per project, and up to 12 projects",
+    "why": "Web-based video creation platform with AI text-to-video, auto-subtitle generator, text-to-speech, and extensive stock asset library."
+  },
+  {
+    "id": 799,
+    "name": "Steve.AI",
+    "url": "https://www.steve.ai",
+    "category": "Video Generation",
+    "access": "Freemium",
+    "freePlan": "Free tier with 3 video downloads per month in 720p with Steve.AI watermark",
+    "why": "Online video creation suite that converts blog posts, scripts, and audio into live-action and animated videos in minutes."
+  },
+  {
+    "id": 800,
+    "name": "Animaker AI",
+    "url": "https://www.animaker.com",
+    "category": "Video Generation",
+    "access": "Freemium",
+    "freePlan": "Free tier with 5 video downloads per month with Animaker watermark and character builder",
+    "why": "Cloud animation and video making software featuring AI script generation, character customization, and automated voice sync."
+  },
+  {
+    "id": 801,
+    "name": "Powtoon AI",
+    "url": "https://www.powtoon.com",
+    "category": "Video Generation",
+    "access": "Freemium",
+    "freePlan": "Free plan with up to 3-minute video exports in standard quality with Powtoon watermark",
+    "why": "Visual communication platform that turns text prompts into animated explainer videos and interactive business presentations."
+  },
+  {
+    "id": 802,
+    "name": "Renderforest AI",
+    "url": "https://www.renderforest.com",
+    "category": "Video Generation",
+    "access": "Freemium",
+    "freePlan": "Free tier with 500MB storage and 360p watermarked video exports",
+    "why": "All-in-one branding suite for creating promotional animations, logo reveals, explainer videos, and mockup presentations."
+  },
+  {
+    "id": 803,
+    "name": "Biteable",
+    "url": "https://biteable.com",
+    "category": "Video Generation",
+    "access": "Paid",
+    "freePlan": "7-day free trial with full access to smart video templates and brand kits",
+    "why": "Enterprise video platform for internal communications and HR, producing on-brand animated updates and training videos."
+  },
+  {
+    "id": 804,
+    "name": "Moovly",
+    "url": "https://www.moovly.com",
+    "category": "Video Generation",
+    "access": "Freemium",
+    "freePlan": "Free trial to test video templates and export watermarked previews",
+    "why": "Online video creator that uses AI to convert text, product catalogs, and spreadsheets into animated marketing videos."
+  },
+  {
+    "id": 805,
+    "name": "Raw Shorts",
+    "url": "https://www.rawshorts.com",
+    "category": "Video Generation",
+    "access": "Freemium",
+    "freePlan": "Free starter plan with 5 non-premium video exports in standard definition",
+    "why": "Text-to-video animator that parses written scripts to assemble animated whiteboard explainer videos automatically."
+  },
+  {
+    "id": 806,
+    "name": "JoggAI",
+    "url": "https://www.jogg.ai",
+    "category": "Video Generation",
+    "access": "Freemium",
+    "freePlan": "Free tier with 3 video credits and access to basic digital avatars and templates",
+    "why": "Video generation platform that turns e-commerce product URLs into high-converting video ads featuring AI avatars and viral captions."
   }
 ]

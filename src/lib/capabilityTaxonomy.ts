@@ -1,7 +1,7 @@
 /**
  * Capability Taxonomy and Mapping Engine for ToolTap
  * Provides normalized capability identifiers, synonyms, category associations,
- * and rule-based capability matchers for 600 AI tools.
+ * and rule-based capability matchers for 800+ AI tools.
  */
 
 export interface CapabilityDefinition {

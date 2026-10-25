@@ -135,7 +135,7 @@ export default function SearchPage() {
     <PageLayout>
       <PageMeta
         title={query ? `Search: "${query}"` : "Search AI Tools"}
-        description="Search 500+ AI tools by task, pricing model, free tier limits, and categories."
+        description="Search 800+ AI tools by task, pricing model, free tier limits, and categories."
       />
       <div className="py-6 sm:py-8 max-w-7xl mx-auto px-4 sm:px-6">
         {/* Header */}

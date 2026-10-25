@@ -5,7 +5,7 @@ import { ToolTapLogo } from '@/components/common/ToolTapLogo';
 import { toast } from 'sonner';
 
 const stats = [
-  { icon: Sparkles, label: '500+ AI Tools' },
+  { icon: Sparkles, label: '800+ AI Tools' },
   { icon: Search, label: '25 Categories' },
   { icon: ShieldCheck, label: 'Official Links Only' },
   { icon: RefreshCcw, label: 'Updated 2026' },
@@ -133,7 +133,7 @@ export default function Footer() {
         <div className="mt-10 pt-6 border-t border-white/[0.08] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-low-emphasis">
           <p>© 2026 ToolTap. All rights reserved.</p>
           <p className="flex items-center gap-2">
-            <span>500+ AI tools</span>
+            <span>800+ AI tools</span>
             <span>•</span>
             <span>25 categories</span>
             <span>•</span>

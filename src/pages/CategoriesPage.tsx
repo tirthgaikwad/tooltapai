@@ -41,9 +41,9 @@ export default function CategoriesPage() {
         {/* Stats bar */}
         <div className="grid grid-cols-3 gap-4 mb-8 p-4 sm:p-5 rounded-2xl bg-[#1E1E24] border border-white/[0.08] shadow-lg">
           {[
-            { n: `${tools.length}+`, label: 'Total AI Tools' },
+            { n: `${Math.floor(tools.length / 100) * 100}+`, label: 'Total AI Tools' },
             { n: '25', label: 'Domain Categories' },
-            { n: '20+', label: 'Avg Tools per Category' },
+            { n: `${Math.floor(tools.length / 25)}+`, label: 'Avg Tools per Category' },
           ].map(({ n, label }) => (
             <div key={label} className="text-center sm:text-left">
               <div className="font-heading font-bold text-xl sm:text-2xl text-amber-400">{n}</div>

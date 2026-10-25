@@ -294,7 +294,7 @@ export function CommandPalette() {
               setSearchQuery(e.target.value);
               setSelectedIndex(0);
             }}
-            placeholder="Search 500+ AI tools, actions, stacks, or workflows... (⌘K)"
+            placeholder="Search 800+ AI tools, actions, stacks, or workflows... (⌘K)"
             className="w-full bg-transparent text-white placeholder:text-white/40 text-sm sm:text-base outline-none font-medium"
             autoFocus
           />
@@ -644,7 +644,7 @@ export function CommandPalette() {
           </div>
           <div className="flex items-center gap-1 text-amber-400/80">
             <Sparkles className="w-3 h-3" />
-            <span>500+ Verified AI Tools</span>
+            <span>800+ Verified AI Tools</span>
           </div>
         </div>
       </DialogContent>

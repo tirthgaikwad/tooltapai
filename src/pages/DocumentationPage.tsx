@@ -219,7 +219,7 @@ export default function DocumentationPage() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 my-6">
                   <div className="p-4 rounded-xl bg-[#101115] border border-white/5 space-y-1">
-                    <span className="text-2xl font-bold text-primary font-heading">500+</span>
+                    <span className="text-2xl font-bold text-primary font-heading">800+</span>
                     <p className="text-xs text-muted-foreground font-medium">Curated AI Tools</p>
                   </div>
                   <div className="p-4 rounded-xl bg-[#101115] border border-white/5 space-y-1">

@@ -23,7 +23,7 @@ const features = [
   {
     icon: Zap,
     title: 'Instant Local Search',
-    desc: 'Zero-latency search across 500 AI tools stored client-side with instant fuzzy matching and synonym support.',
+    desc: 'Zero-latency search across 800+ AI tools stored client-side with instant fuzzy matching and synonym support.',
   },
   {
     icon: Search,
@@ -38,7 +38,7 @@ const features = [
 ];
 
 const stats = [
-  { n: '500+', label: 'AI Tools' },
+  { n: '800+', label: 'AI Tools' },
   { n: '25', label: 'Categories' },
   { n: '0', label: 'Sponsored Placements' },
   { n: '100%', label: 'Official Links' },
@@ -63,7 +63,7 @@ export default function AboutPage() {
             <span className="text-amber-400"> AI Tool Discovery Directory</span>
           </h1>
           <p className="text-muted-foreground text-xs sm:text-sm md:text-base leading-relaxed mb-4 max-w-2xl">
-            ToolTap is a curated directory of 500 AI tools organized into 25 domain categories. Built for students, developers, researchers, creators, and professionals searching for the right AI tools for any task.
+            ToolTap is a curated directory of 800+ AI tools organized into 25 domain categories. Built for students, developers, researchers, creators, and professionals searching for the right AI tools for any task.
           </p>
           <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed max-w-2xl">
             Designed around <strong className="text-foreground">task intent</strong>: describe what you want to achieve, and immediately discover the best software options tailored to your needs.
@@ -116,7 +116,7 @@ export default function AboutPage() {
           <Globe className="w-10 h-10 text-primary mx-auto mb-4" />
           <h2 className="font-heading font-bold text-xl sm:text-2xl text-foreground mb-2">Explore the Directory</h2>
           <p className="text-muted-foreground text-xs sm:text-sm mb-6 max-w-md mx-auto leading-relaxed">
-            500 curated tools. 25 specialized categories. Fast local search.
+            800+ curated tools. 25 specialized categories. Fast local search.
           </p>
           <div className="flex items-center justify-center gap-3 flex-wrap">
             <Button asChild size="sm" className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-xl h-10 px-6">

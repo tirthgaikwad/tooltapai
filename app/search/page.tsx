@@ -3,7 +3,7 @@ import React from 'react';
 
 export const metadata: Metadata = {
   title: 'Search AI Tools',
-  description: 'Search 500+ verified AI tools by specific task, pricing structure, free limitations, and workflow category.',
+  description: 'Search 800+ verified AI tools by specific task, pricing structure, free limitations, and workflow category.',
 };
 
 export default function SearchPage() {

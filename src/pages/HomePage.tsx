@@ -134,7 +134,7 @@ export default function HomePage() {
             {/* Badge Pill */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/25 text-amber-400 text-xs font-semibold mb-6 animate-float-up opacity-0 [animation-fill-mode:forwards]">
               <Sparkles className="w-3.5 h-3.5" />
-              Discover 500+ Verified AI Tools
+              Discover 800+ Verified AI Tools
             </div>
 
             {/* Headline & Dynamic Switcher */}
